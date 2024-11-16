@@ -113,7 +113,7 @@ and nt_expr_1 str =
 and nt_expr_2 str =
     let nt1 = pack (char '^') (fun _ -> Pow) in
     let nt1 = star (caten nt1 nt_expr_3) in
-    let nt1 = pack (caten nt_expr_3 nt1) (fun (expr3, binop_expr3) -> List.fold_right (fun expr3 (binop, expr3') -> BinOp (binop, expr3, expr3')) expr3 binop_expr3) in
+    let nt1 = pack (caten nt_expr_3 nt1) (fun (expr3, binop_expr3) -> List.fold_right (fun (expr3', binop) expr3 -> BinOp (binop, expr3, expr3')) binop_expr3 expr3) in
     let nt1 = make_nt_spaced_out nt1 in
     nt1 str
 
@@ -124,7 +124,7 @@ and nt_expr_3 str =
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
 and nt_paren str =
-  (make_nt_paren '(' ')')  str
+  (make_nt_paren '(' ')' nt_expr)  str
 ;;
 
 end;; (* module InfixParser *)
