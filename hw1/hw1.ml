@@ -113,7 +113,15 @@ and nt_expr_1 str =
 and nt_expr_2 str =
     let nt1 = pack (char '^') (fun _ -> Pow) in
     let nt1 = star (caten nt1 nt_expr_3) in
-    let nt1 = pack (caten nt_expr_3 nt1) (fun (expr3, binop_expr3) -> List.fold_right (fun (expr3', binop) expr3 -> BinOp (binop, expr3, expr3')) binop_expr3 expr3) in
+    (*let nt1 = pack (caten nt_expr_3 nt1) (fun ( expr3, binop_expr3) -> List.fold_left (fun (binop, expr3') expr3a -> BinOp (binop, expr3', expr3a)) binop_expr3 expr3) *)
+    let nt1 =
+      pack
+        (caten nt_expr_3 nt1)
+        (fun (base_expr, ops_and_exprs) ->
+          List.fold_right
+            (fun (binop, next_expr) acc_expr -> BinOp (binop, base_expr, acc_expr))
+            ops_and_exprs
+            base_expr) in
     let nt1 = make_nt_spaced_out nt1 in
     nt1 str
 
