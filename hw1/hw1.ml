@@ -47,13 +47,12 @@ let int_of_digit_char =
 let nt_digit_0_9 = 
   pack (range '0' '9') (int_of_digit_char)
 
-(*
+
 let nt_optional_is_not_divided =
   let nt1 = pack (char '/') (fun _ -> false) in
   let nt1 = maybeify nt1 true in
   nt1;;
   
-*)
 
 let nt_int = 
   let nt1 = pack (plus nt_digit_0_9)
@@ -97,35 +96,40 @@ and nt_expr_0 str =
   let nt1 = pack (char '+') (fun _ -> Add) in
   let nt2 = pack (char '-') (fun _ -> Sub) in
   let nt1 = disj nt1 nt2 in
-  let nt1 = star (caten nt1 nt_expr_1) in
+  let percentage = char '%' in
+  let nt1 = star (not_followed_by (caten nt1 nt_expr_1) percentage) in
   let nt1 = pack (caten nt_expr_1 nt1) (fun (expr1, binop_expr1) -> List.fold_left (fun expr1 (binop, expr1') -> BinOp (binop, expr1, expr1')) expr1 binop_expr1) in
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
 and nt_expr_1 str =
+  let nt1 = pack (char '+') (fun _ -> AddPer) in
+  let nt2 = pack (char '-') (fun _ -> SubPer) in
+  let nt3 = pack (char '*') (fun _ -> PerOf) in
+  let nt1 = disj nt1 (disj nt2 nt3) in
+  let percentage = char '%' in
+  let nt1 = star (caten (caten nt1 nt_expr_2) percentage) in
+  let map_helper l = List.map (((_op , _expr) , _char) -> (_op ,_expr)) l in
+  let nt1 = pack nt1 (fun _list -> map_helper _list ) in 
+  let nt1 = pack (caten nt_expr_2 nt1) (fun (expr2, binop_expr2) -> List.fold_left (fun expr2 (binop, expr2') -> BinOp (binop, expr2, expr2')) expr2 binop_expr2) in
+  let nt1 = make_nt_spaced_out nt1 in
+  nt1 str
+and nt_expr_2 str =
     let nt1 = pack (char '*') (fun _ -> Mul) in
     let nt2 = pack (char '/') (fun _ -> Div) in
     let nt3 = pack nt_mod (fun _ -> Mod) in
     let nt1 = disj nt1 (disj nt2 nt3) in
-    let nt1 = star (caten nt1 nt_expr_2) in
-    let nt1 = pack (caten nt_expr_2 nt1) (fun (expr2, binop_expr2) -> List.fold_left (fun expr2 (binop, expr2') -> BinOp (binop, expr2, expr2')) expr2 binop_expr2) in
+    let nt1 = star (caten nt1 nt_expr_3) in
+    let nt1 = pack (caten nt_expr_3 nt1) (fun (expr3, binop_expr3) -> List.fold_left (fun expr3 (binop, expr3') -> BinOp (binop, expr3, expr3')) expr3 binop_expr3) in
     let nt1 = make_nt_spaced_out nt1 in
     nt1 str
-and nt_expr_2 str =
+and nt_expr_3 str =
     let nt1 = pack (char '^') (fun _ -> Pow) in
-    let nt1 = star (caten nt1 nt_expr_3) in
-    (*let nt1 = pack (caten nt_expr_3 nt1) (fun ( expr3, binop_expr3) -> List.fold_left (fun (binop, expr3') expr3a -> BinOp (binop, expr3', expr3a)) binop_expr3 expr3) *)
-    let nt1 =
-      pack
-        (caten nt_expr_3 nt1)
-        (fun (base_expr, ops_and_exprs) ->
-          List.fold_right
-            (fun (binop, next_expr) acc_expr -> BinOp (binop, base_expr, acc_expr))
-            ops_and_exprs
-            base_expr) in
+    let nt1 = star (caten nt_expr_4 nt1) in
+    let nt1 = pack (caten nt1 nt_expr_4) (fun (binop_expr4, expr4) -> List.fold_right (fun (expr4',binop) expr4 -> BinOp (binop, expr4',expr4)) binop_expr4 expr4) in
     let nt1 = make_nt_spaced_out nt1 in
     nt1 str
 
-and nt_expr_3 str =
+and nt_expr_4 str =
   let nt1 = pack nt_int (fun num -> Num num) in
   let nt1 = disj nt1 nt_var in
   let nt1 = disj nt1 nt_paren in
