@@ -91,6 +91,7 @@ let nt_var =
 let nt_mod = 
   caten (const (fun ch -> ch = 'm' )) (caten  (const (fun ch -> ch = 'o' )) (const (fun ch -> ch = 'd' ))) 
 
+ 
 let rec nt_expr str = nt_expr_0 str
 and nt_expr_0 str =
   let nt1 = pack (char '+') (fun _ -> Add) in
@@ -101,40 +102,62 @@ and nt_expr_0 str =
   let nt1 = pack (caten nt_expr_1 nt1) (fun (expr1, binop_expr1) -> List.fold_left (fun expr1 (binop, expr1') -> BinOp (binop, expr1, expr1')) expr1 binop_expr1) in
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
-and nt_expr_1 str =
+  and nt_expr_1 str =
+    let nt1 = pack (char '*') (fun _ -> Mul) in
+    let nt2 = pack (char '/') (fun _ -> Div) in
+    let nt3 = pack nt_mod (fun _ -> Mod) in
+    let nt1 = disj nt1 (disj nt2 nt3) in
+    let nt1 = star (caten nt1 nt_expr_2) in
+    let nt1 = pack (caten nt_expr_2 nt1) (fun (expr2, binop_expr2) -> List.fold_left (fun expr2 (binop, expr2') -> BinOp (binop, expr2, expr2')) expr2 binop_expr2) in
+    let nt1 = make_nt_spaced_out nt1 in
+    nt1 str
+
+and nt_expr_3 str =
   let nt1 = pack (char '+') (fun _ -> AddPer) in
   let nt2 = pack (char '-') (fun _ -> SubPer) in
   let nt3 = pack (char '*') (fun _ -> PerOf) in
   let nt1 = disj nt1 (disj nt2 nt3) in
   let percentage = char '%' in
-  let nt1 = star (caten (caten nt1 nt_expr_2) percentage) in
+  let nt1 = star (caten (caten nt1 nt_expr_4) percentage) in
   let map_helper l = List.map (fun ((op_ , expr_) , char_) -> (op_ ,expr_) ) l in
   let nt1 = pack nt1 (fun _list -> map_helper _list ) in 
-  let nt1 = pack (caten nt_expr_2 nt1) (fun (expr2, binop_expr2) -> List.fold_left (fun expr2 (binop, expr2') -> BinOp (binop, expr2, expr2')) expr2 binop_expr2) in
+  let nt1 = pack (caten nt_expr_4 nt1) (fun (expr4, binop_expr4) -> List.fold_left (fun expr4 (binop, expr4') -> BinOp (binop, expr4, expr4')) expr4 binop_expr4) in
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
-and nt_expr_2 str =
-    let nt1 = pack (char '*') (fun _ -> Mul) in
-    let nt2 = pack (char '/') (fun _ -> Div) in
-    let nt3 = pack nt_mod (fun _ -> Mod) in
-    let nt1 = disj nt1 (disj nt2 nt3) in
-    let nt1 = star (caten nt1 nt_expr_3) in
-    let nt1 = pack (caten nt_expr_3 nt1) (fun (expr3, binop_expr3) -> List.fold_left (fun expr3 (binop, expr3') -> BinOp (binop, expr3, expr3')) expr3 binop_expr3) in
-    let nt1 = make_nt_spaced_out nt1 in
-    nt1 str
-and nt_expr_3 str =
-    let nt1 = pack (char '^') (fun _ -> Pow) in
-    let nt1 = star (caten nt_expr_4 nt1) in
-    let nt1 = pack (caten nt1 nt_expr_4) (fun (binop_expr4, expr4) -> List.fold_right (fun (expr4',binop) expr4 -> BinOp (binop, expr4',expr4)) binop_expr4 expr4) in
-    let nt1 = make_nt_spaced_out nt1 in
-    nt1 str
-
 and nt_expr_4 str =
+    let nt1 = pack (char '^') (fun _ -> Pow) in
+    let nt1 = star (caten nt_expr_5 nt1) in
+    let nt1 = pack (caten nt1 nt_expr_5) (fun (binop_expr5, expr5) -> List.fold_right (fun (expr5',binop) expr5 -> BinOp (binop, expr5',expr5)) binop_expr5 expr5) in
+    let nt1 = make_nt_spaced_out nt1 in
+    nt1 str
+and nt_expr_5 str =  
+  let nt1 = caten (char '[') (caten (nt_expr_6) (char ']')) in
+  let nt1 = pack nt1 (fun (_,(expr6,_)) -> (fun expr6' -> Deref expr6 expr6')) in
+  let nt1 = star nt1 in
+  let nt1 = pack (caten nt_expr_6 nt1) (fun (expr6, binop_expr6) -> List.fold_left (fun expr6 (binop, expr6') -> BinOp (binop, expr6, expr6')) expr6 binop_expr6) in
+  let nt1 = make_nt_spaced_out nt1 in
+  nt1 str
+
+
+ and nt_expr_6 str =
+  let nt1 =  
+   (caten  (const (fun ch -> ch = '/' )) (const (fun ch -> ch = nt_expr_6 )))  in
+(*
+  let nt1 = caten(caten(pack (char '(') pack (char '/') (fun _ -> Div)))) in
+  let nt2 = Num 1 in *)
+  let nt1 = pack (caten nt1 nt_expr_7) (fun (binop, expr7) -> BinOp (binop, nt2, expr)7) in
+  let nt1 = make_nt_spaced_out nt1 in
+  nt1 str
+
+(* This is for Numbers*)
+and nt_expr_7 str =
   let nt1 = pack nt_int (fun num -> Num num) in
   let nt1 = disj nt1 nt_var in
   let nt1 = disj nt1 nt_paren in
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
+
+  (* This is for parenthesis*)
 and nt_paren str =
   (make_nt_paren '(' ')' nt_expr)  str
 ;;
