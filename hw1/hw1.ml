@@ -59,16 +59,29 @@ let nt_int =
   (fun digits -> List.fold_left (fun number digit -> 10 * number + digit) 0 digits) in
   let nt1 = caten nt_optional_is_positive nt1 in
   let nt1 = pack nt1 (fun (is_positive, n) -> if is_positive then n else (-n)) in
+  let nt1 = pack nt1 (fun n -> Num n) in
     nt1;;
 
 
-(*whitespace*)
 let nt_whitespace = const (fun ch -> ch <= ' ');;
+
 
 let make_nt_spaced_out nt = 
   let nt1 = star nt_whitespace in
   let nt1 = pack (caten nt1 (caten nt nt1)) (fun (_, (e, _)) -> e) in
   nt1;;
+
+let make_nt_paren ch_left ch_right nt =
+      let nt1 = make_nt_spaced_out (char ch_left) in
+      let nt2 = make_nt_spaced_out (char ch_right) in
+      let nt1 = caten nt1 (caten nt nt2) in
+      let nt1 = pack nt1 (fun (_, (e, _)) -> e) in 
+      nt1;;
+
+
+(*whitespace*)
+
+
 
 (*parenthesis*)
 let make_nt_paren ch_left ch_right nt=
@@ -107,8 +120,8 @@ and nt_expr_0 str =
     let nt2 = pack (char '/') (fun _ -> Div) in
     let nt3 = pack nt_mod (fun _ -> Mod) in
     let nt1 = disj nt1 (disj nt2 nt3) in
-    let nt1 = star (caten nt1 nt_expr_2) in
-    let nt1 = pack (caten nt_expr_2 nt1) (fun (expr2, binop_expr2) -> List.fold_left (fun expr2 (binop, expr2') -> BinOp (binop, expr2, expr2')) expr2 binop_expr2) in
+    let nt1 = star (caten nt1 nt_expr_3) in
+    let nt1 = pack (caten nt_expr_3 nt1) (fun (expr3, binop_expr3) -> List.fold_left (fun expr3 (binop, expr3') -> BinOp (binop, expr3, expr3')) expr3 binop_expr3) in
     let nt1 = make_nt_spaced_out nt1 in
     nt1 str
 
@@ -130,7 +143,44 @@ and nt_expr_4 str =
     let nt1 = pack (caten nt1 nt_expr_5) (fun (binop_expr5, expr5) -> List.fold_right (fun (expr5',binop) expr5 -> BinOp (binop, expr5',expr5)) binop_expr5 expr5) in
     let nt1 = make_nt_spaced_out nt1 in
     nt1 str
-and nt_expr_5 str =  
+
+
+and nt_expr_5 str = 
+  let nt1 = nt_expr_6 in
+  let nt2 = make_separated_by_star (char ',') nt_expr in
+  
+  let nt2 = make_nt_paren '(' ')' nt2 in
+  let nt2 = pack nt2 (fun arg -> Args arg) in
+
+  let nt3 = make_nt_paren '[' ']' nt_expr in
+  let nt3 = pack nt3 (fun e -> Index e) in
+  let nt2 = star (disj nt2 nt3) in
+
+  let nt1 = caten nt1 nt2 in
+  let nt1 = pack nt1 (fun (index, arg) -> List.fold_left(fun index -> function
+                                                                       | Args es -> Call (index,es)
+                                                                       | Index index' -> Deref (index,index'))
+                                                                       index arg) in
+  nt1 str
+
+
+
+and nt_expr_6 str= 
+  let nt1 = disj_list [nt_int ; nt_var ; nt_paren] in
+  let nt1 = make_nt_spaced_out nt1 in
+  nt1 str
+
+and nt_paren str =
+  let nt1 = pack(char '-')(fun _ -> Sub) in
+  let nt2 = followed_by nt_expr(make_nt_spaced_out (char ')')) in
+  let nt1 = pack (caten nt1 (make_nt_spaced_out nt2)) (fun (_, exp) -> BinOp (Sub, Num 0, exp)) in
+  let nt3 = pack (char '/') (fun _ -> Div) in
+  let nt3 = pack (caten nt3 (make_nt_spaced_out nt2))
+    (fun (_, exp) -> BinOp (Div, Num 1, exp)) in
+  let nt = disj nt1 nt3 in
+  make_nt_paren '(' ')' (disj nt nt_expr) str;;
+
+(*and nt_expr_5 str =  
   let nt1 = caten (char '[') (caten (nt_expr_6) (char ']')) in
   let nt1 = pack nt1 (fun (_,(expr6,_)) -> (fun expr6' -> Deref expr6 expr6')) in
   let nt1 = star nt1 in
@@ -147,9 +197,10 @@ and nt_expr_5 str =
   let nt2 = Num 1 in *)
   let nt1 = pack (caten nt1 nt_expr_7) (fun (binop, expr7) -> BinOp (binop, nt2, expr)7) in
   let nt1 = make_nt_spaced_out nt1 in
-  nt1 str
+  nt1 str*)
 
 (* This is for Numbers*)
+(*
 and nt_expr_7 str =
   let nt1 = pack nt_int (fun num -> Num num) in
   let nt1 = disj nt1 nt_var in
@@ -160,7 +211,7 @@ and nt_expr_7 str =
   (* This is for parenthesis*)
 and nt_paren str =
   (make_nt_paren '(' ')' nt_expr)  str
-;;
+;;*)
 
 end;; (* module InfixParser *)
 
