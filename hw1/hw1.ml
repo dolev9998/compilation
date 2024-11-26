@@ -96,13 +96,13 @@ let nt_var =
   let nt1 = range_ci 'a' 'z' in
   let nt2 = range '0' '9' in
   let nt3 = const (fun ch -> ch = '$' || ch = '_') in
-  let nt1 = caten nt1 (star (disj (disj nt1 nt2) nt3)) in
-  let nt1 = pack nt1 (fun (ch1, chs) -> string_of_list (ch1 :: chs)) in
+  let nt4 = (disj (disj nt1 nt2) nt3) in
+  let nt2 = caten nt1 (star nt4) in
+  let nt1 = pack (diff nt2 (not_followed_by (word "mod") nt4)) (fun (ch1, chs) -> string_of_list (ch1 :: chs)) in
   let nt1 = pack nt1 (fun name -> Var name) in
   nt1;;
 
-let nt_mod = 
-  caten (const (fun ch -> ch = 'm' )) (caten  (const (fun ch -> ch = 'o' )) (const (fun ch -> ch = 'd' ))) 
+let nt_mod = word "mod"
 
  
 let rec nt_expr str = nt_expr_0 str
@@ -110,8 +110,7 @@ and nt_expr_0 str =
   let nt1 = pack (char '+') (fun _ -> Add) in
   let nt2 = pack (char '-') (fun _ -> Sub) in
   let nt1 = disj nt1 nt2 in
-  let percentage = char '%' in
-  let nt1 = star (not_followed_by (caten nt1 nt_expr_1) percentage) in
+  let nt1 = star (caten nt1 nt_expr_1) in
   let nt1 = pack (caten nt_expr_1 nt1) (fun (expr1, binop_expr1) -> List.fold_left (fun expr1 (binop, expr1') -> BinOp (binop, expr1, expr1')) expr1 binop_expr1) in
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
@@ -130,13 +129,15 @@ and nt_expr_3 str =
   let nt2 = pack (char '-') (fun _ -> SubPer) in
   let nt3 = pack (char '*') (fun _ -> PerOf) in
   let nt1 = disj nt1 (disj nt2 nt3) in
-  let percentage = char '%' in
-  let nt1 = star (caten (caten nt1 nt_expr_4) percentage) in
-  let map_helper l = List.map (fun ((op_ , expr_) , char_) -> (op_ ,expr_) ) l in
-  let nt1 = pack nt1 (fun _list -> map_helper _list ) in 
+  let percentage = make_nt_spaced_out(char '%') in
+  let nt1 = star (pack 
+                (caten nt1 (caten nt_expr_4 percentage))
+                (fun (a, (b, _)) -> (a, b))) in
   let nt1 = pack (caten nt_expr_4 nt1) (fun (expr4, binop_expr4) -> List.fold_left (fun expr4 (binop, expr4') -> BinOp (binop, expr4, expr4')) expr4 binop_expr4) in
   let nt1 = make_nt_spaced_out nt1 in
   nt1 str
+
+
 and nt_expr_4 str =
     let nt1 = pack (char '^') (fun _ -> Pow) in
     let nt1 = star (caten nt_expr_5 nt1) in
