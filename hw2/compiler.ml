@@ -582,7 +582,10 @@ module Tag_Parser : TAG_PARSER = struct
        ((fun (rdc, last) -> (car :: rdc, last))
           (scheme_list_to_ocaml cdr))  
     | rac -> ([], rac);;
-
+  let rec ocaml_list_to_scheme = function
+      | [] -> ScmNil
+      | first :: rest -> ScmPair(first,ocaml_list_to_scheme rest)
+    
   let is_reserved_word name = List.mem name reserved_word_list;;
 
   let unsymbolify_var = function
@@ -708,6 +711,12 @@ module Tag_Parser : TAG_PARSER = struct
       | (name : string) :: rest when not (List.mem name rest) -> run rest
       | _ -> false
     in run;;
+  
+  let map_let_rib sexpr = function
+    | ScmPair(var, value) -> (var,value)
+    | _ -> raise (X_syntax "invalid rib in Let") 
+
+
 
   let rec tag_parse sexpr =
     match sexpr with
@@ -725,7 +734,7 @@ module Tag_Parser : TAG_PARSER = struct
       | ScmPair (ScmSymbol "if", ScmPair(test,ScmPair(dit,ScmPair(dif,ScmNil)))) ->
         ScmIf(tag_parse test, tag_parse dit, tag_parse dif)
       
-
+  
     | ScmPair (ScmSymbol "or", ScmNil) -> tag_parse (ScmBoolean false)
     | ScmPair (ScmSymbol "or", ScmPair (sexpr, ScmNil)) -> tag_parse sexpr
     | ScmPair (ScmSymbol "or", sexprs) ->
@@ -770,24 +779,84 @@ module Tag_Parser : TAG_PARSER = struct
            else raise (X_syntax "duplicate function parameters")
         | _ -> raise (X_syntax "invalid parameter list"))
     (* add support for let *)
-    | ScmPair (ScmSymbol "let" ,ScmPair(decl,ScmPair(body,ScmNil))) ->
+    | ScmPair (ScmSymbol "let" ,ScmPair (ribs, exprs)) ->
+        let ribs = (match (scheme_list_to_ocaml ribs) with
+        | (ribs', ScmNil) -> List.map map_let_rib ribs'
+        | _ -> raise (X_syntax "Malformed let-expression!")) in
+        let params = ocaml_list_to_scheme (List.map (fun (first,second) -> first)  ribs) in
+        let args = ocaml_list_to_scheme (List.map (fun (first,second) -> second)  ribs) in
+        tag_parse 
+          (ScmPair (ScmPair (ScmSymbol "lambda",
+                              ScmPair (params,exprs)),
+                              args))
         
       
-           
+          
     (* add support for let* *)
-    | ScmPair (ScmSymbol "let*", ScmPair (ScmNil, body)) -> tag_parse (ScmPair (ScmSymbol "let", ScmPair (ScmNil, body)))
+    (* Case 1 : No bindings\ribs*)
+    (* | ScmPair (ScmSymbol "let*", ScmPair (ScmNil, body)) -> tag_parse (ScmPair (ScmSymbol "let", ScmPair (ScmNil, body)))  *)
+
+     (* Case 2 : With bindings\ribs*)
     | ScmPair (ScmSymbol "let*", ScmPair (decls, body)) ->
-        let rec let_star = function
-          | ScmPair (ScmPair (ScmSymbol var, ScmPair (value, ScmNil)), rest) ->
-              ScmPair (ScmSymbol "let",
-                      ScmPair (ScmPair (ScmSymbol var, ScmPair (value, ScmNil)),
-                                ScmPair (let_star rest, ScmNil))) 
-          | ScmNil -> tag_parse body
-          | _ -> raise (X_syntax "malformed let*")
+      (
+      match decls with
+        | ScmNil -> tag_parse (ScmPair (ScmSymbol "let", ScmPair (ScmNil, body)))
+        | ScmPair (first , ScmNil) ->
+          tag_parse (ScmPair(ScmSymbol "let", ScmPair((ScmPair(first,ScmNil)),body)))
+        | ScmPair (first , rest) ->
+          tag_parse (ScmPair(ScmSymbol "let", ScmPair(ScmPair(first,ScmNil),ScmPair(ScmPair(ScmSymbol "let*",ScmPair(rest, body) ),ScmNil))))
+        | _ -> raise (X_syntax "Malformed let* expression") 
+      )
+   (* | ScmPair (ScmSymbol "let*", ScmPair (decls, body)) ->
+      let rec let_star decls body =
+        match decls with
+        | ScmPair (ScmPair (ScmSymbol var, ScmPair (value, ScmNil)), rest) ->
+            ScmPair (ScmSymbol "let",
+                     ScmPair(ScmPair (ScmPair (ScmSymbol var, ScmPair (value, ScmNil)), ScmNil),
+                              ScmPair (let_star rest body, ScmNil)))
+        | ScmPair (Scm)
+        | ScmNil -> body(*ScmPair (ScmSymbol "let", ScmPair (ScmNil, body))*)
+        | _ -> raise (X_syntax "Malformed let* expression")
+      in tag_parse (let_star decls body) *)
     
-    
-    (* add support for letrec *)
-    
+    | ScmPair (ScmSymbol "letrec", ScmPair (decls, body)) ->
+      (
+        match decls with
+          | ScmNil ->  tag_parse (ScmPair (ScmSymbol "let", ScmPair (ScmNil, body)))
+          | ScmPair (_ , _) ->  
+            (let ribs = (match (scheme_list_to_ocaml decls) with
+              | (ribs', ScmNil) -> List.map map_let_rib ribs' 
+              | _ -> raise (X_syntax "Malformed letrec expression")) in
+                    let params_ocaml_list = (List.map (fun (first,second) -> first)  ribs) in
+                    let newRibs = ocaml_list_to_scheme (List.map (fun param -> ScmPair(param,ScmPair(ScmSymbol("quote"),ScmPair(ScmSymbol("whatever"),ScmNil)))) params_ocaml_list) in
+                    let args = ocaml_list_to_scheme (List.map (fun (first,second) -> second)  ribs) in
+                    let setBangs = ocaml_list_to_scheme (List.map (fun (param,arg) -> ScmPair(ScmSymbol("set!"),ScmPair(param,ScmPair(arg,ScmNil)))) ribs) in
+                    (*let temp = (print_string (string_of_sexpr newRibs)) in*)
+                    tag_parse (ScmPair(ScmSymbol("let"),ScmPair(newRibs,ScmPair(setBangs,body))))
+
+                  
+              
+            )
+          | _ -> raise (X_syntax "Malformed letrec expression") 
+      )
+(* add support for letrec
+    (** Case 1 : No bindings\ribs*)
+    | ScmPair (ScmSymbol "letrec", ScmPair (ScmNil, body)) -> tag_parse (ScmPair (ScmSymbol "let", ScmPair (ScmNil, body)))
+
+    (* Case 2 : With bindings\ribs *)
+       |ScmPair (ScmSymbol "letrec", ScmPair (bindings, body)) ->
+        (
+        let rec let_rec = function 
+        | ScmPair (ScmPair (ScmSymbol var, ScmPair (value, ScmNil)), left_over) ->
+            ScmPair (ScmSymbol "let",
+                    ScmPair (ScmPair (ScmSymbol var, ScmPair (ScmPair (ScmSymbol "quote", ScmPair (ScmNil, ScmNil)), ScmNil)),
+                              ScmPair (let_rec left_over, ScmNil)))
+        | ScmNil -> tag_parse body
+        | _ -> raise (X_syntax "malformed letrec")   
+
+        ) *)
+
+
     | ScmPair (ScmSymbol "and", ScmNil) -> tag_parse (ScmBoolean true)
     | ScmPair (ScmSymbol "and", exprs) ->
        (match (scheme_list_to_ocaml exprs) with
