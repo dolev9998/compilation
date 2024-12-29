@@ -767,6 +767,9 @@ module Tag_Parser : TAG_PARSER = struct
        raise (X_syntax "Malformed set!-expression!")
     (* add support for define *)
       | ScmPair (ScmSymbol "define", ScmPair(ScmSymbol var, ScmPair(value,ScmNil))) -> ScmVarDef(Var(var),tag_parse value) 
+      | ScmPair (ScmSymbol "define", ScmPair(ScmPair(var, args), body)) -> 
+        let lambda = ScmPair(ScmSymbol "lambda", ScmPair(args, body)) in (*Squid Ganes 2*)
+        tag_parse (ScmPair(ScmSymbol "define", ScmPair(var, ScmPair(lambda, ScmNil))))
 
     | ScmPair (ScmSymbol "lambda", rest)
          when scm_improper_list rest ->
