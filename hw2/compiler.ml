@@ -768,7 +768,7 @@ module Tag_Parser : TAG_PARSER = struct
     (* add support for define *)
       | ScmPair (ScmSymbol "define", ScmPair(ScmSymbol var, ScmPair(value,ScmNil))) -> ScmVarDef(Var(var),tag_parse value) 
       | ScmPair (ScmSymbol "define", ScmPair(ScmPair(var, args), body)) -> 
-        let lambda = ScmPair(ScmSymbol "lambda", ScmPair(args, body)) in (*Squid Ganes 2*)
+        let lambda = ScmPair(ScmSymbol "lambda", ScmPair(args, body)) in 
         tag_parse (ScmPair(ScmSymbol "define", ScmPair(var, ScmPair(lambda, ScmNil))))
 
     | ScmPair (ScmSymbol "lambda", rest)
