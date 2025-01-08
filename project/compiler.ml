@@ -1990,7 +1990,8 @@ let sprint_exprs' chan exprs =
                 ^ "\tleave\n"
                 ^ (Printf.sprintf "\tret AND_KILL_FRAME(%d)\n" (List.length params'))
                 ^ (Printf.sprintf "%s:\t; new closure is in rax\n" label_end)
-             | ScmLambda' (params', Opt opt, body) ->(*Changed Here*)
+                
+          | ScmLambda' (params', Opt opt, body) ->(*Changed Here Ori ->Dolev*)
                 let label_loop_env = make_lambda_opt_loop_env ()
                 and label_loop_env_end = make_lambda_opt_loop_env_end ()
                 and label_loop_params = make_lambda_opt_loop_params ()
@@ -2004,23 +2005,99 @@ let sprint_exprs' chan exprs =
                 and label_loop_exit = make_lambda_opt_loop_exit ()
                 in
                 let param_num = List.length params' in
+                let free_vars_num = List.length opt in
                 let new_stack_size = param_num * 8 in
                 
-                let prologue =  Printf.sprintf         "\tpush rbp\n"
-                                                      ^"\tmov rbp, rsp\n"
-                                                      ^"\tsub rsp, %d\n" new_stack_size in
-                let setup = Printf.sprintf             "\trbx, [rbp + 8 * 3]\n"
-                                                      ^"\tmov rcx, %d\n"
-                                                      ^"\t%s"
-                                                       
-                                                       
-                                                       (List.length opt) in
+                (*setup for the code, 1.caller cbase pointer, 2.set up a new one and 3. allocate space at the end*)
+                let entry =  Printf.sprintf         "\tpush rbp \n
+                                                        \tmov rbp, rsp \n
+                                                        \tsub rsp, %d  \n" new_stack_size in
 
+                (*create enviorment for the closure*)                                        
+                let setup = Printf.sprintf             "\trbx, [rbp + 8 * 3]\n
+                                                        \tmov rcx, %d\n         
+                                                        %s:\n
+                                                        \tcmp rcx, 0\n
+                                                        \tje %s\n
+                                                        \tdec rcx\n
+                                                        \tmov rdx, [rbx + rcx * 8]\n
+                                                        \tmov [rsp + rcx * 8] , rdx\n
+                                                        \tjmp %s\n
+                                                        %s:\n
+                                                          "
+                                                       (List.length opt)   (* first   %d*)
+                                                       label_loop_env      (* first   %s*)
+                                                       label_loop_env_end  (* second  %s*)
+                                                       label_loop_env      (* third   %s*)
+                                                       label_loop_env_end  (* fourth  %s*)
+                                                       in
+
+                let parameter_handling = Printf.sprintf"
+                                                        \tcmp rdi,%d        \n
+                                                        \tjne %s           \n
+                                                        %s:                  \n
+                                                        \tmov rbx, rbp    \n
+                                                        %s                  \n                                     
+                                                      "
+                                                       param_num
+                                                       label_arity_more
+                                                       label_arity_exact
+                                                       (String.concat "\n" (List.mapi (fun i param ->
+                                                        Printf.sprintf "\tmov qword [rbx - %d], rsi\n" ((i + 1) * 8)) params')) in
+
+                let handle_variadic =
+                  Printf.sprintf "
+                    
+                  %s:\n
+                    \tmov rcx, rdi\n                ; Load number of arguments
+                    \tsub rcx, %d\n                 
+                    \tmov rbx, rsp\n                
+                  %s_loop:\n
+                    \tcmp rcx, 0\n                  
+                    \tje %s\n                       ; Exit variadic loop
+                    \tdec rcx\n                     ; Decrement argument counter
+                    \tmov rdx, [rbx + rcx * 8]\n    
+                    \tjmp %s_loop\n                 ; Continue loop
+                  %s:\n
+                  "
+                  label_arity_more
+                  num_params
+                  label_arity_more
+                  label_stack_ok
+                  label_stack_ok in
+            
+
+                let compiled_body = generate_code body in
 
                 
+                let tail_call_opt = (* Tail-call optimization*)
+                  Printf.sprintf "
+                    %s:\n
+                    \tcmp rcx, 0\n                  ; Check if stack adjustment done
+                    \tje %s\n                       ; Exit loop
+                    \tdec rcx\n                     
+                    \tjmp %s                      ; Continue loop
+                  %s:\n
+                  "
+                  label_loop
+                  label_loop_exit
+                  label_loop
+                  label_loop_exit in
+            
+                (*Just clean and go*)
+                let ending =
+                  Printf.sprintf "
+                    \tmov rsp, rbp\n                ; Restore stack pointer
+                    \tpop rbp\n                     ; Restore base pointer
+                    \tret\n                         ; Return
+                  " in
+            
+                (* Combine all parts to form the full assembly code *)
+                entry ^ setup ^ parameter_handling ^ handle_variadic ^ compiled_body ^ tail_call_opt ^ ending
+                
 
-
-
+                (*You left me this*)
+                (*
                 "\tmov rdi, (1 + 8 + 8)\t; sob closure\n"
                 ^ "\tcall malloc\n"
                 ^ "\tpush rax\n"
@@ -2071,7 +2148,11 @@ let sprint_exprs' chan exprs =
                 ^ (run (List.length params') (env + 1) body)
                 ^ "\tleave\n"
                 ^ (Printf.sprintf "\tret AND_KILL_FRAME(%d)\n" (List.length params'))
-                ^ (Printf.sprintf "%s:\t; new closure is in rax\n" label_end)
+                ^ (Printf.sprintf "%s:\t; new closure is in rax\n" label_end)           
+
+                *)
+
+                
              | ScmApplic' (proc, args, Non_Tail_Call) -> 
                 let args_code =
                   String.concat ""
