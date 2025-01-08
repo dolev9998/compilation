@@ -1862,7 +1862,7 @@ let sprint_exprs' chan exprs =
                   (List.map (run params env) exprs')
              | ScmOr' exprs' -> (*changed here*)
               (
-                let exitString = make_if_end
+                let exitString = make_if_end ()
                 let rec make_or = function
                 | [] -> (Printf.sprintf "%s:\n" exitString)
                 | first :: rest -> first
@@ -1894,15 +1894,15 @@ let sprint_exprs' chan exprs =
                 
              | ScmVarSet' (Var' (v, Param minor), expr') -> (*changed here*)
                 (
-                  let exprString = (run params env expr') in
-                  exprString
+                  let expr_code = (run params env expr') in
+                  expr_code
                   ^(Printf.sprintf "\tmov qword [rbp +8*(4+%s)],rax\n" minor)
                   ^"\tmov rax, sob_void\n"
                 )
              | ScmVarSet' (Var' (v, Bound (major, minor)), expr') -> (*changed here*)
                 (
-                  let exprString = (run params env expr') in
-                  exprString
+                  let expr_code = (run params env expr') in
+                  expr_code
                   ^"\tmov rbx, qword [rbp + 8*2]\n"
                   ^(Printf.sprintf "\tmov rbx, qword [rbx + 8*%s]\n" major)
                   ^(Printf.sprintf "\tmov qword [rbx + 8*%s],rax\n" minor)
@@ -1990,7 +1990,7 @@ let sprint_exprs' chan exprs =
                 ^ "\tleave\n"
                 ^ (Printf.sprintf "\tret AND_KILL_FRAME(%d)\n" (List.length params'))
                 ^ (Printf.sprintf "%s:\t; new closure is in rax\n" label_end)
-             | ScmLambda' (params', Opt opt, body) ->
+             | ScmLambda' (params', Opt opt, body) ->(*Changed Here*)
                 let label_loop_env = make_lambda_opt_loop_env ()
                 and label_loop_env_end = make_lambda_opt_loop_env_end ()
                 and label_loop_params = make_lambda_opt_loop_params ()
@@ -2003,6 +2003,24 @@ let sprint_exprs' chan exprs =
                 and label_loop = make_lambda_opt_loop ()
                 and label_loop_exit = make_lambda_opt_loop_exit ()
                 in
+                let param_num = List.length params' in
+                let new_stack_size = param_num * 8 in
+                
+                let prologue =  Printf.sprintf         "\tpush rbp\n"
+                                                      ^"\tmov rbp, rsp\n"
+                                                      ^"\tsub rsp, %d\n" new_stack_size in
+                let setup = Printf.sprintf             "\trbx, [rbp + 8 * 3]\n"
+                                                      ^"\tmov rcx, %d\n"
+                                                      ^"\t%s"
+                                                       
+                                                       
+                                                       (List.length opt) in
+
+
+                
+
+
+
                 "\tmov rdi, (1 + 8 + 8)\t; sob closure\n"
                 ^ "\tcall malloc\n"
                 ^ "\tpush rax\n"
@@ -2073,7 +2091,46 @@ let sprint_exprs' chan exprs =
                 ^ "\tpush SOB_CLOSURE_ENV(rax)\n"
                 ^ "\tcall SOB_CLOSURE_CODE(rax)\n"
              | ScmApplic' (proc, args, Tail_Call) -> 
-                raise (X_not_yet_implemented "final project")
+              let label_recycle_frame_loop = make_tc_applic_recycle_frame_loop () in
+              let label_recycle_frame_loop_done = make_tc_applic_recycle_frame_done () in
+              let args_code =
+                String.concat ""
+                  (List.map
+                     (fun arg ->
+                       let arg_code = run params env arg in
+                       arg_code
+                       ^ "\tpush rax\n")
+                     (List.rev args)) in
+              let proc_code = run params env proc in
+              "\t; preparing a tail-call\n"
+              ^ args_code
+              ^ (Printf.sprintf "\tpush %d\t; arg count\n" (List.length args))
+              ^ proc_code
+              ^ "\tcmp byte [rax], T_closure\n"
+              ^ "\tjne L_error_non_closure\n"
+              ^ "\tpush SOB_CLOSURE_ENV(rax)\n"
+              (*^ "\tcall SOB_CLOSURE_CODE(rax)\n" *)
+              ^"\tpush qword [rbp + 8 *1]\n"
+              ^"\tpush rax\n"
+              (* ^"\tpop rbp\n"*)
+              ^"\tmov rbx, COUNT\n" (*original's function count*)
+              ^"\tmov rbx, rbp + 8 * (4 + rbx)\n"  (*original's function first param's addr*)
+              ^"\tmov rax, rbp - 8\n" (*calee's first param's addr*)
+              ^"\tmov rbp, [rbp]\n" (*restore old rbp*)
+              ^"\tmov rcx,0\n" (*i in loop (int i =0;i<m+3;i++) *)
+              ^"\tmov rdx, [esp + 8 * 4]\n" (*m*)
+              ^"\tadd rdx, 3\n" (*m+3*)
+              ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop)
+              ^"\tcmp rcx, rdx\n"
+              ^(Printf.sprintf "\tje %s\n" label_recycle_frame_loop_done)
+              ^"\tmov [rbx+ 8 * rcx],[rax + 8 * rcx]\n"
+              ^"\tadd rcx,1\n"
+              ^(Printf.sprintf "%\tjmp %s\n" label_recycle_frame_loop)
+              ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop_done)
+              ^"\tpop rbx\n"
+              ^"\tmov esp, rax + 8 * rcx\n"
+              ^"\tjmp SOB_CLOSURE_CODE(rbx)\n"
+
            and runs params env exprs' =
              List.map (fun expr' -> run params env expr') exprs' in
            let codes = runs 0 0 exprs' in

@@ -883,6 +883,7 @@ L_code_ptr_lognot:
         ret AND_KILL_FRAME(1)
 
 L_code_ptr_bin_apply:
+        
 ;;; fill in for final project!
 
 L_code_ptr_is_null:
