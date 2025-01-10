@@ -888,12 +888,12 @@ L_code_ptr_bin_apply:
         jne L_error_arg_count_2
         mov rax, PARAM(2) ; list
         mov rbx,0 ;list length count
-.L_length_loop ;this loop is to iterate through the list and count it's  (stop when encountering nil)
-        cmp byte [rax], sob_nil ;TODO: check if correct
+.L_length_loop: ;this loop is to iterate through the list and count it's  (stop when encountering nil)
+        cmp byte [rax], T_nil ;TODO: check if correct
         je .L_loop_exit
         add rbx,1
         jmp .L_loop
-.L_length_loop_exit:
+.L_length_loop_exit: ;1381
         mov rax, PARAM(2) ; list
         ;rbx contains list's length
         mov rcx, PARAM(1) ; PROC
@@ -904,14 +904,26 @@ L_code_ptr_bin_apply:
         mov rsp, rbp
 .L_loop: ;loop to push list's to stack. not done with push because we need to invert it's order on stack.
         cmp rdx, rbx ; rdx=index, rbx=count
-        je L_loop_exit
-        mov [rbp-8*(rbx - rdx + 1)], SOB_PAIR_CAR(rax)
+        je .L_loop_exit
+        mov r9, rbx
+        sub r9, rdx
+        add r9, 1
+        imul r9, -8
+        add r9, rbp
+        ;mov [rbp-8*(rbx - rdx + 1)], SOB_PAIR_CAR(rax)
+        mov rdi, SOB_PAIR_CAR(rax)
+        mov [r9], rdi
         ;;above line should push parameters in backward order (for list (1 2 3) should push 1 2 3 to stack)
         mov rax, SOB_PAIR_CDR(rax)
         add rdx, 1
         jmp .L_loop
 .L_loop_exit:
-        mov rsp, rbx-8 * (rbx + 1) ;fix stack pointer to include added parameters in loop.
+        mov r9, rbx
+        add r9,1
+        imul r9, -8
+        add r9,rbp
+       ; mov rsp, rbp- 8 * (rbx + 1) ;fix stack pointer to include added parameters in loop.
+        mov rsp, r9
         push rbx
         push SOB_CLOSURE_ENV(rcx)
         push r8
@@ -1852,7 +1864,7 @@ L_code_ptr_raw_equal_zz:
 .L_exit:
 	leave
 	ret AND_KILL_FRAME(2)
-
+        
 L_code_ptr_raw_equal_qq:
         enter 0, 0
         cmp COUNT, 2

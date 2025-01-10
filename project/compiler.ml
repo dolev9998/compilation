@@ -740,7 +740,8 @@ module Tag_Parser : TAG_PARSER = struct
     (* add support for if *)
       | ScmPair (ScmSymbol "if", ScmPair(test,ScmPair(dit,ScmPair(dif,ScmNil)))) ->
         ScmIf(tag_parse test, tag_parse dit, tag_parse dif)
-      
+      | ScmPair (ScmSymbol "if", ScmPair(test,ScmPair(dit,ScmNil))) ->
+        ScmIf(tag_parse test, tag_parse dit, ScmConst (ScmNil))
   
     | ScmPair (ScmSymbol "or", ScmNil) -> tag_parse (ScmBoolean false)
     | ScmPair (ScmSymbol "or", ScmPair (sexpr, ScmNil)) -> tag_parse sexpr
@@ -766,7 +767,16 @@ module Tag_Parser : TAG_PARSER = struct
     | ScmPair (ScmSymbol "set!", _) ->
        raise (X_syntax "Malformed set!-expression!")
     (* add support for define *)
-      | ScmPair (ScmSymbol "define", ScmPair(ScmSymbol var, ScmPair(value,ScmNil))) -> ScmVarDef(Var(var),tag_parse value) 
+      | ScmPair (ScmSymbol "define", ScmPair(ScmSymbol var, ScmPair(value,ScmNil))) -> 
+        if (is_reserved_word var)
+          then raise (X_syntax "Define variable cannot be a reserved word")
+          else ScmVarDef(Var(var),tag_parse value) 
+      | ScmPair (ScmSymbol "define", ScmPair(ScmPair(ScmSymbol var, args), body)) -> 
+        if (is_reserved_word var)
+        then raise (X_syntax "Define variable cannot be a reserved word")
+        else
+          let lambda = ScmPair(ScmSymbol "lambda", ScmPair(args, body)) in 
+          tag_parse (ScmPair(ScmSymbol "define", ScmPair(ScmSymbol var, ScmPair(lambda, ScmNil))))
 
     | ScmPair (ScmSymbol "lambda", rest)
          when scm_improper_list rest ->
@@ -1288,7 +1298,7 @@ module Semantic_Analysis : SEMANTIC_ANALYSIS = struct
 
   let semantics expr =
     auto_box
-      (annotate_tail_calls
+      ((*annotate_tail_calls TODO: UNCOMMENT*) 
          (annotate_lexical_address expr));;
 
 end;; (* end of module Semantic_Analysis *)
@@ -1542,13 +1552,25 @@ let sprint_exprs' chan exprs =
        
          let collect_constants =
            let rec run = function (*changed here*)
-             | ScmConst' sexpr -> sexpr
-              | ScmVarGet' _ | ScmBox' _ | ScmBoxGet _-> []
-              | ScmIf' test, dif, dif -> (((run test) @ (run dit)) @ (run dif))
-              | ScmSeq exprs' | ScmOr' exprs' -> List.fold_left (fun consts expr' -> consts @ (run expr')) [] exprs'
-              | ScmVarSet' _,expr' | ScmVarSet' _,expr' | ScmBoxSet' _,expr' -> run expr'
-              | ScmLambda' _,_,expr' -> run expr'
-              | ScmApplic' expr',exprs'_ -> List.fold_left (fun consts expr' -> consts @ (run expr')) (run expr') exprs'
+             | ScmConst' sexpr -> [sexpr]
+              | ScmVarGet' (Var' (name , lex_addr)) | ScmBoxGet' (Var' (name , lex_addr)) | ScmBox' (Var' (name , lex_addr))
+                -> 
+                  (
+                    match lex_addr with
+                    | Free -> [ScmString name]
+                    | _ -> []
+                  )
+              | ScmIf' (test, dit, dif) -> (((run test) @ (run dit)) @ (run dif))
+              | ScmSeq' exprs' | ScmOr' exprs' -> List.fold_left (fun consts expr' -> consts @ (run expr')) [] exprs'
+              | ScmVarSet' (Var' (name, lex_addr),expr') | ScmBoxSet' (Var' (name, lex_addr),expr') | ScmVarDef' (Var' (name, lex_addr),expr')
+                -> 
+                  (
+                    match lex_addr with
+                    | Free -> [ScmString name] @ run expr'
+                    | _ -> run expr'
+                  )
+              | ScmLambda' (_,_,expr') -> run expr'
+              | ScmApplic' (expr',exprs',_) -> List.fold_left (fun consts expr' -> consts @ (run expr')) (run expr') exprs'
 
 
            and runs exprs' =
@@ -1611,12 +1633,12 @@ let sprint_exprs' chan exprs =
               ([RTTI "T_real"; QuadFloat x], 1 + word_size)
            | ScmVector s ->
               let len = List.length(s) in
-              let vec =  List.map (fun sexpr -> search_constant_address sexpr table) s in
-              ([RTTI "T_vector";len]@vec,1+word_size*(len+1)) (*changed here*)
+              let vec =  List.map (fun sexpr -> ConstPtr (search_constant_address sexpr table)) s in
+              ([RTTI "T_vector"; Quad len]@vec,1+word_size*(len+1)) (*changed here*)
            | ScmPair (car, cdr) ->
               let carAddr = search_constant_address car table in
               let cdrAddr = search_constant_address cdr table in
-              ([RTTI "T_pair";ConstPtr car; ConstPtr cdr] 1 + 2*word_size);; (*changed here*)
+              ([RTTI "T_pair";ConstPtr carAddr; ConstPtr cdrAddr] ,1 + 2*word_size);; (*changed here*)
        
          let make_constants_table =
            let rec run table loc = function
@@ -1702,21 +1724,20 @@ let sprint_exprs' chan exprs =
          let collect_free_vars =
            let rec run = function (*changed here*)
              | ScmConst' _ -> []
-             | ScmVarGet' (Var' name , lex_addr) | ScmBox' (Var' name , lex_addr) | ScmBoxGet' (Var' name , lex_addr) -> 
+             | ScmVarGet' Var'( name , lex_addr) | ScmBox' Var' (name , lex_addr) | ScmBoxGet' Var' (name , lex_addr) -> 
                 (match lex_addr with
                   | Free -> [name]
                   | _ -> []
                 )
-              | ScmIf' test, dit, dif -> (run test) @ (run dit) @ (run dif)
+              | ScmIf' (test, dit, dif) -> (run test) @ (run dit) @ (run dif)
               | ScmSeq' exprs' | ScmOr' exprs' -> List.fold_left (fun vars expr' -> vars @ (run expr')) [] exprs'
-              | ScmVarSet' (Var' name , lex_addr) expr' | ScmVarDef' (Var' name , lex_addr) expr' | ScmBoxSet' (Var' name , lex_addr) expr'
+              | ScmVarSet' (Var'( name , Free), expr') | ScmVarDef'(Var' ( name , Free), expr') | ScmBoxSet' (Var' ( name , Free) ,expr')
                 ->  
-                  (match lex_addr with
-                    | Free -> [name] @ (run expr')
-                    | _ -> (run expr')
-                  )
-              | ScmLambda' _,_,expr' -> run expr'
-              | ScmApplic' expr',exprs',_ ->  List.fold_left (fun vars expr' -> vars @ (run expr')) (run expr') exprs'
+                   [name] @ (run expr')
+              |ScmVarSet' (_, expr') | ScmVarDef'(_, expr') | ScmBoxSet' (_ ,expr')
+              -> (run expr')
+              | ScmLambda' (_,_,expr') -> run expr'
+              | ScmApplic' (expr',exprs',_ )->  List.fold_left (fun vars expr' -> vars @ (run expr')) (run expr') exprs'
                 
            and runs exprs' =
              List.fold_left
@@ -1740,40 +1761,39 @@ let sprint_exprs' chan exprs =
              | (v', x86_label) :: _ when v = v' -> x86_label
              | _ :: table -> run v table
            in run;;
-       
-         let asm_of_global_bindings global_bindings_table free_var_table =
-           String.concat "\n"
-             (List.map
-                (fun (scheme_name, asm_code_ptr) ->
-                  let free_var_label =
-                    search_free_var_table scheme_name free_var_table in
-                  (Printf.sprintf "\t; building closure for %s\n" scheme_name)
-                  ^ (Printf.sprintf "\tmov rdi, %s\n" free_var_label)
-                  ^ (Printf.sprintf "\tmov rsi, %s\n" asm_code_ptr)
-                  ^ "\tcall bind_primitive\n")
-                (List.filter
-                   (fun (scheme_name, _asm_code_ptr) ->
-                     match (List.assoc_opt scheme_name free_var_table) with
-                     | None -> false
-                     | Some _ -> true)
-                   global_bindings_table));;
-         
-         let asm_of_free_vars_table fvars_table consts_table=
-           let tmp = 
-             List.map
-               (fun (scm_var, asm_label) ->
-                 let addr =
-                   search_constant_address (ScmString scm_var) consts_table in
-                 (Printf.sprintf "%s:\t; location of %s\n" 
-                    asm_label scm_var)
-                 ^ "\tdq .undefined_object\n"
-                 ^ ".undefined_object:\n"
-                 ^ "\tdb T_undefined\n"
-                 ^ (Printf.sprintf "\tdq L_constants + %d\n"
-                      addr))
-               fvars_table in
-           String.concat "\n" tmp;;
-       
+           let asm_of_global_bindings global_bindings_table free_var_table =
+            String.concat "\n"
+              (List.map
+                 (fun (scheme_name, asm_code_ptr) ->
+                   let free_var_label =
+                     search_free_var_table scheme_name free_var_table in
+                   (Printf.sprintf "\t; building closure for %s\n" scheme_name)
+                   ^ (Printf.sprintf "\tmov rdi, %s\n" free_var_label)
+                   ^ (Printf.sprintf "\tmov rsi, %s\n" asm_code_ptr)
+                   ^ "\tcall bind_primitive\n")
+                 (List.filter
+                    (fun (scheme_name, _asm_code_ptr) ->
+                      match (List.assoc_opt scheme_name free_var_table) with
+                      | None -> false
+                      | Some _ -> true)
+                    global_bindings_table));;
+          
+          let asm_of_free_vars_table fvars_table consts_table=
+            let tmp = 
+              List.map
+                (fun (scm_var, asm_label) ->
+                  let addr =
+                    search_constant_address (ScmString scm_var) consts_table in
+                  (Printf.sprintf "%s:\t; location of %s\n" 
+                     asm_label scm_var)
+                  ^ "\tdq .undefined_object\n"
+                  ^ ".undefined_object:\n"
+                  ^ "\tdb T_undefined\n"
+                  ^ (Printf.sprintf "\tdq L_constants + %d\n"
+                       addr))
+                fvars_table in
+            String.concat "\n" tmp;;
+
          let make_make_label prefix =
            let index = ref 0 in
            fun () ->
@@ -1824,6 +1844,14 @@ let sprint_exprs' chan exprs =
          let code_gen exprs' =
            let consts = make_constants_table exprs' in
            let free_vars = make_free_vars_table exprs' in
+         (*
+           let temp = List.map (fun (a, _,_) ->  (print_string (string_of_sexpr a))) consts in (*TODO: REMOVE SIDE EFFECT*)
+           let temp = print_string "\n\n" in (*TODO: REMOVE SIDE EFFECT*)
+           let temp = List.map (fun (a, _) ->  (print_string  a)) free_vars in (*TODO: REMOVE SIDE EFFECT*)
+           let temp = print_string "\n\n" in (*TODO: REMOVE SIDE EFFECT*)
+           let temp = List.map (fun (_, b) ->  (print_string  b)) free_vars in (*TODO: REMOVE SIDE EFFECT*)
+           let temp = print_string "\n\n" in (*TODO: REMOVE SIDE EFFECT*)
+          *)
            let rec run params env = function
              | ScmConst' sexpr ->
                 let addr = search_constant_address sexpr consts in
@@ -1862,14 +1890,15 @@ let sprint_exprs' chan exprs =
                   (List.map (run params env) exprs')
              | ScmOr' exprs' -> (*changed here*)
               (
-                let exitString = make_if_end ()
+                let exit_label = make_if_end () in
                 let rec make_or = function
-                | [] -> (Printf.sprintf "%s:\n" exitString)
+                | [] -> (Printf.sprintf "%s:\n" exit_label)
                 | first :: rest -> first
                   ^"\tcmp rax, sob_false\n"
-                  ^(Print.sprintf "\tjne %s\n" exitString)
-                  ^(make_or rest) 
-                let orList = List.fold_left (fun strings expr' -> strings (run params env expr') ) [] exprs' in
+                  ^(Printf.sprintf "\tjne %s\n" exit_label)
+                  ^(make_or rest) in
+                let orList = List.map (fun expr' -> run params env expr') exprs' in
+                 (*List.fold_left (fun strings expr' -> strings @ (run params env expr') ) [] exprs' in*)
                 make_or orList
               )
                  
@@ -1882,7 +1911,6 @@ let sprint_exprs' chan exprs =
               
              | ScmVarSet' (Var' (v, Param minor), ScmBox' _) -> (*changed here*)
                 (
-                  let label = search_free_var_table v free_vars in
                   (Printf.sprintf "\t mov rbx, qword [rbp + 8 * (4 +%d)]\n" minor)
                                 ^"\t mov rdi, rax\n" (**)
                                 ^"\t MALLOC rax, 8\n"
@@ -1896,7 +1924,7 @@ let sprint_exprs' chan exprs =
                 (
                   let expr_code = (run params env expr') in
                   expr_code
-                  ^(Printf.sprintf "\tmov qword [rbp +8*(4+%s)],rax\n" minor)
+                  ^(Printf.sprintf "\tmov qword [rbp +8*(4+%d)],rax\n" minor)
                   ^"\tmov rax, sob_void\n"
                 )
              | ScmVarSet' (Var' (v, Bound (major, minor)), expr') -> (*changed here*)
@@ -1904,8 +1932,8 @@ let sprint_exprs' chan exprs =
                   let expr_code = (run params env expr') in
                   expr_code
                   ^"\tmov rbx, qword [rbp + 8*2]\n"
-                  ^(Printf.sprintf "\tmov rbx, qword [rbx + 8*%s]\n" major)
-                  ^(Printf.sprintf "\tmov qword [rbx + 8*%s],rax\n" minor)
+                  ^(Printf.sprintf "\tmov rbx, qword [rbx + 8*%d]\n" major)
+                  ^(Printf.sprintf "\tmov qword [rbx + 8*%d],rax\n" minor)
                   ^"\tmov rax, sob_void\n"
                 )
              | ScmVarDef' (Var' (v, Free), expr') ->
@@ -2005,7 +2033,7 @@ let sprint_exprs' chan exprs =
                 and label_loop_exit = make_lambda_opt_loop_exit ()
                 in
                 let param_num = List.length params' in
-                let free_vars_num = List.length opt in
+                let free_vars_num = 1 in (*List.length opt in *) (*changed here*)
                 let new_stack_size = param_num * 8 in
                 
                 (*setup for the code, 1.caller cbase pointer, 2.set up a new one and 3. allocate space at the end*)
@@ -2025,7 +2053,7 @@ let sprint_exprs' chan exprs =
                                                         \tjmp %s\n
                                                         %s:\n
                                                           "
-                                                       (List.length opt)   (* first   %d*)
+                                                       1 (* (List.length opt)   (* first   %d*) *)
                                                        label_loop_env      (* first   %s*)
                                                        label_loop_env_end  (* second  %s*)
                                                        label_loop_env      (* third   %s*)
@@ -2061,13 +2089,16 @@ let sprint_exprs' chan exprs =
                   %s:\n
                   "
                   label_arity_more
-                  num_params
+                  param_num
                   label_arity_more
                   label_stack_ok
+                  label_arity_more
                   label_stack_ok in
             
 
-                let compiled_body = generate_code body in
+                  (*^ (run (List.length params') (env + 1) body)*)
+               (* let compiled_body = run body in (*generate_code body in*) *)
+                let compiled_body  = run (List.length params') (env +1) body in (*TODO: check*)
 
                 
                 let tail_call_opt = (* Tail-call optimization*)
@@ -2190,26 +2221,24 @@ let sprint_exprs' chan exprs =
               ^ "\tcmp byte [rax], T_closure\n"
               ^ "\tjne L_error_non_closure\n"
               ^ "\tpush SOB_CLOSURE_ENV(rax)\n"
-              (*^ "\tcall SOB_CLOSURE_CODE(rax)\n" *)
               ^"\tpush qword [rbp + 8 *1]\n"
               ^"\tpush rax\n"
-              (* ^"\tpop rbp\n"*)
               ^"\tmov rbx, COUNT\n" (*original's function count*)
               ^"\tmov rbx, rbp + 8 * (4 + rbx)\n"  (*original's function first param's addr*)
               ^"\tmov rax, rbp - 8\n" (*calee's first param's addr*)
               ^"\tmov rbp, [rbp]\n" (*restore old rbp*)
               ^"\tmov rcx,0\n" (*i in loop (int i =0;i<m+3;i++) *)
-              ^"\tmov rdx, [esp + 8 * 4]\n" (*m*)
+              ^"\tmov rdx, [rsp + 8 * 4]\n" (*m*)
               ^"\tadd rdx, 3\n" (*m+3*)
               ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop)
               ^"\tcmp rcx, rdx\n"
               ^(Printf.sprintf "\tje %s\n" label_recycle_frame_loop_done)
               ^"\tmov [rbx+ 8 * rcx],[rax + 8 * rcx]\n"
               ^"\tadd rcx,1\n"
-              ^(Printf.sprintf "%\tjmp %s\n" label_recycle_frame_loop)
+              ^(Printf.sprintf "\tjmp %s\n" label_recycle_frame_loop)
               ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop_done)
               ^"\tpop rbx\n"
-              ^"\tmov esp, rax + 8 * rcx\n"
+              ^"\tmov rsp, rax + 8 * rcx\n"
               ^"\tjmp SOB_CLOSURE_CODE(rbx)\n"
 
            and runs params env exprs' =
