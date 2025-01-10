@@ -883,6 +883,42 @@ L_code_ptr_lognot:
         ret AND_KILL_FRAME(1)
 
 L_code_ptr_bin_apply:
+        enter 0, 0
+        cmp COUNT, 2
+        jne L_error_arg_count_2
+        mov rax, PARAM(2) ; list
+        mov rbx,0 ;list length count
+.L_length_loop ;this loop is to iterate through the list and count it's  (stop when encountering nil)
+        cmp byte [rax], sob_nil ;TODO: check if correct
+        je .L_loop_exit
+        add rbx,1
+        jmp .L_loop
+.L_length_loop_exit:
+        mov rax, PARAM(2) ; list
+        ;rbx contains list's length
+        mov rcx, PARAM(1) ; PROC
+        assert_closure(rcx)
+        mov rdx, 0 ;i in (int i =0;i<list.length;i++)
+        mov r8, RET_ADDR
+        mov rbp, OLD_RBP
+        mov rsp, rbp
+.L_loop: ;loop to push list's to stack. not done with push because we need to invert it's order on stack.
+        cmp rdx, rbx ; rdx=index, rbx=count
+        je L_loop_exit
+        mov [rbp-8*(rbx - rdx + 1)], SOB_PAIR_CAR(rax)
+        ;;above line should push parameters in backward order (for list (1 2 3) should push 1 2 3 to stack)
+        mov rax, SOB_PAIR_CDR(rax)
+        add rdx, 1
+        jmp .L_loop
+.L_loop_exit:
+        mov rsp, rbx-8 * (rbx + 1) ;fix stack pointer to include added parameters in loop.
+        push rbx
+        push SOB_CLOSURE_ENV(rcx)
+        push r8
+        jmp SOB_CLOSURE_CODE(rcx)
+
+        
+
         
 ;;; fill in for final project!
 
