@@ -886,17 +886,19 @@ L_code_ptr_bin_apply:
         enter 0, 0
         cmp COUNT, 2
         jne L_error_arg_count_2
-        mov rax, PARAM(2) ; list
+        mov rax, PARAM(1) ; list
         mov rbx,0 ;list length count
 .L_length_loop: ;this loop is to iterate through the list and count it's  (stop when encountering nil)
         cmp byte [rax], T_nil ;TODO: check if correct
-        je .L_loop_exit
+        je .L_length_loop_exit
+        assert_pair(rax)
+        mov rax, SOB_PAIR_CDR(rax)
         add rbx,1
-        jmp .L_loop
+        jmp .L_length_loop
 .L_length_loop_exit: ;1381
-        mov rax, PARAM(2) ; list
+        mov rax, PARAM(1) ; list
         ;rbx contains list's length
-        mov rcx, PARAM(1) ; PROC
+        mov rcx, PARAM(0) ; PROC
         assert_closure(rcx)
         mov rdx, 0 ;i in (int i =0;i<list.length;i++)
         mov r8, RET_ADDR

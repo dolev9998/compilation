@@ -1298,7 +1298,7 @@ module Semantic_Analysis : SEMANTIC_ANALYSIS = struct
 
   let semantics expr =
     auto_box
-      ((*annotate_tail_calls TODO: UNCOMMENT*) 
+      (annotate_tail_calls 
          (annotate_lexical_address expr));;
 
 end;; (* end of module Semantic_Analysis *)
@@ -2050,10 +2050,10 @@ let sprint_exprs' chan exprs =
                 let new_stack_size = param_num * 8 in
                 
                 (*setup for the code, 1.caller cbase pointer, 2.set up a new one and 3. allocate space at the end*)
-                let entry =  Printf.sprintf 
-                        "\tpush rbp \n 
-                        \tmov rbp, rsp \n
-                        \tsub rsp, %d  \n" new_stack_size in
+let entry =  Printf.sprintf 
+        "\tpush rbp \n 
+        \tmov rbp, rsp \n
+        \tsub rsp, %d  \n" new_stack_size in
 
                 (*create enviorment for the closure*)                                        
 let setup = Printf.sprintf          
@@ -2244,21 +2244,35 @@ Printf.sprintf "
               ^"\tpush qword [rbp + 8 *1]\n"
               ^"\tpush rax\n"
               ^"\tmov rbx, COUNT\n" (*original's function count*)
-              ^"\tmov rbx, rbp + 8 * (4 + rbx)\n"  (*original's function first param's addr*)
-              ^"\tmov rax, rbp - 8\n" (*calee's first param's addr*)
+              ^"\tadd rbx,3\n"
+              ^"\tshl rbx,3\n"
+              ^"\tadd rbx, rbp\n"
+              (*^"\tmov rbx, rbp + 8 * (4 + (COUNT - 1))\n"  (*original's function first param's addr*)*)
+              ^"\tmov rdi, rbx\n" (*store curr frame start for later use*)
+              ^"\tmov rax, rbp\n"
+              ^"\tsub rax, 8\n" (*calee's first param's addr*)
               ^"\tmov rbp, [rbp]\n" (*restore old rbp*)
               ^"\tmov rcx,0\n" (*i in loop (int i =0;i<m+3;i++) *)
-              ^"\tmov rdx, [rsp + 8 * 4]\n" (*m*)
+              ^"\tmov rdx, [rsp + 8 * 3]\n" (*m*)
               ^"\tadd rdx, 3\n" (*m+3*)
               ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop)
               ^"\tcmp rcx, rdx\n"
               ^(Printf.sprintf "\tje %s\n" label_recycle_frame_loop_done)
-              ^"\tmov [rbx+ 8 * rcx],[rax + 8 * rcx]\n"
+              ^"\tmov r9, rcx\n"
+               ^"\tshl r9, 3\n"
+              ^"\tadd r9,rbx\n"
+              (*^"\tmov [rbx+ 8 * rcx],[rax + 8 * rcx]\n"*)
+              ^"\tmov r8, [rax + 8 * rcx]\n"
+              ^"\tmov [r9], r8\n"
               ^"\tadd rcx,1\n"
               ^(Printf.sprintf "\tjmp %s\n" label_recycle_frame_loop)
               ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop_done)
               ^"\tpop rbx\n"
-              ^"\tmov rsp, rax + 8 * rcx\n"
+              ^"\tsub rcx, 1\n"
+              ^"\tshl rcx,3\n"
+              ^"\tadd rdi,rcx\n"
+              ^"\tmov rsp,rdi\n"
+              (*^"\tmov rsp, rdi + 8 * rcx\n"*)
               ^"\tjmp SOB_CLOSURE_CODE(rbx)\n"
 
            and runs params env exprs' =
