@@ -1096,7 +1096,7 @@ module Semantic_Analysis : SEMANTIC_ANALYSIS = struct
       (* add support for lambda *)
       | ScmLambda'(params,kind,expr') -> ScmLambda'(params,kind,run true expr') 
       (* add support for applic *)
-      | ScmApplic'(proc,params,kind) -> ScmApplic'(run true proc, (List.map (fun param -> run false param) params),(if in_tail then Tail_Call else Non_Tail_Call))
+      | ScmApplic'(proc,params,kind) -> ScmApplic'(run false proc, (List.map (fun param -> run false param) params),(if in_tail then Tail_Call else Non_Tail_Call))
     and runl in_tail expr = function
       | [] -> [run in_tail expr]
       | expr' :: exprs -> (run false expr) :: (runl in_tail expr' exprs)
@@ -1298,7 +1298,7 @@ module Semantic_Analysis : SEMANTIC_ANALYSIS = struct
 
   let semantics expr =
     auto_box
-      ( annotate_tail_calls  
+      (annotate_tail_calls 
          (annotate_lexical_address expr));;
 
 end;; (* end of module Semantic_Analysis *)
@@ -2253,6 +2253,9 @@ let sprint_exprs' chan exprs =
                      (List.rev args)) in
               let proc_code = run params env proc in
               "\t; preparing a tail-call\n"
+              (* ^"\tpush rbp\n"
+              ^"\tmov rbp,rsp\n" *)
+              (* ^"\tenter 0, 0\n" *)
               ^ args_code
               ^ (Printf.sprintf "\tpush %d\t; arg count\n" (List.length args))
               ^ proc_code
@@ -2260,18 +2263,21 @@ let sprint_exprs' chan exprs =
               ^ "\tjne L_error_non_closure\n"
               ^ "\tpush SOB_CLOSURE_ENV(rax)\n"
               ^"\tpush qword [rbp + 8 *1]\n" (*old ret_addr*)
-              ^"\tpush rax\n"
+              ^"\tmov r8, rax\n"
               ^"\tmov rbx, COUNT\n" (*original's function count*)
               ^"\tadd rbx,3\n"
               ^"\tshl rbx,3\n"
               ^"\tadd rbx, rbp\n" (*curr frame start (last arg) *)
               (*^"\tmov rbx, rbp + 8 * (4 + (COUNT - 1))\n"  (*original's function first param's addr*)*)
-              ^"\tmov rdi, rbx\n" (*store curr frame start for later use*)
-              ^"\tmov rax, rbp\n"
-              ^"\tsub rax, 8\n" (*calee's first param's addr*)
               ^"\tmov rbp, [rbp]\n" (*restore old rbp*)
               ^"\tmov rcx,0\n" (*i in loop (int i =0;i<m+3;i++) *)
               ^(Printf.sprintf "\tmov rdx, %d\n" ((List.length args ) + 3)) (*m+3*)
+              ^"\tmov rax, rdx\n"
+              ^"\tdec rax\n"
+              ^"\tshl rax,3\n"
+              ^"\tadd rax, rsp\n" (*rax = rsp + 8 * (m+2) *)
+              (* ^"\tmov rdx, [rsp+24]\n"
+              ^"\tadd rdx, 3\n" *)
               ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop)
               ^"\tcmp rcx, rdx\n"
               ^(Printf.sprintf "\tje %s\n" label_recycle_frame_loop_done)
@@ -2282,13 +2288,13 @@ let sprint_exprs' chan exprs =
               ^"\tadd rcx,1\n"
               ^(Printf.sprintf "\tjmp %s\n" label_recycle_frame_loop)
               ^(Printf.sprintf "\t%s:\n" label_recycle_frame_loop_done)
-              ^"\tpop rbx\n"
-              ^"\tsub rcx, 1\n" 
+              (* ^"\tsub rcx, 1\n" 
               ^"\tshl rcx,3\n"
-              ^"\tsub rdi,rcx\n"
-              ^"\tmov rsp,rdi\n"
+              ^"\tsub rdi,rcx\n" *)
+              ^"\tadd rbx,8\n"
+              ^"\tmov rsp,rbx\n"
               (*^"\tmov rsp, rdi + 8 * rcx\n"*)
-              ^"\tjmp SOB_CLOSURE_CODE(rbx)\n"
+              ^"\tjmp SOB_CLOSURE_CODE(r8)\n"
 
            and runs params env exprs' =
              List.map (fun expr' -> run params env expr') exprs' in

@@ -882,6 +882,7 @@ L_code_ptr_lognot:
         leave
         ret AND_KILL_FRAME(1)
 
+
 L_code_ptr_bin_apply:
         enter 0, 0
         cmp COUNT, 2
@@ -931,10 +932,6 @@ L_code_ptr_bin_apply:
         push r8
         jmp SOB_CLOSURE_CODE(rcx)
 
-        
-
-        
-;;; fill in for final project!
 
 L_code_ptr_is_null:
         enter 0, 0
@@ -1866,7 +1863,7 @@ L_code_ptr_raw_equal_zz:
 .L_exit:
 	leave
 	ret AND_KILL_FRAME(2)
-        
+
 L_code_ptr_raw_equal_qq:
         enter 0, 0
         cmp COUNT, 2
