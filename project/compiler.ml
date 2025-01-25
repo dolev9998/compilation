@@ -1298,7 +1298,7 @@ module Semantic_Analysis : SEMANTIC_ANALYSIS = struct
 
   let semantics expr =
     auto_box
-      (annotate_tail_calls 
+      ( (*annotate_tail_calls  *)
          (annotate_lexical_address expr));;
 
 end;; (* end of module Semantic_Analysis *)
@@ -2184,7 +2184,7 @@ let sprint_exprs' chan exprs =
                     ^ "\tshl rcx, 3\n" 
              
            
-                    ^ (Printf.sprintf "\t%s:\n" label_shrink_stack)
+                    ^ (Printf.sprintf "\t%s:\n" label_stack_shrink)
                     ^ "\tcmp rdx, 0\n"
                     ^ (Printf.sprintf "\tje %s\n" label_end_opt_loop)
                     ^ "\tmov rax, rbx\n"    

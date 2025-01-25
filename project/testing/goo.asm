@@ -609,729 +609,269 @@ L_constants:
 	dq 5
 	db 0x61, 0x70, 0x70, 0x6C, 0x79
 	; L_constants + 2016:
-	db T_string	; "ormap"
-	dq 5
-	db 0x6F, 0x72, 0x6D, 0x61, 0x70
-	; L_constants + 2030:
 	db T_string	; "map"
 	dq 3
 	db 0x6D, 0x61, 0x70
-	; L_constants + 2042:
-	db T_string	; "andmap"
-	dq 6
-	db 0x61, 0x6E, 0x64, 0x6D, 0x61, 0x70
-	; L_constants + 2057:
-	db T_string	; "reverse"
-	dq 7
-	db 0x72, 0x65, 0x76, 0x65, 0x72, 0x73, 0x65
-	; L_constants + 2073:
-	db T_string	; "fold-left"
-	dq 9
-	db 0x66, 0x6F, 0x6C, 0x64, 0x2D, 0x6C, 0x65, 0x66
-	db 0x74
-	; L_constants + 2091:
-	db T_string	; "append"
-	dq 6
-	db 0x61, 0x70, 0x70, 0x65, 0x6E, 0x64
-	; L_constants + 2106:
-	db T_string	; "fold-right"
-	dq 10
-	db 0x66, 0x6F, 0x6C, 0x64, 0x2D, 0x72, 0x69, 0x67
-	db 0x68, 0x74
-	; L_constants + 2125:
-	db T_string	; "+"
-	dq 1
-	db 0x2B
-	; L_constants + 2135:
-	db T_integer	; 0
-	dq 0
-	; L_constants + 2144:
-	db T_string	; "__bin_integer_to_fr...
-	dq 25
-	db 0x5F, 0x5F, 0x62, 0x69, 0x6E, 0x5F, 0x69, 0x6E
-	db 0x74, 0x65, 0x67, 0x65, 0x72, 0x5F, 0x74, 0x6F
-	db 0x5F, 0x66, 0x72, 0x61, 0x63, 0x74, 0x69, 0x6F
-	db 0x6E
-	; L_constants + 2178:
-	db T_interned_symbol	; +
-	dq L_constants + 2125
-	; L_constants + 2187:
-	db T_string	; "all arguments need ...
-	dq 32
-	db 0x61, 0x6C, 0x6C, 0x20, 0x61, 0x72, 0x67, 0x75
-	db 0x6D, 0x65, 0x6E, 0x74, 0x73, 0x20, 0x6E, 0x65
-	db 0x65, 0x64, 0x20, 0x74, 0x6F, 0x20, 0x62, 0x65
-	db 0x20, 0x6E, 0x75, 0x6D, 0x62, 0x65, 0x72, 0x73
-	; L_constants + 2228:
-	db T_string	; "-"
-	dq 1
-	db 0x2D
-	; L_constants + 2238:
-	db T_string	; "real"
-	dq 4
-	db 0x72, 0x65, 0x61, 0x6C
-	; L_constants + 2251:
-	db T_interned_symbol	; -
-	dq L_constants + 2228
-	; L_constants + 2260:
-	db T_string	; "*"
-	dq 1
-	db 0x2A
-	; L_constants + 2270:
-	db T_integer	; 1
-	dq 1
-	; L_constants + 2279:
-	db T_interned_symbol	; *
-	dq L_constants + 2260
-	; L_constants + 2288:
-	db T_string	; "/"
-	dq 1
-	db 0x2F
-	; L_constants + 2298:
-	db T_interned_symbol	; /
-	dq L_constants + 2288
-	; L_constants + 2307:
-	db T_string	; "fact"
-	dq 4
-	db 0x66, 0x61, 0x63, 0x74
-	; L_constants + 2320:
-	db T_string	; "<"
-	dq 1
-	db 0x3C
-	; L_constants + 2330:
-	db T_string	; "<="
-	dq 2
-	db 0x3C, 0x3D
-	; L_constants + 2341:
-	db T_string	; ">"
-	dq 1
-	db 0x3E
-	; L_constants + 2351:
-	db T_string	; ">="
-	dq 2
-	db 0x3E, 0x3D
-	; L_constants + 2362:
-	db T_string	; "="
-	dq 1
-	db 0x3D
-	; L_constants + 2372:
-	db T_string	; "generic-comparator"
-	dq 18
-	db 0x67, 0x65, 0x6E, 0x65, 0x72, 0x69, 0x63, 0x2D
-	db 0x63, 0x6F, 0x6D, 0x70, 0x61, 0x72, 0x61, 0x74
-	db 0x6F, 0x72
-	; L_constants + 2399:
-	db T_interned_symbol	; generic-comparator
-	dq L_constants + 2372
-	; L_constants + 2408:
-	db T_string	; "all the arguments m...
-	dq 33
-	db 0x61, 0x6C, 0x6C, 0x20, 0x74, 0x68, 0x65, 0x20
-	db 0x61, 0x72, 0x67, 0x75, 0x6D, 0x65, 0x6E, 0x74
-	db 0x73, 0x20, 0x6D, 0x75, 0x73, 0x74, 0x20, 0x62
-	db 0x65, 0x20, 0x6E, 0x75, 0x6D, 0x62, 0x65, 0x72
-	db 0x73
-	; L_constants + 2450:
-	db T_string	; "char<?"
-	dq 6
-	db 0x63, 0x68, 0x61, 0x72, 0x3C, 0x3F
-	; L_constants + 2465:
-	db T_string	; "char<=?"
-	dq 7
-	db 0x63, 0x68, 0x61, 0x72, 0x3C, 0x3D, 0x3F
-	; L_constants + 2481:
-	db T_string	; "char=?"
-	dq 6
-	db 0x63, 0x68, 0x61, 0x72, 0x3D, 0x3F
-	; L_constants + 2496:
-	db T_string	; "char>?"
-	dq 6
-	db 0x63, 0x68, 0x61, 0x72, 0x3E, 0x3F
-	; L_constants + 2511:
-	db T_string	; "char>=?"
-	dq 7
-	db 0x63, 0x68, 0x61, 0x72, 0x3E, 0x3D, 0x3F
-	; L_constants + 2527:
-	db T_string	; "char-downcase"
-	dq 13
-	db 0x63, 0x68, 0x61, 0x72, 0x2D, 0x64, 0x6F, 0x77
-	db 0x6E, 0x63, 0x61, 0x73, 0x65
-	; L_constants + 2549:
-	db T_string	; "char-upcase"
-	dq 11
-	db 0x63, 0x68, 0x61, 0x72, 0x2D, 0x75, 0x70, 0x63
-	db 0x61, 0x73, 0x65
-	; L_constants + 2569:
-	db T_char, 0x41	; #\A
-	; L_constants + 2571:
-	db T_char, 0x5A	; #\Z
-	; L_constants + 2573:
-	db T_char, 0x61	; #\a
-	; L_constants + 2575:
-	db T_char, 0x7A	; #\z
-free_var_0:	; location of *
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2260
-
-free_var_1:	; location of +
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2125
-
-free_var_2:	; location of -
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2228
-
-free_var_3:	; location of /
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2288
-
-free_var_4:	; location of <
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2320
-
-free_var_5:	; location of <=
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2330
-
-free_var_6:	; location of =
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2362
-
-free_var_7:	; location of >
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2341
-
-free_var_8:	; location of >=
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2351
-
-free_var_9:	; location of __bin-add-qq
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 617
-
-free_var_10:	; location of __bin-add-rr
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 533
-
-free_var_11:	; location of __bin-add-zz
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 701
-
-free_var_12:	; location of __bin-apply
+	; L_constants + 2028:
+	db T_integer	; 5
+	dq 5
+free_var_0:	; location of __bin-apply
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 513
 
-free_var_13:	; location of __bin-div-qq
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 680
-
-free_var_14:	; location of __bin-div-rr
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 596
-
-free_var_15:	; location of __bin-div-zz
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 764
-
-free_var_16:	; location of __bin-equal-qq
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 903
-
-free_var_17:	; location of __bin-equal-rr
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 880
-
-free_var_18:	; location of __bin-equal-zz
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 926
-
-free_var_19:	; location of __bin-less-than-qq
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 826
-
-free_var_20:	; location of __bin-less-than-rr
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 799
-
-free_var_21:	; location of __bin-less-than-zz
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 853
-
-free_var_22:	; location of __bin-mul-qq
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 659
-
-free_var_23:	; location of __bin-mul-rr
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 575
-
-free_var_24:	; location of __bin-mul-zz
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 743
-
-free_var_25:	; location of __bin-sub-qq
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 638
-
-free_var_26:	; location of __bin-sub-rr
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 554
-
-free_var_27:	; location of __bin-sub-zz
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 722
-
-free_var_28:	; location of __bin_integer_to_fraction
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2144
-
-free_var_29:	; location of __integer-to-fraction
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 1186
-
-free_var_30:	; location of andmap
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2042
-
-free_var_31:	; location of append
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2091
-
-free_var_32:	; location of apply
+free_var_1:	; location of apply
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 2002
 
-free_var_33:	; location of caaaar
+free_var_2:	; location of caaaar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1665
 
-free_var_34:	; location of caaadr
+free_var_3:	; location of caaadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1680
 
-free_var_35:	; location of caaar
+free_var_4:	; location of caaar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1553
 
-free_var_36:	; location of caadar
+free_var_5:	; location of caadar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1695
 
-free_var_37:	; location of caaddr
+free_var_6:	; location of caaddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1710
 
-free_var_38:	; location of caadr
+free_var_7:	; location of caadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1567
 
-free_var_39:	; location of caar
+free_var_8:	; location of caar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1501
 
-free_var_40:	; location of cadaar
+free_var_9:	; location of cadaar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1725
 
-free_var_41:	; location of cadadr
+free_var_10:	; location of cadadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1740
 
-free_var_42:	; location of cadar
+free_var_11:	; location of cadar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1581
 
-free_var_43:	; location of caddar
+free_var_12:	; location of caddar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1755
 
-free_var_44:	; location of cadddr
+free_var_13:	; location of cadddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1770
 
-free_var_45:	; location of caddr
+free_var_14:	; location of caddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1595
 
-free_var_46:	; location of cadr
+free_var_15:	; location of cadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1514
 
-free_var_47:	; location of car
+free_var_16:	; location of car
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 277
 
-free_var_48:	; location of cdaaar
+free_var_17:	; location of cdaaar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1785
 
-free_var_49:	; location of cdaadr
+free_var_18:	; location of cdaadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1800
 
-free_var_50:	; location of cdaar
+free_var_19:	; location of cdaar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1609
 
-free_var_51:	; location of cdadar
+free_var_20:	; location of cdadar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1815
 
-free_var_52:	; location of cdaddr
+free_var_21:	; location of cdaddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1830
 
-free_var_53:	; location of cdadr
+free_var_22:	; location of cdadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1623
 
-free_var_54:	; location of cdar
+free_var_23:	; location of cdar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1527
 
-free_var_55:	; location of cddaar
+free_var_24:	; location of cddaar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1845
 
-free_var_56:	; location of cddadr
+free_var_25:	; location of cddadr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1860
 
-free_var_57:	; location of cddar
+free_var_26:	; location of cddar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1637
 
-free_var_58:	; location of cdddar
+free_var_27:	; location of cdddar
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1875
 
-free_var_59:	; location of cddddr
+free_var_28:	; location of cddddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1890
 
-free_var_60:	; location of cdddr
+free_var_29:	; location of cdddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1651
 
-free_var_61:	; location of cddr
+free_var_30:	; location of cddr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1540
 
-free_var_62:	; location of cdr
+free_var_31:	; location of cdr
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 289
 
-free_var_63:	; location of char->integer
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 425
-
-free_var_64:	; location of char-downcase
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2527
-
-free_var_65:	; location of char-upcase
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2549
-
-free_var_66:	; location of char<=?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2465
-
-free_var_67:	; location of char<?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2450
-
-free_var_68:	; location of char=?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2481
-
-free_var_69:	; location of char>=?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2511
-
-free_var_70:	; location of char>?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2496
-
-free_var_71:	; location of cons
+free_var_32:	; location of cons
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 223
 
-free_var_72:	; location of error
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 785
-
-free_var_73:	; location of fact
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2307
-
-free_var_74:	; location of fold-left
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2073
-
-free_var_75:	; location of fold-right
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2106
-
-free_var_76:	; location of fraction->real
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 402
-
-free_var_77:	; location of fraction?
+free_var_33:	; location of fraction?
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 152
 
-free_var_78:	; location of integer->char
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 447
-
-free_var_79:	; location of integer->real
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 380
-
-free_var_80:	; location of integer?
+free_var_34:	; location of integer?
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 496
 
-free_var_81:	; location of list
+free_var_35:	; location of list
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1919
 
-free_var_82:	; location of list*
+free_var_36:	; location of list*
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1962
 
-free_var_83:	; location of list?
+free_var_37:	; location of list?
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1905
 
-free_var_84:	; location of map
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2030
-
-free_var_85:	; location of not
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 1932
-
-free_var_86:	; location of null?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 6
-
-free_var_87:	; location of ormap
+free_var_38:	; location of map
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 2016
 
-free_var_88:	; location of pair?
+free_var_39:	; location of not
+	dq .undefined_object
+.undefined_object:
+	db T_undefined
+	dq L_constants + 1932
+
+free_var_40:	; location of null?
+	dq .undefined_object
+.undefined_object:
+	db T_undefined
+	dq L_constants + 6
+
+free_var_41:	; location of pair?
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 20
 
-free_var_89:	; location of rational?
+free_var_42:	; location of rational?
 	dq .undefined_object
 .undefined_object:
 	db T_undefined
 	dq L_constants + 1944
-
-free_var_90:	; location of real
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2238
-
-free_var_91:	; location of real?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 138
-
-free_var_92:	; location of reverse
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 2057
-
-free_var_93:	; location of zero?
-	dq .undefined_object
-.undefined_object:
-	db T_undefined
-	dq L_constants + 482
 
 
 extern printf, fprintf, stdout, stderr, fwrite, exit, putchar, getchar
@@ -1344,175 +884,45 @@ main:
         push Lend
         enter 0, 0
 	; building closure for null?
-	mov rdi, free_var_86
+	mov rdi, free_var_40
 	mov rsi, L_code_ptr_is_null
 	call bind_primitive
 
 	; building closure for pair?
-	mov rdi, free_var_88
+	mov rdi, free_var_41
 	mov rsi, L_code_ptr_is_pair
 	call bind_primitive
 
-	; building closure for real?
-	mov rdi, free_var_91
-	mov rsi, L_code_ptr_is_real
-	call bind_primitive
-
 	; building closure for fraction?
-	mov rdi, free_var_77
+	mov rdi, free_var_33
 	mov rsi, L_code_ptr_is_fraction
 	call bind_primitive
 
 	; building closure for cons
-	mov rdi, free_var_71
+	mov rdi, free_var_32
 	mov rsi, L_code_ptr_cons
 	call bind_primitive
 
 	; building closure for car
-	mov rdi, free_var_47
+	mov rdi, free_var_16
 	mov rsi, L_code_ptr_car
 	call bind_primitive
 
 	; building closure for cdr
-	mov rdi, free_var_62
+	mov rdi, free_var_31
 	mov rsi, L_code_ptr_cdr
 	call bind_primitive
 
-	; building closure for integer->real
-	mov rdi, free_var_79
-	mov rsi, L_code_ptr_integer_to_real
-	call bind_primitive
-
-	; building closure for fraction->real
-	mov rdi, free_var_76
-	mov rsi, L_code_ptr_fraction_to_real
-	call bind_primitive
-
-	; building closure for char->integer
-	mov rdi, free_var_63
-	mov rsi, L_code_ptr_char_to_integer
-	call bind_primitive
-
-	; building closure for integer->char
-	mov rdi, free_var_78
-	mov rsi, L_code_ptr_integer_to_char
-	call bind_primitive
-
-	; building closure for zero?
-	mov rdi, free_var_93
-	mov rsi, L_code_ptr_is_zero
-	call bind_primitive
-
 	; building closure for integer?
-	mov rdi, free_var_80
+	mov rdi, free_var_34
 	mov rsi, L_code_ptr_is_integer
 	call bind_primitive
 
 	; building closure for __bin-apply
-	mov rdi, free_var_12
+	mov rdi, free_var_0
 	mov rsi, L_code_ptr_bin_apply
 	call bind_primitive
 
-	; building closure for __bin-add-rr
-	mov rdi, free_var_10
-	mov rsi, L_code_ptr_raw_bin_add_rr
-	call bind_primitive
-
-	; building closure for __bin-sub-rr
-	mov rdi, free_var_26
-	mov rsi, L_code_ptr_raw_bin_sub_rr
-	call bind_primitive
-
-	; building closure for __bin-mul-rr
-	mov rdi, free_var_23
-	mov rsi, L_code_ptr_raw_bin_mul_rr
-	call bind_primitive
-
-	; building closure for __bin-div-rr
-	mov rdi, free_var_14
-	mov rsi, L_code_ptr_raw_bin_div_rr
-	call bind_primitive
-
-	; building closure for __bin-add-qq
-	mov rdi, free_var_9
-	mov rsi, L_code_ptr_raw_bin_add_qq
-	call bind_primitive
-
-	; building closure for __bin-sub-qq
-	mov rdi, free_var_25
-	mov rsi, L_code_ptr_raw_bin_sub_qq
-	call bind_primitive
-
-	; building closure for __bin-mul-qq
-	mov rdi, free_var_22
-	mov rsi, L_code_ptr_raw_bin_mul_qq
-	call bind_primitive
-
-	; building closure for __bin-div-qq
-	mov rdi, free_var_13
-	mov rsi, L_code_ptr_raw_bin_div_qq
-	call bind_primitive
-
-	; building closure for __bin-add-zz
-	mov rdi, free_var_11
-	mov rsi, L_code_ptr_raw_bin_add_zz
-	call bind_primitive
-
-	; building closure for __bin-sub-zz
-	mov rdi, free_var_27
-	mov rsi, L_code_ptr_raw_bin_sub_zz
-	call bind_primitive
-
-	; building closure for __bin-mul-zz
-	mov rdi, free_var_24
-	mov rsi, L_code_ptr_raw_bin_mul_zz
-	call bind_primitive
-
-	; building closure for __bin-div-zz
-	mov rdi, free_var_15
-	mov rsi, L_code_ptr_raw_bin_div_zz
-	call bind_primitive
-
-	; building closure for error
-	mov rdi, free_var_72
-	mov rsi, L_code_ptr_error
-	call bind_primitive
-
-	; building closure for __bin-less-than-rr
-	mov rdi, free_var_20
-	mov rsi, L_code_ptr_raw_less_than_rr
-	call bind_primitive
-
-	; building closure for __bin-less-than-qq
-	mov rdi, free_var_19
-	mov rsi, L_code_ptr_raw_less_than_qq
-	call bind_primitive
-
-	; building closure for __bin-less-than-zz
-	mov rdi, free_var_21
-	mov rsi, L_code_ptr_raw_less_than_zz
-	call bind_primitive
-
-	; building closure for __bin-equal-rr
-	mov rdi, free_var_17
-	mov rsi, L_code_ptr_raw_equal_rr
-	call bind_primitive
-
-	; building closure for __bin-equal-qq
-	mov rdi, free_var_16
-	mov rsi, L_code_ptr_raw_equal_qq
-	call bind_primitive
-
-	; building closure for __bin-equal-zz
-	mov rdi, free_var_18
-	mov rsi, L_code_ptr_raw_equal_zz
-	call bind_primitive
-
-	; building closure for __integer-to-fraction
-	mov rdi, free_var_29
-	mov rsi, L_code_ptr_integer_to_fraction
-	call bind_primitive
-
 	mov rdi, (1 + 8 + 8)	; sob closure
 	call malloc
 	push rax
@@ -1524,46 +934,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0001:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0787:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0001
+	je .L_lambda_simple_env_end_0787
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0001
-.L_lambda_simple_env_end_0001:
+	jmp .L_lambda_simple_env_loop_0787
+.L_lambda_simple_env_end_0787:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0001:	; copy params
+.L_lambda_simple_params_loop_0787:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0001
+	je .L_lambda_simple_params_end_0787
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0001
-.L_lambda_simple_params_end_0001:
+	jmp .L_lambda_simple_params_loop_0787
+.L_lambda_simple_params_end_0787:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0001
-	jmp .L_lambda_simple_end_0001
-.L_lambda_simple_code_0001:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0787
+	jmp .L_lambda_simple_end_0787
+.L_lambda_simple_code_0787:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0001
+	je .L_lambda_simple_arity_check_ok_0837
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0001:
+.L_lambda_simple_arity_check_ok_0837:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1572,7 +982,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1581,8 +991,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0001:	; new closure is in rax
-	mov qword [free_var_39], rax
+.L_lambda_simple_end_0787:	; new closure is in rax
+	mov qword [free_var_8], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -1598,46 +1008,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0002:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0788:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0002
+	je .L_lambda_simple_env_end_0788
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0002
-.L_lambda_simple_env_end_0002:
+	jmp .L_lambda_simple_env_loop_0788
+.L_lambda_simple_env_end_0788:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0002:	; copy params
+.L_lambda_simple_params_loop_0788:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0002
+	je .L_lambda_simple_params_end_0788
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0002
-.L_lambda_simple_params_end_0002:
+	jmp .L_lambda_simple_params_loop_0788
+.L_lambda_simple_params_end_0788:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0002
-	jmp .L_lambda_simple_end_0002
-.L_lambda_simple_code_0002:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0788
+	jmp .L_lambda_simple_end_0788
+.L_lambda_simple_code_0788:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0002
+	je .L_lambda_simple_arity_check_ok_0838
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0002:
+.L_lambda_simple_arity_check_ok_0838:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1646,7 +1056,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1655,8 +1065,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0002:	; new closure is in rax
-	mov qword [free_var_46], rax
+.L_lambda_simple_end_0788:	; new closure is in rax
+	mov qword [free_var_15], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -1672,46 +1082,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0003:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0789:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0003
+	je .L_lambda_simple_env_end_0789
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0003
-.L_lambda_simple_env_end_0003:
+	jmp .L_lambda_simple_env_loop_0789
+.L_lambda_simple_env_end_0789:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0003:	; copy params
+.L_lambda_simple_params_loop_0789:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0003
+	je .L_lambda_simple_params_end_0789
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0003
-.L_lambda_simple_params_end_0003:
+	jmp .L_lambda_simple_params_loop_0789
+.L_lambda_simple_params_end_0789:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0003
-	jmp .L_lambda_simple_end_0003
-.L_lambda_simple_code_0003:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0789
+	jmp .L_lambda_simple_end_0789
+.L_lambda_simple_code_0789:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0003
+	je .L_lambda_simple_arity_check_ok_0839
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0003:
+.L_lambda_simple_arity_check_ok_0839:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1720,7 +1130,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1729,8 +1139,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0003:	; new closure is in rax
-	mov qword [free_var_54], rax
+.L_lambda_simple_end_0789:	; new closure is in rax
+	mov qword [free_var_23], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -1746,46 +1156,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0004:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_078a:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0004
+	je .L_lambda_simple_env_end_078a
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0004
-.L_lambda_simple_env_end_0004:
+	jmp .L_lambda_simple_env_loop_078a
+.L_lambda_simple_env_end_078a:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0004:	; copy params
+.L_lambda_simple_params_loop_078a:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0004
+	je .L_lambda_simple_params_end_078a
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0004
-.L_lambda_simple_params_end_0004:
+	jmp .L_lambda_simple_params_loop_078a
+.L_lambda_simple_params_end_078a:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0004
-	jmp .L_lambda_simple_end_0004
-.L_lambda_simple_code_0004:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_078a
+	jmp .L_lambda_simple_end_078a
+.L_lambda_simple_code_078a:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0004
+	je .L_lambda_simple_arity_check_ok_083a
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0004:
+.L_lambda_simple_arity_check_ok_083a:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1794,7 +1204,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1803,8 +1213,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0004:	; new closure is in rax
-	mov qword [free_var_61], rax
+.L_lambda_simple_end_078a:	; new closure is in rax
+	mov qword [free_var_30], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -1820,46 +1230,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0005:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_078b:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0005
+	je .L_lambda_simple_env_end_078b
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0005
-.L_lambda_simple_env_end_0005:
+	jmp .L_lambda_simple_env_loop_078b
+.L_lambda_simple_env_end_078b:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0005:	; copy params
+.L_lambda_simple_params_loop_078b:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0005
+	je .L_lambda_simple_params_end_078b
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0005
-.L_lambda_simple_params_end_0005:
+	jmp .L_lambda_simple_params_loop_078b
+.L_lambda_simple_params_end_078b:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0005
-	jmp .L_lambda_simple_end_0005
-.L_lambda_simple_code_0005:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_078b
+	jmp .L_lambda_simple_end_078b
+.L_lambda_simple_code_078b:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0005
+	je .L_lambda_simple_arity_check_ok_083b
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0005:
+.L_lambda_simple_arity_check_ok_083b:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1868,7 +1278,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1877,8 +1287,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0005:	; new closure is in rax
-	mov qword [free_var_35], rax
+.L_lambda_simple_end_078b:	; new closure is in rax
+	mov qword [free_var_4], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -1894,46 +1304,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0006:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_078c:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0006
+	je .L_lambda_simple_env_end_078c
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0006
-.L_lambda_simple_env_end_0006:
+	jmp .L_lambda_simple_env_loop_078c
+.L_lambda_simple_env_end_078c:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0006:	; copy params
+.L_lambda_simple_params_loop_078c:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0006
+	je .L_lambda_simple_params_end_078c
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0006
-.L_lambda_simple_params_end_0006:
+	jmp .L_lambda_simple_params_loop_078c
+.L_lambda_simple_params_end_078c:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0006
-	jmp .L_lambda_simple_end_0006
-.L_lambda_simple_code_0006:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_078c
+	jmp .L_lambda_simple_end_078c
+.L_lambda_simple_code_078c:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0006
+	je .L_lambda_simple_arity_check_ok_083c
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0006:
+.L_lambda_simple_arity_check_ok_083c:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1942,7 +1352,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -1951,8 +1361,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0006:	; new closure is in rax
-	mov qword [free_var_38], rax
+.L_lambda_simple_end_078c:	; new closure is in rax
+	mov qword [free_var_7], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -1968,46 +1378,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0007:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_078d:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0007
+	je .L_lambda_simple_env_end_078d
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0007
-.L_lambda_simple_env_end_0007:
+	jmp .L_lambda_simple_env_loop_078d
+.L_lambda_simple_env_end_078d:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0007:	; copy params
+.L_lambda_simple_params_loop_078d:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0007
+	je .L_lambda_simple_params_end_078d
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0007
-.L_lambda_simple_params_end_0007:
+	jmp .L_lambda_simple_params_loop_078d
+.L_lambda_simple_params_end_078d:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0007
-	jmp .L_lambda_simple_end_0007
-.L_lambda_simple_code_0007:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_078d
+	jmp .L_lambda_simple_end_078d
+.L_lambda_simple_code_078d:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0007
+	je .L_lambda_simple_arity_check_ok_083d
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0007:
+.L_lambda_simple_arity_check_ok_083d:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2016,7 +1426,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2025,8 +1435,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0007:	; new closure is in rax
-	mov qword [free_var_42], rax
+.L_lambda_simple_end_078d:	; new closure is in rax
+	mov qword [free_var_11], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2042,46 +1452,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0008:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_078e:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0008
+	je .L_lambda_simple_env_end_078e
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0008
-.L_lambda_simple_env_end_0008:
+	jmp .L_lambda_simple_env_loop_078e
+.L_lambda_simple_env_end_078e:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0008:	; copy params
+.L_lambda_simple_params_loop_078e:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0008
+	je .L_lambda_simple_params_end_078e
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0008
-.L_lambda_simple_params_end_0008:
+	jmp .L_lambda_simple_params_loop_078e
+.L_lambda_simple_params_end_078e:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0008
-	jmp .L_lambda_simple_end_0008
-.L_lambda_simple_code_0008:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_078e
+	jmp .L_lambda_simple_end_078e
+.L_lambda_simple_code_078e:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0008
+	je .L_lambda_simple_arity_check_ok_083e
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0008:
+.L_lambda_simple_arity_check_ok_083e:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2090,7 +1500,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2099,8 +1509,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0008:	; new closure is in rax
-	mov qword [free_var_45], rax
+.L_lambda_simple_end_078e:	; new closure is in rax
+	mov qword [free_var_14], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2116,46 +1526,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0009:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_078f:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0009
+	je .L_lambda_simple_env_end_078f
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0009
-.L_lambda_simple_env_end_0009:
+	jmp .L_lambda_simple_env_loop_078f
+.L_lambda_simple_env_end_078f:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0009:	; copy params
+.L_lambda_simple_params_loop_078f:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0009
+	je .L_lambda_simple_params_end_078f
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0009
-.L_lambda_simple_params_end_0009:
+	jmp .L_lambda_simple_params_loop_078f
+.L_lambda_simple_params_end_078f:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0009
-	jmp .L_lambda_simple_end_0009
-.L_lambda_simple_code_0009:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_078f
+	jmp .L_lambda_simple_end_078f
+.L_lambda_simple_code_078f:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0009
+	je .L_lambda_simple_arity_check_ok_083f
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0009:
+.L_lambda_simple_arity_check_ok_083f:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2164,7 +1574,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2173,8 +1583,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0009:	; new closure is in rax
-	mov qword [free_var_50], rax
+.L_lambda_simple_end_078f:	; new closure is in rax
+	mov qword [free_var_19], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2190,46 +1600,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_000a:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0790:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_000a
+	je .L_lambda_simple_env_end_0790
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_000a
-.L_lambda_simple_env_end_000a:
+	jmp .L_lambda_simple_env_loop_0790
+.L_lambda_simple_env_end_0790:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_000a:	; copy params
+.L_lambda_simple_params_loop_0790:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_000a
+	je .L_lambda_simple_params_end_0790
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_000a
-.L_lambda_simple_params_end_000a:
+	jmp .L_lambda_simple_params_loop_0790
+.L_lambda_simple_params_end_0790:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_000a
-	jmp .L_lambda_simple_end_000a
-.L_lambda_simple_code_000a:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0790
+	jmp .L_lambda_simple_end_0790
+.L_lambda_simple_code_0790:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_000a
+	je .L_lambda_simple_arity_check_ok_0840
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_000a:
+.L_lambda_simple_arity_check_ok_0840:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2238,7 +1648,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2247,8 +1657,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_000a:	; new closure is in rax
-	mov qword [free_var_53], rax
+.L_lambda_simple_end_0790:	; new closure is in rax
+	mov qword [free_var_22], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2264,46 +1674,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_000b:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0791:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_000b
+	je .L_lambda_simple_env_end_0791
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_000b
-.L_lambda_simple_env_end_000b:
+	jmp .L_lambda_simple_env_loop_0791
+.L_lambda_simple_env_end_0791:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_000b:	; copy params
+.L_lambda_simple_params_loop_0791:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_000b
+	je .L_lambda_simple_params_end_0791
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_000b
-.L_lambda_simple_params_end_000b:
+	jmp .L_lambda_simple_params_loop_0791
+.L_lambda_simple_params_end_0791:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_000b
-	jmp .L_lambda_simple_end_000b
-.L_lambda_simple_code_000b:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0791
+	jmp .L_lambda_simple_end_0791
+.L_lambda_simple_code_0791:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_000b
+	je .L_lambda_simple_arity_check_ok_0841
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_000b:
+.L_lambda_simple_arity_check_ok_0841:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2312,7 +1722,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2321,8 +1731,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_000b:	; new closure is in rax
-	mov qword [free_var_57], rax
+.L_lambda_simple_end_0791:	; new closure is in rax
+	mov qword [free_var_26], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2338,46 +1748,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_000c:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0792:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_000c
+	je .L_lambda_simple_env_end_0792
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_000c
-.L_lambda_simple_env_end_000c:
+	jmp .L_lambda_simple_env_loop_0792
+.L_lambda_simple_env_end_0792:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_000c:	; copy params
+.L_lambda_simple_params_loop_0792:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_000c
+	je .L_lambda_simple_params_end_0792
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_000c
-.L_lambda_simple_params_end_000c:
+	jmp .L_lambda_simple_params_loop_0792
+.L_lambda_simple_params_end_0792:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_000c
-	jmp .L_lambda_simple_end_000c
-.L_lambda_simple_code_000c:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0792
+	jmp .L_lambda_simple_end_0792
+.L_lambda_simple_code_0792:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_000c
+	je .L_lambda_simple_arity_check_ok_0842
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_000c:
+.L_lambda_simple_arity_check_ok_0842:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2386,7 +1796,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2395,8 +1805,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_000c:	; new closure is in rax
-	mov qword [free_var_60], rax
+.L_lambda_simple_end_0792:	; new closure is in rax
+	mov qword [free_var_29], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2412,46 +1822,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_000d:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0793:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_000d
+	je .L_lambda_simple_env_end_0793
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_000d
-.L_lambda_simple_env_end_000d:
+	jmp .L_lambda_simple_env_loop_0793
+.L_lambda_simple_env_end_0793:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_000d:	; copy params
+.L_lambda_simple_params_loop_0793:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_000d
+	je .L_lambda_simple_params_end_0793
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_000d
-.L_lambda_simple_params_end_000d:
+	jmp .L_lambda_simple_params_loop_0793
+.L_lambda_simple_params_end_0793:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_000d
-	jmp .L_lambda_simple_end_000d
-.L_lambda_simple_code_000d:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0793
+	jmp .L_lambda_simple_end_0793
+.L_lambda_simple_code_0793:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_000d
+	je .L_lambda_simple_arity_check_ok_0843
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_000d:
+.L_lambda_simple_arity_check_ok_0843:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2460,7 +1870,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2469,8 +1879,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_000d:	; new closure is in rax
-	mov qword [free_var_33], rax
+.L_lambda_simple_end_0793:	; new closure is in rax
+	mov qword [free_var_2], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2486,46 +1896,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_000e:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0794:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_000e
+	je .L_lambda_simple_env_end_0794
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_000e
-.L_lambda_simple_env_end_000e:
+	jmp .L_lambda_simple_env_loop_0794
+.L_lambda_simple_env_end_0794:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_000e:	; copy params
+.L_lambda_simple_params_loop_0794:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_000e
+	je .L_lambda_simple_params_end_0794
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_000e
-.L_lambda_simple_params_end_000e:
+	jmp .L_lambda_simple_params_loop_0794
+.L_lambda_simple_params_end_0794:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_000e
-	jmp .L_lambda_simple_end_000e
-.L_lambda_simple_code_000e:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0794
+	jmp .L_lambda_simple_end_0794
+.L_lambda_simple_code_0794:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_000e
+	je .L_lambda_simple_arity_check_ok_0844
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_000e:
+.L_lambda_simple_arity_check_ok_0844:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2534,7 +1944,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2543,8 +1953,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_000e:	; new closure is in rax
-	mov qword [free_var_34], rax
+.L_lambda_simple_end_0794:	; new closure is in rax
+	mov qword [free_var_3], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2560,46 +1970,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_000f:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0795:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_000f
+	je .L_lambda_simple_env_end_0795
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_000f
-.L_lambda_simple_env_end_000f:
+	jmp .L_lambda_simple_env_loop_0795
+.L_lambda_simple_env_end_0795:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_000f:	; copy params
+.L_lambda_simple_params_loop_0795:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_000f
+	je .L_lambda_simple_params_end_0795
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_000f
-.L_lambda_simple_params_end_000f:
+	jmp .L_lambda_simple_params_loop_0795
+.L_lambda_simple_params_end_0795:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_000f
-	jmp .L_lambda_simple_end_000f
-.L_lambda_simple_code_000f:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0795
+	jmp .L_lambda_simple_end_0795
+.L_lambda_simple_code_0795:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_000f
+	je .L_lambda_simple_arity_check_ok_0845
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_000f:
+.L_lambda_simple_arity_check_ok_0845:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2608,7 +2018,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2617,8 +2027,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_000f:	; new closure is in rax
-	mov qword [free_var_36], rax
+.L_lambda_simple_end_0795:	; new closure is in rax
+	mov qword [free_var_5], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2634,46 +2044,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0010:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0796:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0010
+	je .L_lambda_simple_env_end_0796
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0010
-.L_lambda_simple_env_end_0010:
+	jmp .L_lambda_simple_env_loop_0796
+.L_lambda_simple_env_end_0796:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0010:	; copy params
+.L_lambda_simple_params_loop_0796:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0010
+	je .L_lambda_simple_params_end_0796
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0010
-.L_lambda_simple_params_end_0010:
+	jmp .L_lambda_simple_params_loop_0796
+.L_lambda_simple_params_end_0796:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0010
-	jmp .L_lambda_simple_end_0010
-.L_lambda_simple_code_0010:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0796
+	jmp .L_lambda_simple_end_0796
+.L_lambda_simple_code_0796:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0010
+	je .L_lambda_simple_arity_check_ok_0846
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0010:
+.L_lambda_simple_arity_check_ok_0846:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2682,7 +2092,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2691,8 +2101,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0010:	; new closure is in rax
-	mov qword [free_var_37], rax
+.L_lambda_simple_end_0796:	; new closure is in rax
+	mov qword [free_var_6], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2708,46 +2118,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0011:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0797:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0011
+	je .L_lambda_simple_env_end_0797
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0011
-.L_lambda_simple_env_end_0011:
+	jmp .L_lambda_simple_env_loop_0797
+.L_lambda_simple_env_end_0797:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0011:	; copy params
+.L_lambda_simple_params_loop_0797:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0011
+	je .L_lambda_simple_params_end_0797
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0011
-.L_lambda_simple_params_end_0011:
+	jmp .L_lambda_simple_params_loop_0797
+.L_lambda_simple_params_end_0797:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0011
-	jmp .L_lambda_simple_end_0011
-.L_lambda_simple_code_0011:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0797
+	jmp .L_lambda_simple_end_0797
+.L_lambda_simple_code_0797:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0011
+	je .L_lambda_simple_arity_check_ok_0847
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0011:
+.L_lambda_simple_arity_check_ok_0847:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2756,7 +2166,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2765,8 +2175,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0011:	; new closure is in rax
-	mov qword [free_var_40], rax
+.L_lambda_simple_end_0797:	; new closure is in rax
+	mov qword [free_var_9], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2782,46 +2192,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0012:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0798:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0012
+	je .L_lambda_simple_env_end_0798
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0012
-.L_lambda_simple_env_end_0012:
+	jmp .L_lambda_simple_env_loop_0798
+.L_lambda_simple_env_end_0798:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0012:	; copy params
+.L_lambda_simple_params_loop_0798:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0012
+	je .L_lambda_simple_params_end_0798
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0012
-.L_lambda_simple_params_end_0012:
+	jmp .L_lambda_simple_params_loop_0798
+.L_lambda_simple_params_end_0798:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0012
-	jmp .L_lambda_simple_end_0012
-.L_lambda_simple_code_0012:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0798
+	jmp .L_lambda_simple_end_0798
+.L_lambda_simple_code_0798:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0012
+	je .L_lambda_simple_arity_check_ok_0848
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0012:
+.L_lambda_simple_arity_check_ok_0848:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2830,7 +2240,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2839,8 +2249,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0012:	; new closure is in rax
-	mov qword [free_var_41], rax
+.L_lambda_simple_end_0798:	; new closure is in rax
+	mov qword [free_var_10], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2856,46 +2266,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0013:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_0799:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0013
+	je .L_lambda_simple_env_end_0799
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0013
-.L_lambda_simple_env_end_0013:
+	jmp .L_lambda_simple_env_loop_0799
+.L_lambda_simple_env_end_0799:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0013:	; copy params
+.L_lambda_simple_params_loop_0799:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0013
+	je .L_lambda_simple_params_end_0799
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0013
-.L_lambda_simple_params_end_0013:
+	jmp .L_lambda_simple_params_loop_0799
+.L_lambda_simple_params_end_0799:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0013
-	jmp .L_lambda_simple_end_0013
-.L_lambda_simple_code_0013:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0799
+	jmp .L_lambda_simple_end_0799
+.L_lambda_simple_code_0799:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0013
+	je .L_lambda_simple_arity_check_ok_0849
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0013:
+.L_lambda_simple_arity_check_ok_0849:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2904,7 +2314,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2913,8 +2323,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0013:	; new closure is in rax
-	mov qword [free_var_43], rax
+.L_lambda_simple_end_0799:	; new closure is in rax
+	mov qword [free_var_12], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -2930,46 +2340,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0014:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_079a:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0014
+	je .L_lambda_simple_env_end_079a
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0014
-.L_lambda_simple_env_end_0014:
+	jmp .L_lambda_simple_env_loop_079a
+.L_lambda_simple_env_end_079a:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0014:	; copy params
+.L_lambda_simple_params_loop_079a:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0014
+	je .L_lambda_simple_params_end_079a
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0014
-.L_lambda_simple_params_end_0014:
+	jmp .L_lambda_simple_params_loop_079a
+.L_lambda_simple_params_end_079a:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0014
-	jmp .L_lambda_simple_end_0014
-.L_lambda_simple_code_0014:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_079a
+	jmp .L_lambda_simple_end_079a
+.L_lambda_simple_code_079a:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0014
+	je .L_lambda_simple_arity_check_ok_084a
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0014:
+.L_lambda_simple_arity_check_ok_084a:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2978,7 +2388,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -2987,8 +2397,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0014:	; new closure is in rax
-	mov qword [free_var_44], rax
+.L_lambda_simple_end_079a:	; new closure is in rax
+	mov qword [free_var_13], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3004,46 +2414,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0015:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_079b:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0015
+	je .L_lambda_simple_env_end_079b
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0015
-.L_lambda_simple_env_end_0015:
+	jmp .L_lambda_simple_env_loop_079b
+.L_lambda_simple_env_end_079b:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0015:	; copy params
+.L_lambda_simple_params_loop_079b:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0015
+	je .L_lambda_simple_params_end_079b
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0015
-.L_lambda_simple_params_end_0015:
+	jmp .L_lambda_simple_params_loop_079b
+.L_lambda_simple_params_end_079b:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0015
-	jmp .L_lambda_simple_end_0015
-.L_lambda_simple_code_0015:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_079b
+	jmp .L_lambda_simple_end_079b
+.L_lambda_simple_code_079b:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0015
+	je .L_lambda_simple_arity_check_ok_084b
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0015:
+.L_lambda_simple_arity_check_ok_084b:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3052,7 +2462,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3061,8 +2471,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0015:	; new closure is in rax
-	mov qword [free_var_48], rax
+.L_lambda_simple_end_079b:	; new closure is in rax
+	mov qword [free_var_17], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3078,46 +2488,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0016:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_079c:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0016
+	je .L_lambda_simple_env_end_079c
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0016
-.L_lambda_simple_env_end_0016:
+	jmp .L_lambda_simple_env_loop_079c
+.L_lambda_simple_env_end_079c:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0016:	; copy params
+.L_lambda_simple_params_loop_079c:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0016
+	je .L_lambda_simple_params_end_079c
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0016
-.L_lambda_simple_params_end_0016:
+	jmp .L_lambda_simple_params_loop_079c
+.L_lambda_simple_params_end_079c:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0016
-	jmp .L_lambda_simple_end_0016
-.L_lambda_simple_code_0016:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_079c
+	jmp .L_lambda_simple_end_079c
+.L_lambda_simple_code_079c:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0016
+	je .L_lambda_simple_arity_check_ok_084c
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0016:
+.L_lambda_simple_arity_check_ok_084c:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3126,7 +2536,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3135,8 +2545,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0016:	; new closure is in rax
-	mov qword [free_var_49], rax
+.L_lambda_simple_end_079c:	; new closure is in rax
+	mov qword [free_var_18], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3152,46 +2562,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0017:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_079d:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0017
+	je .L_lambda_simple_env_end_079d
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0017
-.L_lambda_simple_env_end_0017:
+	jmp .L_lambda_simple_env_loop_079d
+.L_lambda_simple_env_end_079d:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0017:	; copy params
+.L_lambda_simple_params_loop_079d:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0017
+	je .L_lambda_simple_params_end_079d
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0017
-.L_lambda_simple_params_end_0017:
+	jmp .L_lambda_simple_params_loop_079d
+.L_lambda_simple_params_end_079d:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0017
-	jmp .L_lambda_simple_end_0017
-.L_lambda_simple_code_0017:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_079d
+	jmp .L_lambda_simple_end_079d
+.L_lambda_simple_code_079d:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0017
+	je .L_lambda_simple_arity_check_ok_084d
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0017:
+.L_lambda_simple_arity_check_ok_084d:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3200,7 +2610,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3209,8 +2619,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0017:	; new closure is in rax
-	mov qword [free_var_51], rax
+.L_lambda_simple_end_079d:	; new closure is in rax
+	mov qword [free_var_20], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3226,46 +2636,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0018:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_079e:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0018
+	je .L_lambda_simple_env_end_079e
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0018
-.L_lambda_simple_env_end_0018:
+	jmp .L_lambda_simple_env_loop_079e
+.L_lambda_simple_env_end_079e:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0018:	; copy params
+.L_lambda_simple_params_loop_079e:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0018
+	je .L_lambda_simple_params_end_079e
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0018
-.L_lambda_simple_params_end_0018:
+	jmp .L_lambda_simple_params_loop_079e
+.L_lambda_simple_params_end_079e:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0018
-	jmp .L_lambda_simple_end_0018
-.L_lambda_simple_code_0018:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_079e
+	jmp .L_lambda_simple_end_079e
+.L_lambda_simple_code_079e:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0018
+	je .L_lambda_simple_arity_check_ok_084e
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0018:
+.L_lambda_simple_arity_check_ok_084e:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3274,7 +2684,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3283,8 +2693,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0018:	; new closure is in rax
-	mov qword [free_var_52], rax
+.L_lambda_simple_end_079e:	; new closure is in rax
+	mov qword [free_var_21], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3300,46 +2710,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0019:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_079f:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0019
+	je .L_lambda_simple_env_end_079f
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0019
-.L_lambda_simple_env_end_0019:
+	jmp .L_lambda_simple_env_loop_079f
+.L_lambda_simple_env_end_079f:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0019:	; copy params
+.L_lambda_simple_params_loop_079f:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0019
+	je .L_lambda_simple_params_end_079f
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0019
-.L_lambda_simple_params_end_0019:
+	jmp .L_lambda_simple_params_loop_079f
+.L_lambda_simple_params_end_079f:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0019
-	jmp .L_lambda_simple_end_0019
-.L_lambda_simple_code_0019:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_079f
+	jmp .L_lambda_simple_end_079f
+.L_lambda_simple_code_079f:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0019
+	je .L_lambda_simple_arity_check_ok_084f
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0019:
+.L_lambda_simple_arity_check_ok_084f:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_39]	; free var caar
+	mov rax, qword [free_var_8]	; free var caar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3348,7 +2758,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3357,8 +2767,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0019:	; new closure is in rax
-	mov qword [free_var_55], rax
+.L_lambda_simple_end_079f:	; new closure is in rax
+	mov qword [free_var_24], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3374,46 +2784,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_001a:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a0:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_001a
+	je .L_lambda_simple_env_end_07a0
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_001a
-.L_lambda_simple_env_end_001a:
+	jmp .L_lambda_simple_env_loop_07a0
+.L_lambda_simple_env_end_07a0:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_001a:	; copy params
+.L_lambda_simple_params_loop_07a0:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_001a
+	je .L_lambda_simple_params_end_07a0
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_001a
-.L_lambda_simple_params_end_001a:
+	jmp .L_lambda_simple_params_loop_07a0
+.L_lambda_simple_params_end_07a0:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_001a
-	jmp .L_lambda_simple_end_001a
-.L_lambda_simple_code_001a:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a0
+	jmp .L_lambda_simple_end_07a0
+.L_lambda_simple_code_07a0:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_001a
+	je .L_lambda_simple_arity_check_ok_0850
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_001a:
+.L_lambda_simple_arity_check_ok_0850:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_46]	; free var cadr
+	mov rax, qword [free_var_15]	; free var cadr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3422,7 +2832,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3431,8 +2841,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_001a:	; new closure is in rax
-	mov qword [free_var_56], rax
+.L_lambda_simple_end_07a0:	; new closure is in rax
+	mov qword [free_var_25], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3448,46 +2858,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_001b:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a1:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_001b
+	je .L_lambda_simple_env_end_07a1
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_001b
-.L_lambda_simple_env_end_001b:
+	jmp .L_lambda_simple_env_loop_07a1
+.L_lambda_simple_env_end_07a1:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_001b:	; copy params
+.L_lambda_simple_params_loop_07a1:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_001b
+	je .L_lambda_simple_params_end_07a1
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_001b
-.L_lambda_simple_params_end_001b:
+	jmp .L_lambda_simple_params_loop_07a1
+.L_lambda_simple_params_end_07a1:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_001b
-	jmp .L_lambda_simple_end_001b
-.L_lambda_simple_code_001b:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a1
+	jmp .L_lambda_simple_end_07a1
+.L_lambda_simple_code_07a1:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_001b
+	je .L_lambda_simple_arity_check_ok_0851
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_001b:
+.L_lambda_simple_arity_check_ok_0851:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_54]	; free var cdar
+	mov rax, qword [free_var_23]	; free var cdar
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3496,7 +2906,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3505,8 +2915,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_001b:	; new closure is in rax
-	mov qword [free_var_58], rax
+.L_lambda_simple_end_07a1:	; new closure is in rax
+	mov qword [free_var_27], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3522,46 +2932,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_001c:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a2:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_001c
+	je .L_lambda_simple_env_end_07a2
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_001c
-.L_lambda_simple_env_end_001c:
+	jmp .L_lambda_simple_env_loop_07a2
+.L_lambda_simple_env_end_07a2:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_001c:	; copy params
+.L_lambda_simple_params_loop_07a2:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_001c
+	je .L_lambda_simple_params_end_07a2
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_001c
-.L_lambda_simple_params_end_001c:
+	jmp .L_lambda_simple_params_loop_07a2
+.L_lambda_simple_params_end_07a2:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_001c
-	jmp .L_lambda_simple_end_001c
-.L_lambda_simple_code_001c:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a2
+	jmp .L_lambda_simple_end_07a2
+.L_lambda_simple_code_07a2:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_001c
+	je .L_lambda_simple_arity_check_ok_0852
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_001c:
+.L_lambda_simple_arity_check_ok_0852:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param x
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3570,7 +2980,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_61]	; free var cddr
+	mov rax, qword [free_var_30]	; free var cddr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3579,8 +2989,8 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_001c:	; new closure is in rax
-	mov qword [free_var_59], rax
+.L_lambda_simple_end_07a2:	; new closure is in rax
+	mov qword [free_var_28], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3596,45 +3006,45 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_001d:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a3:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_001d
+	je .L_lambda_simple_env_end_07a3
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_001d
-.L_lambda_simple_env_end_001d:
+	jmp .L_lambda_simple_env_loop_07a3
+.L_lambda_simple_env_end_07a3:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_001d:	; copy params
+.L_lambda_simple_params_loop_07a3:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_001d
+	je .L_lambda_simple_params_end_07a3
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_001d
-.L_lambda_simple_params_end_001d:
+	jmp .L_lambda_simple_params_loop_07a3
+.L_lambda_simple_params_end_07a3:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_001d
-	jmp .L_lambda_simple_end_001d
-.L_lambda_simple_code_001d:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a3
+	jmp .L_lambda_simple_end_07a3
+.L_lambda_simple_code_07a3:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_001d
+	je .L_lambda_simple_arity_check_ok_0853
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_001d:
+.L_lambda_simple_arity_check_ok_0853:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param e
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
+	mov rax, qword [free_var_40]	; free var null?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3642,12 +3052,12 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	jne .L_if_end_0001
+	jne .L_if_end_0164
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param e
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_88]	; free var pair?
+	mov rax, qword [free_var_41]	; free var pair?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3655,13 +3065,13 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	je .L_if_else_0001
+	je .L_if_else_00f6
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param e
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3670,24 +3080,24 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_83]	; free var list?
+	mov rax, qword [free_var_37]	; free var list?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0002
-.L_if_else_0001:
+	jmp .L_if_end_0165
+.L_if_else_00f6:
 	mov rax, L_constants + 2
-.L_if_end_0002:
+.L_if_end_0165:
 	cmp rax, sob_boolean_false
-	jne .L_if_end_0001
-.L_if_end_0001:
+	jne .L_if_end_0164
+.L_if_end_0164:
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_001d:	; new closure is in rax
-	mov qword [free_var_83], rax
+.L_lambda_simple_end_07a3:	; new closure is in rax
+	mov qword [free_var_37], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3705,65 +3115,64 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_opt_code_0001:	; ext_env[i + 1] <-- env[i] copy all the array
+.L_lambda_opt_env_loop_00b1:	; ext_env[i + 1] <-- env[i] copy all the array
 	cmp rsi, 0
-	je .L_lambda_opt_end_0001
+	je .L_lambda_opt_env_end_00b1
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_opt_code_0001
-.L_lambda_opt_end_0001:
+	jmp .L_lambda_opt_env_loop_00b1
+.L_lambda_opt_env_end_00b1:
 	pop rbx
 	mov rsi, 0
-.L_lambda_opt_code_0002:	; copy params
+.L_lambda_opt_params_loop_0211:	; copy params
 	cmp rsi, 0
-	je .L_lambda_opt_end_0002
+	je .L_lambda_opt_params_end_0161
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_opt_code_0002
-.L_lambda_opt_end_0002:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
+	jmp .L_lambda_opt_params_loop_0211
+.L_lambda_opt_params_end_0161:
+	mov qword [rax], rbx 	; ext_env[0] <-- The new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0003
-	jmp .L_lambda_opt_end_0003
-.L_lambda_opt_code_0003:	; lambda-opt body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_00b1
+	jmp .L_lambda_opt_end_0161
+.L_lambda_opt_code_00b1:	; lambda-opt body
 	cmp qword [rsp + 8 * 2], 0
-	jge .L_lambda_simple_arity_check_ok_001e
+	jge .L_lambda_simple_arity_check_ok_0854
 	push qword [rsp + 8 * 2]
 	push 0
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_001e:
+.L_lambda_simple_arity_check_ok_0854:
 	mov r8, qword [rsp + 8 * 2]
 	sub r8, 0
 	mov rbx,r8
 	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0003
+	jne .L_lambda_opt_params_loop_0213
 	mov rdx, qword [rsp + 8 * 2]
 	add rdx , 3
 	sub rsp , 8
 	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0001: ;pushing down the stack of the current function
+.L_lambda_opt_stack_adjusted_0212: ;pushing down the stack of the current function
 	mov rbx, qword [rcx + 8 * 1]
 	mov qword[rcx] , rbx
 	add rcx , 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0001
+	jne .L_lambda_opt_stack_adjusted_0212
 	inc qword [rsp + 8 * 2]
 	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0004
-	.L_lambda_opt_params_loop_0003:
+	jmp .L_lambda_opt_end_0162
+	.L_lambda_opt_params_loop_0213:
 	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
+	lea rcx, [rsp + 16 + 8*rdx]
 	mov rdx, r8
 	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0001: ;loop for copying the opt into list
+	.L_lambda_opt_params_loop_0212: ;loop for copying the opt into list
 	mov rdi, (1 + 8 + 8)
 	call malloc
 	mov byte[rax], T_pair
@@ -3774,19 +3183,18 @@ main:
 	dec rdx
 	sub rcx, 8
 	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0001
+	jne .L_lambda_opt_params_loop_0212
 	mov rdx, qword [rsp + 8 * 2]
 	mov rax, rsp
 	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
 	mov rcx, r8
 	dec rcx
 	add rdx, 3
 	sub rdx,rcx
 	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0002:
+	.L_lambda_opt_stack_adjusted_0213:
 	cmp rdx, 0
-	je .L_lambda_opt_params_end_0002
+	je .L_lambda_opt_params_end_0162
 	mov rax, rbx
 	sub rax, rcx
 	mov rsi, qword [rax]
@@ -3794,8 +3202,8 @@ main:
 	sub rbx, 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0002
-	.L_lambda_opt_params_end_0002:
+	jne .L_lambda_opt_stack_adjusted_0213
+	.L_lambda_opt_params_end_0162:
 	add rsp,rcx
 	mov rbx, 0
 	mov rbx, qword [rsp + 8 * 2]
@@ -3806,13 +3214,13 @@ main:
 	mov qword[rbx] , r9
 	dec r8
 	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0004:
+	.L_lambda_opt_end_0162:
 	enter 0, 0
 	mov rax, PARAM(0)	; param args
 	LEAVE
 	ret AND_KILL_FRAME(1)
-.L_lambda_opt_end_0003:
-	mov qword [free_var_81], rax
+.L_lambda_opt_end_0161:
+	mov qword [free_var_35], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3828,52 +3236,52 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_001e:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a4:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_001e
+	je .L_lambda_simple_env_end_07a4
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_001e
-.L_lambda_simple_env_end_001e:
+	jmp .L_lambda_simple_env_loop_07a4
+.L_lambda_simple_env_end_07a4:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_001e:	; copy params
+.L_lambda_simple_params_loop_07a4:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_001e
+	je .L_lambda_simple_params_end_07a4
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_001e
-.L_lambda_simple_params_end_001e:
+	jmp .L_lambda_simple_params_loop_07a4
+.L_lambda_simple_params_end_07a4:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_001e
-	jmp .L_lambda_simple_end_001e
-.L_lambda_simple_code_001e:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a4
+	jmp .L_lambda_simple_end_07a4
+.L_lambda_simple_code_07a4:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_001f
+	je .L_lambda_simple_arity_check_ok_0855
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_001f:
+.L_lambda_simple_arity_check_ok_0855:
 	enter 0, 0
 	mov rax, PARAM(0)	; param x
 	cmp rax, sob_boolean_false
-	je .L_if_else_0002
+	je .L_if_else_00f7
 	mov rax, L_constants + 2
-	jmp .L_if_end_0003
-.L_if_else_0002:
+	jmp .L_if_end_0166
+.L_if_else_00f7:
 	mov rax, L_constants + 3
-.L_if_end_0003:
+.L_if_end_0166:
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_001e:	; new closure is in rax
-	mov qword [free_var_85], rax
+.L_lambda_simple_end_07a4:	; new closure is in rax
+	mov qword [free_var_39], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3889,45 +3297,45 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_001f:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a5:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_001f
+	je .L_lambda_simple_env_end_07a5
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_001f
-.L_lambda_simple_env_end_001f:
+	jmp .L_lambda_simple_env_loop_07a5
+.L_lambda_simple_env_end_07a5:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_001f:	; copy params
+.L_lambda_simple_params_loop_07a5:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_001f
+	je .L_lambda_simple_params_end_07a5
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_001f
-.L_lambda_simple_params_end_001f:
+	jmp .L_lambda_simple_params_loop_07a5
+.L_lambda_simple_params_end_07a5:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_001f
-	jmp .L_lambda_simple_end_001f
-.L_lambda_simple_code_001f:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a5
+	jmp .L_lambda_simple_end_07a5
+.L_lambda_simple_code_07a5:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0020
+	je .L_lambda_simple_arity_check_ok_0856
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0020:
+.L_lambda_simple_arity_check_ok_0856:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param q
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
+	mov rax, qword [free_var_34]	; free var integer?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3935,12 +3343,12 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	jne .L_if_end_0004
+	jne .L_if_end_0167
 	; preparing a non-tail-call
 	mov rax, PARAM(0)	; param q
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
+	mov rax, qword [free_var_33]	; free var fraction?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -3948,12 +3356,12 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	jne .L_if_end_0004
-.L_if_end_0004:
+	jne .L_if_end_0167
+.L_if_end_0167:
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_001f:	; new closure is in rax
-	mov qword [free_var_89], rax
+.L_lambda_simple_end_07a5:	; new closure is in rax
+	mov qword [free_var_42], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -3973,39 +3381,39 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0020:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a6:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0020
+	je .L_lambda_simple_env_end_07a6
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0020
-.L_lambda_simple_env_end_0020:
+	jmp .L_lambda_simple_env_loop_07a6
+.L_lambda_simple_env_end_07a6:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0020:	; copy params
+.L_lambda_simple_params_loop_07a6:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0020
+	je .L_lambda_simple_params_end_07a6
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0020
-.L_lambda_simple_params_end_0020:
+	jmp .L_lambda_simple_params_loop_07a6
+.L_lambda_simple_params_end_07a6:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0020
-	jmp .L_lambda_simple_end_0020
-.L_lambda_simple_code_0020:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a6
+	jmp .L_lambda_simple_end_07a6
+.L_lambda_simple_code_07a6:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0021
+	je .L_lambda_simple_arity_check_ok_0857
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0021:
+.L_lambda_simple_arity_check_ok_0857:
 	enter 0, 0
 	 mov rbx, qword [rbp + 8 * (4 +0)]
 	mov rdi, 8
@@ -4025,45 +3433,45 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0021:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a7:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 1
-	je .L_lambda_simple_env_end_0021
+	je .L_lambda_simple_env_end_07a7
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0021
-.L_lambda_simple_env_end_0021:
+	jmp .L_lambda_simple_env_loop_07a7
+.L_lambda_simple_env_end_07a7:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0021:	; copy params
+.L_lambda_simple_params_loop_07a7:	; copy params
 	cmp rsi, 1
-	je .L_lambda_simple_params_end_0021
+	je .L_lambda_simple_params_end_07a7
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0021
-.L_lambda_simple_params_end_0021:
+	jmp .L_lambda_simple_params_loop_07a7
+.L_lambda_simple_params_end_07a7:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0021
-	jmp .L_lambda_simple_end_0021
-.L_lambda_simple_code_0021:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a7
+	jmp .L_lambda_simple_end_07a7
+.L_lambda_simple_code_07a7:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0022
+	je .L_lambda_simple_arity_check_ok_0858
 	push qword [rsp + 8 * 2]
 	push 2
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0022:
+.L_lambda_simple_arity_check_ok_0858:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
+	mov rax, qword [free_var_40]	; free var null?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4071,17 +3479,17 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	je .L_if_else_0003
+	je .L_if_else_00f8
 	mov rax, PARAM(0)	; param a
-	jmp .L_if_end_0005
-.L_if_else_0003:
+	jmp .L_if_end_0168
+.L_if_else_00f8:
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4093,7 +3501,7 @@ main:
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4114,17 +3522,17 @@ main:
 	mov rax, PARAM(0)	; param a
 	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
+	mov rax, qword [free_var_32]	; free var cons
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0005:
+.L_if_end_0168:
 	leave
 	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0021:	; new closure is in rax
+.L_lambda_simple_end_07a7:	; new closure is in rax
 	push rax
 	mov rax, PARAM(0)	; param run
 	pop qword [rax]
@@ -4143,65 +3551,64 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_opt_code_0004:	; ext_env[i + 1] <-- env[i] copy all the array
+.L_lambda_opt_env_loop_00b2:	; ext_env[i + 1] <-- env[i] copy all the array
 	cmp rsi, 1
-	je .L_lambda_opt_end_0005
+	je .L_lambda_opt_env_end_00b2
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_opt_code_0004
-.L_lambda_opt_end_0005:
+	jmp .L_lambda_opt_env_loop_00b2
+.L_lambda_opt_env_end_00b2:
 	pop rbx
 	mov rsi, 0
-.L_lambda_opt_code_0005:	; copy params
+.L_lambda_opt_params_loop_0214:	; copy params
 	cmp rsi, 1
-	je .L_lambda_opt_end_0006
+	je .L_lambda_opt_params_end_0163
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_opt_code_0005
-.L_lambda_opt_end_0006:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
+	jmp .L_lambda_opt_params_loop_0214
+.L_lambda_opt_params_end_0163:
+	mov qword [rax], rbx 	; ext_env[0] <-- The new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0006
-	jmp .L_lambda_opt_end_0007
-.L_lambda_opt_code_0006:	; lambda-opt body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_00b2
+	jmp .L_lambda_opt_end_0163
+.L_lambda_opt_code_00b2:	; lambda-opt body
 	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0023
+	jge .L_lambda_simple_arity_check_ok_0859
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0023:
+.L_lambda_simple_arity_check_ok_0859:
 	mov r8, qword [rsp + 8 * 2]
 	sub r8, 1
 	mov rbx,r8
 	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0006
+	jne .L_lambda_opt_params_loop_0216
 	mov rdx, qword [rsp + 8 * 2]
 	add rdx , 3
 	sub rsp , 8
 	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0003: ;pushing down the stack of the current function
+.L_lambda_opt_stack_adjusted_0215: ;pushing down the stack of the current function
 	mov rbx, qword [rcx + 8 * 1]
 	mov qword[rcx] , rbx
 	add rcx , 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0003
+	jne .L_lambda_opt_stack_adjusted_0215
 	inc qword [rsp + 8 * 2]
 	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0008
-	.L_lambda_opt_params_loop_0006:
+	jmp .L_lambda_opt_end_0164
+	.L_lambda_opt_params_loop_0216:
 	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
+	lea rcx, [rsp + 16 + 8*rdx]
 	mov rdx, r8
 	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0004: ;loop for copying the opt into list
+	.L_lambda_opt_params_loop_0215: ;loop for copying the opt into list
 	mov rdi, (1 + 8 + 8)
 	call malloc
 	mov byte[rax], T_pair
@@ -4212,19 +3619,18 @@ main:
 	dec rdx
 	sub rcx, 8
 	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0004
+	jne .L_lambda_opt_params_loop_0215
 	mov rdx, qword [rsp + 8 * 2]
 	mov rax, rsp
 	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
 	mov rcx, r8
 	dec rcx
 	add rdx, 3
 	sub rdx,rcx
 	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0004:
+	.L_lambda_opt_stack_adjusted_0216:
 	cmp rdx, 0
-	je .L_lambda_opt_params_end_0006
+	je .L_lambda_opt_params_end_0164
 	mov rax, rbx
 	sub rax, rcx
 	mov rsi, qword [rax]
@@ -4232,8 +3638,8 @@ main:
 	sub rbx, 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0004
-	.L_lambda_opt_params_end_0006:
+	jne .L_lambda_opt_stack_adjusted_0216
+	.L_lambda_opt_params_end_0164:
 	add rsp,rcx
 	mov rbx, 1
 	mov rbx, qword [rsp + 8 * 2]
@@ -4244,7 +3650,7 @@ main:
 	mov qword[rbx] , r9
 	dec r8
 	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0008:
+	.L_lambda_opt_end_0164:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
@@ -4262,15 +3668,15 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	LEAVE
 	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_0007:
+.L_lambda_opt_end_0163:
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0020:	; new closure is in rax
+.L_lambda_simple_end_07a6:	; new closure is in rax
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_82], rax
+	mov qword [free_var_36], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -4290,39 +3696,39 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0022:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a8:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0022
+	je .L_lambda_simple_env_end_07a8
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0022
-.L_lambda_simple_env_end_0022:
+	jmp .L_lambda_simple_env_loop_07a8
+.L_lambda_simple_env_end_07a8:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0022:	; copy params
+.L_lambda_simple_params_loop_07a8:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0022
+	je .L_lambda_simple_params_end_07a8
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0022
-.L_lambda_simple_params_end_0022:
+	jmp .L_lambda_simple_params_loop_07a8
+.L_lambda_simple_params_end_07a8:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0022
-	jmp .L_lambda_simple_end_0022
-.L_lambda_simple_code_0022:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a8
+	jmp .L_lambda_simple_end_07a8
+.L_lambda_simple_code_07a8:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0024
+	je .L_lambda_simple_arity_check_ok_085a
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0024:
+.L_lambda_simple_arity_check_ok_085a:
 	enter 0, 0
 	 mov rbx, qword [rbp + 8 * (4 +0)]
 	mov rdi, 8
@@ -4342,45 +3748,45 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0023:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07a9:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 1
-	je .L_lambda_simple_env_end_0023
+	je .L_lambda_simple_env_end_07a9
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0023
-.L_lambda_simple_env_end_0023:
+	jmp .L_lambda_simple_env_loop_07a9
+.L_lambda_simple_env_end_07a9:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0023:	; copy params
+.L_lambda_simple_params_loop_07a9:	; copy params
 	cmp rsi, 1
-	je .L_lambda_simple_params_end_0023
+	je .L_lambda_simple_params_end_07a9
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0023
-.L_lambda_simple_params_end_0023:
+	jmp .L_lambda_simple_params_loop_07a9
+.L_lambda_simple_params_end_07a9:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0023
-	jmp .L_lambda_simple_end_0023
-.L_lambda_simple_code_0023:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07a9
+	jmp .L_lambda_simple_end_07a9
+.L_lambda_simple_code_07a9:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0025
+	je .L_lambda_simple_arity_check_ok_085b
 	push qword [rsp + 8 * 2]
 	push 2
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0025:
+.L_lambda_simple_arity_check_ok_085b:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_88]	; free var pair?
+	mov rax, qword [free_var_41]	; free var pair?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4388,14 +3794,14 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	je .L_if_else_0004
+	je .L_if_else_00f9
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4407,7 +3813,7 @@ main:
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4428,20 +3834,20 @@ main:
 	mov rax, PARAM(0)	; param a
 	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
+	mov rax, qword [free_var_32]	; free var cons
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0006
-.L_if_else_0004:
+	jmp .L_if_end_0169
+.L_if_else_00f9:
 	mov rax, PARAM(0)	; param a
-.L_if_end_0006:
+.L_if_end_0169:
 	leave
 	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0023:	; new closure is in rax
+.L_lambda_simple_end_07a9:	; new closure is in rax
 	push rax
 	mov rax, PARAM(0)	; param run
 	pop qword [rax]
@@ -4460,65 +3866,64 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_opt_code_0007:	; ext_env[i + 1] <-- env[i] copy all the array
+.L_lambda_opt_env_loop_00b3:	; ext_env[i + 1] <-- env[i] copy all the array
 	cmp rsi, 1
-	je .L_lambda_opt_end_0009
+	je .L_lambda_opt_env_end_00b3
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_opt_code_0007
-.L_lambda_opt_end_0009:
+	jmp .L_lambda_opt_env_loop_00b3
+.L_lambda_opt_env_end_00b3:
 	pop rbx
 	mov rsi, 0
-.L_lambda_opt_code_0008:	; copy params
+.L_lambda_opt_params_loop_0217:	; copy params
 	cmp rsi, 1
-	je .L_lambda_opt_end_000a
+	je .L_lambda_opt_params_end_0165
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_opt_code_0008
-.L_lambda_opt_end_000a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
+	jmp .L_lambda_opt_params_loop_0217
+.L_lambda_opt_params_end_0165:
+	mov qword [rax], rbx 	; ext_env[0] <-- The new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0009
-	jmp .L_lambda_opt_end_000b
-.L_lambda_opt_code_0009:	; lambda-opt body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_00b3
+	jmp .L_lambda_opt_end_0165
+.L_lambda_opt_code_00b3:	; lambda-opt body
 	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0026
+	jge .L_lambda_simple_arity_check_ok_085c
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0026:
+.L_lambda_simple_arity_check_ok_085c:
 	mov r8, qword [rsp + 8 * 2]
 	sub r8, 1
 	mov rbx,r8
 	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0009
+	jne .L_lambda_opt_params_loop_0219
 	mov rdx, qword [rsp + 8 * 2]
 	add rdx , 3
 	sub rsp , 8
 	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0005: ;pushing down the stack of the current function
+.L_lambda_opt_stack_adjusted_0218: ;pushing down the stack of the current function
 	mov rbx, qword [rcx + 8 * 1]
 	mov qword[rcx] , rbx
 	add rcx , 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0005
+	jne .L_lambda_opt_stack_adjusted_0218
 	inc qword [rsp + 8 * 2]
 	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_000c
-	.L_lambda_opt_params_loop_0009:
+	jmp .L_lambda_opt_end_0166
+	.L_lambda_opt_params_loop_0219:
 	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
+	lea rcx, [rsp + 16 + 8*rdx]
 	mov rdx, r8
 	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0007: ;loop for copying the opt into list
+	.L_lambda_opt_params_loop_0218: ;loop for copying the opt into list
 	mov rdi, (1 + 8 + 8)
 	call malloc
 	mov byte[rax], T_pair
@@ -4529,19 +3934,18 @@ main:
 	dec rdx
 	sub rcx, 8
 	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0007
+	jne .L_lambda_opt_params_loop_0218
 	mov rdx, qword [rsp + 8 * 2]
 	mov rax, rsp
 	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
 	mov rcx, r8
 	dec rcx
 	add rdx, 3
 	sub rdx,rcx
 	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0006:
+	.L_lambda_opt_stack_adjusted_0219:
 	cmp rdx, 0
-	je .L_lambda_opt_params_end_000a
+	je .L_lambda_opt_params_end_0166
 	mov rax, rbx
 	sub rax, rcx
 	mov rsi, qword [rax]
@@ -4549,8 +3953,8 @@ main:
 	sub rbx, 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0006
-	.L_lambda_opt_params_end_000a:
+	jne .L_lambda_opt_stack_adjusted_0219
+	.L_lambda_opt_params_end_0166:
 	add rsp,rcx
 	mov rbx, 1
 	mov rbx, qword [rsp + 8 * 2]
@@ -4561,7 +3965,7 @@ main:
 	mov qword[rbx] , r9
 	dec r8
 	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_000c:
+	.L_lambda_opt_end_0166:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
@@ -4569,7 +3973,7 @@ main:
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4581,7 +3985,7 @@ main:
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4602,7 +4006,7 @@ main:
 	mov rax, PARAM(0)	; param f
 	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_12]	; free var __bin-apply
+	mov rax, qword [free_var_0]	; free var __bin-apply
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -4611,749 +4015,15 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	LEAVE
 	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_000b:
+.L_lambda_opt_end_0165:
 	leave
 	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0022:	; new closure is in rax
+.L_lambda_simple_end_07a8:	; new closure is in rax
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_32], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 0	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_000a:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 0
-	je .L_lambda_opt_end_000d
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_000a
-.L_lambda_opt_end_000d:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_000b:	; copy params
-	cmp rsi, 0
-	je .L_lambda_opt_end_000e
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_000b
-.L_lambda_opt_end_000e:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_000c
-	jmp .L_lambda_opt_end_000f
-.L_lambda_opt_code_000c:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0027
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0027:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 1
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_000c
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0007: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0007
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0010
-	.L_lambda_opt_params_loop_000c:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_000a: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_000a
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0008:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_000e
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0008
-	.L_lambda_opt_params_end_000e:
-	add rsp,rcx
-	mov rbx, 1
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0010:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 1993
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0024:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0024
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0024
-.L_lambda_simple_env_end_0024:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0024:	; copy params
-	cmp rsi, 2
-	je .L_lambda_simple_params_end_0024
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0024
-.L_lambda_simple_params_end_0024:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0024
-	jmp .L_lambda_simple_end_0024
-.L_lambda_simple_code_0024:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0028
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0028:
-	enter 0, 0
-	 mov rbx, qword [rbp + 8 * (4 +0)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0025:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 2
-	je .L_lambda_simple_env_end_0025
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0025
-.L_lambda_simple_env_end_0025:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0025:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0025
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0025
-.L_lambda_simple_params_end_0025:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0025
-	jmp .L_lambda_simple_end_0025
-.L_lambda_simple_code_0025:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0029
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0029:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_88]	; free var pair?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0005
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var f
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_32]	; free var apply
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	jne .L_if_end_0007
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var loop
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	jne .L_if_end_0007
-.L_if_end_0007:
-	jmp .L_if_end_0008
-.L_if_else_0005:
-	mov rax, L_constants + 2
-.L_if_end_0008:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0025:	; new closure is in rax
-	push rax
-	mov rax, PARAM(0)	; param loop
-	pop qword [rax]
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_88]	; free var pair?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0006
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var s
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param loop
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0009
-.L_if_else_0006:
-	mov rax, L_constants + 2
-.L_if_end_0009:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0024:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_000f:
-	mov qword [free_var_87], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 0	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_000d:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 0
-	je .L_lambda_opt_end_0011
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_000d
-.L_lambda_opt_end_0011:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_000e:	; copy params
-	cmp rsi, 0
-	je .L_lambda_opt_end_0012
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_000e
-.L_lambda_opt_end_0012:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_000f
-	jmp .L_lambda_opt_end_0013
-.L_lambda_opt_code_000f:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_002a
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_002a:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 1
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_000f
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0009: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0009
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0014
-	.L_lambda_opt_params_loop_000f:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_000d: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_000d
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_000a:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_0012
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_000a
-	.L_lambda_opt_params_end_0012:
-	add rsp,rcx
-	mov rbx, 1
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0014:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 1993
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0026:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0026
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0026
-.L_lambda_simple_env_end_0026:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0026:	; copy params
-	cmp rsi, 2
-	je .L_lambda_simple_params_end_0026
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0026
-.L_lambda_simple_params_end_0026:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0026
-	jmp .L_lambda_simple_end_0026
-.L_lambda_simple_code_0026:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_002b
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_002b:
-	enter 0, 0
-	 mov rbx, qword [rbp + 8 * (4 +0)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0027:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 2
-	je .L_lambda_simple_env_end_0027
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0027
-.L_lambda_simple_env_end_0027:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0027:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0027
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0027
-.L_lambda_simple_params_end_0027:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0027
-	jmp .L_lambda_simple_end_0027
-.L_lambda_simple_code_0027:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_002c
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_002c:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	jne .L_if_end_000a
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var f
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_32]	; free var apply
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0007
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var loop
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_000b
-.L_if_else_0007:
-	mov rax, L_constants + 2
-.L_if_end_000b:
-	cmp rax, sob_boolean_false
-	jne .L_if_end_000a
-.L_if_end_000a:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0027:	; new closure is in rax
-	push rax
-	mov rax, PARAM(0)	; param loop
-	pop qword [rax]
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	jne .L_if_end_000c
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_88]	; free var pair?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0008
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var s
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param loop
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_000d
-.L_if_else_0008:
-	mov rax, L_constants + 2
-.L_if_end_000d:
-	cmp rax, sob_boolean_false
-	jne .L_if_end_000c
-.L_if_end_000c:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0026:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_0013:
-	mov qword [free_var_30], rax
+	mov qword [free_var_1], rax
 	mov rax, sob_void
 
 	mov rdi, rax
@@ -5375,39 +4045,39 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0028:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07aa:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_0028
+	je .L_lambda_simple_env_end_07aa
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0028
-.L_lambda_simple_env_end_0028:
+	jmp .L_lambda_simple_env_loop_07aa
+.L_lambda_simple_env_end_07aa:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0028:	; copy params
+.L_lambda_simple_params_loop_07aa:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_0028
+	je .L_lambda_simple_params_end_07aa
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0028
-.L_lambda_simple_params_end_0028:
+	jmp .L_lambda_simple_params_loop_07aa
+.L_lambda_simple_params_end_07aa:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0028
-	jmp .L_lambda_simple_end_0028
-.L_lambda_simple_code_0028:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07aa
+	jmp .L_lambda_simple_end_07aa
+.L_lambda_simple_code_07aa:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_002d
+	je .L_lambda_simple_arity_check_ok_085d
 	push qword [rsp + 8 * 2]
 	push 2
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_002d:
+.L_lambda_simple_arity_check_ok_085d:
 	enter 0, 0
 	 mov rbx, qword [rbp + 8 * (4 +0)]
 	mov rdi, 8
@@ -5434,45 +4104,45 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_0029:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07ab:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 1
-	je .L_lambda_simple_env_end_0029
+	je .L_lambda_simple_env_end_07ab
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_0029
-.L_lambda_simple_env_end_0029:
+	jmp .L_lambda_simple_env_loop_07ab
+.L_lambda_simple_env_end_07ab:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_0029:	; copy params
+.L_lambda_simple_params_loop_07ab:	; copy params
 	cmp rsi, 2
-	je .L_lambda_simple_params_end_0029
+	je .L_lambda_simple_params_end_07ab
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_0029
-.L_lambda_simple_params_end_0029:
+	jmp .L_lambda_simple_params_loop_07ab
+.L_lambda_simple_params_end_07ab:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0029
-	jmp .L_lambda_simple_end_0029
-.L_lambda_simple_code_0029:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07ab
+	jmp .L_lambda_simple_end_07ab
+.L_lambda_simple_code_07ab:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_002e
+	je .L_lambda_simple_arity_check_ok_085e
 	push qword [rsp + 8 * 2]
 	push 2
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_002e:
+.L_lambda_simple_arity_check_ok_085e:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
+	mov rax, qword [free_var_40]	; free var null?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5480,17 +4150,17 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	je .L_if_else_0009
+	je .L_if_else_00fa
 	mov rax, L_constants + 1
-	jmp .L_if_end_000e
-.L_if_else_0009:
+	jmp .L_if_end_016a
+.L_if_else_00fa:
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5515,7 +4185,7 @@ main:
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5531,17 +4201,17 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
+	mov rax, qword [free_var_32]	; free var cons
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-.L_if_end_000e:
+.L_if_end_016a:
 	leave
 	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0029:	; new closure is in rax
+.L_lambda_simple_end_07ab:	; new closure is in rax
 	push rax
 	mov rax, PARAM(0)	; param map1
 	pop qword [rax]
@@ -5558,46 +4228,46 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_002a:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07ac:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 1
-	je .L_lambda_simple_env_end_002a
+	je .L_lambda_simple_env_end_07ac
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_002a
-.L_lambda_simple_env_end_002a:
+	jmp .L_lambda_simple_env_loop_07ac
+.L_lambda_simple_env_end_07ac:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_002a:	; copy params
+.L_lambda_simple_params_loop_07ac:	; copy params
 	cmp rsi, 2
-	je .L_lambda_simple_params_end_002a
+	je .L_lambda_simple_params_end_07ac
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_002a
-.L_lambda_simple_params_end_002a:
+	jmp .L_lambda_simple_params_loop_07ac
+.L_lambda_simple_params_end_07ac:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_002a
-	jmp .L_lambda_simple_end_002a
-.L_lambda_simple_code_002a:	; lambda-simple body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07ac
+	jmp .L_lambda_simple_end_07ac
+.L_lambda_simple_code_07ac:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_002f
+	je .L_lambda_simple_arity_check_ok_085f
 	push qword [rsp + 8 * 2]
 	push 2
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_002f:
+.L_lambda_simple_arity_check_ok_085f:
 	enter 0, 0
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5606,7 +4276,7 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
+	mov rax, qword [free_var_40]	; free var null?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5614,16 +4284,16 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	je .L_if_else_000a
+	je .L_if_else_00fb
 	mov rax, L_constants + 1
-	jmp .L_if_end_000f
-.L_if_else_000a:
+	jmp .L_if_end_016b
+.L_if_else_00fb:
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
-	mov rax, qword [free_var_62]	; free var cdr
+	mov rax, qword [free_var_31]	; free var cdr
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	push rax
@@ -5653,7 +4323,7 @@ main:
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
-	mov rax, qword [free_var_47]	; free var car
+	mov rax, qword [free_var_16]	; free var car
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	push rax
@@ -5670,7 +4340,7 @@ main:
 	mov rax, PARAM(0)	; param f
 	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_32]	; free var apply
+	mov rax, qword [free_var_1]	; free var apply
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5679,17 +4349,17 @@ main:
 	call SOB_CLOSURE_CODE(rax)
 	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
+	mov rax, qword [free_var_32]	; free var cons
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-.L_if_end_000f:
+.L_if_end_016b:
 	leave
 	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_002a:	; new closure is in rax
+.L_lambda_simple_end_07ac:	; new closure is in rax
 	push rax
 	mov rax, PARAM(1)	; param map-list
 	pop qword [rax]
@@ -5708,65 +4378,64 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_opt_code_0010:	; ext_env[i + 1] <-- env[i] copy all the array
+.L_lambda_opt_env_loop_00b4:	; ext_env[i + 1] <-- env[i] copy all the array
 	cmp rsi, 1
-	je .L_lambda_opt_end_0015
+	je .L_lambda_opt_env_end_00b4
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_opt_code_0010
-.L_lambda_opt_end_0015:
+	jmp .L_lambda_opt_env_loop_00b4
+.L_lambda_opt_env_end_00b4:
 	pop rbx
 	mov rsi, 0
-.L_lambda_opt_code_0011:	; copy params
+.L_lambda_opt_params_loop_021a:	; copy params
 	cmp rsi, 2
-	je .L_lambda_opt_end_0016
+	je .L_lambda_opt_params_end_0167
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_opt_code_0011
-.L_lambda_opt_end_0016:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
+	jmp .L_lambda_opt_params_loop_021a
+.L_lambda_opt_params_end_0167:
+	mov qword [rax], rbx 	; ext_env[0] <-- The new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0012
-	jmp .L_lambda_opt_end_0017
-.L_lambda_opt_code_0012:	; lambda-opt body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_00b4
+	jmp .L_lambda_opt_end_0167
+.L_lambda_opt_code_00b4:	; lambda-opt body
 	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0030
+	jge .L_lambda_simple_arity_check_ok_0860
 	push qword [rsp + 8 * 2]
 	push 1
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0030:
+.L_lambda_simple_arity_check_ok_0860:
 	mov r8, qword [rsp + 8 * 2]
 	sub r8, 1
 	mov rbx,r8
 	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0012
+	jne .L_lambda_opt_params_loop_021c
 	mov rdx, qword [rsp + 8 * 2]
 	add rdx , 3
 	sub rsp , 8
 	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_000b: ;pushing down the stack of the current function
+.L_lambda_opt_stack_adjusted_021b: ;pushing down the stack of the current function
 	mov rbx, qword [rcx + 8 * 1]
 	mov qword[rcx] , rbx
 	add rcx , 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_000b
+	jne .L_lambda_opt_stack_adjusted_021b
 	inc qword [rsp + 8 * 2]
 	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0018
-	.L_lambda_opt_params_loop_0012:
+	jmp .L_lambda_opt_end_0168
+	.L_lambda_opt_params_loop_021c:
 	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
+	lea rcx, [rsp + 16 + 8*rdx]
 	mov rdx, r8
 	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0010: ;loop for copying the opt into list
+	.L_lambda_opt_params_loop_021b: ;loop for copying the opt into list
 	mov rdi, (1 + 8 + 8)
 	call malloc
 	mov byte[rax], T_pair
@@ -5777,19 +4446,18 @@ main:
 	dec rdx
 	sub rcx, 8
 	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0010
+	jne .L_lambda_opt_params_loop_021b
 	mov rdx, qword [rsp + 8 * 2]
 	mov rax, rsp
 	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
 	mov rcx, r8
 	dec rcx
 	add rdx, 3
 	sub rdx,rcx
 	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_000c:
+	.L_lambda_opt_stack_adjusted_021c:
 	cmp rdx, 0
-	je .L_lambda_opt_params_end_0016
+	je .L_lambda_opt_params_end_0168
 	mov rax, rbx
 	sub rax, rcx
 	mov rsi, qword [rax]
@@ -5797,8 +4465,8 @@ main:
 	sub rbx, 8
 	dec rdx
 	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_000c
-	.L_lambda_opt_params_end_0016:
+	jne .L_lambda_opt_stack_adjusted_021c
+	.L_lambda_opt_params_end_0168:
 	add rsp,rcx
 	mov rbx, 1
 	mov rbx, qword [rsp + 8 * 2]
@@ -5809,13 +4477,13 @@ main:
 	mov qword[rbx] , r9
 	dec r8
 	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0018:
+	.L_lambda_opt_end_0168:
 	enter 0, 0
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
 	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
+	mov rax, qword [free_var_40]	; free var null?
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
 	cmp byte [rax], T_closure
@@ -5823,10 +4491,10 @@ main:
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
 	cmp rax, sob_boolean_false
-	je .L_if_else_000b
+	je .L_if_else_00fc
 	mov rax, L_constants + 1
-	jmp .L_if_end_0010
-.L_if_else_000b:
+	jmp .L_if_end_016c
+.L_if_else_00fc:
 	; preparing a non-tail-call
 	mov rax, PARAM(1)	; param s
 	push rax
@@ -5841,159 +4509,28 @@ main:
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0010:
+.L_if_end_016c:
 	LEAVE
 	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_0017:
+.L_lambda_opt_end_0167:
 	leave
 	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0028:	; new closure is in rax
+.L_lambda_simple_end_07aa:	; new closure is in rax
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
 	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_84], rax
+	mov qword [free_var_38], rax
 	mov rax, sob_void
 
 	mov rdi, rax
 	call print_sexpr_if_not_void
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_002b:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_002b
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_002b
-.L_lambda_simple_env_end_002b:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_002b:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_002b
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_002b
-.L_lambda_simple_params_end_002b:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_002b
-	jmp .L_lambda_simple_end_002b
-.L_lambda_simple_code_002b:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0031
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0031:
-	enter 0, 0
 	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
 	mov rax, L_constants + 1
 	push rax
 	mov rdi, (1 + 8 + 8)	; sob closure
 	call malloc
 	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_002c:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_002c
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_002c
-.L_lambda_simple_env_end_002c:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_002c:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_002c
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_002c
-.L_lambda_simple_params_end_002c:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_002c
-	jmp .L_lambda_simple_end_002c
-.L_lambda_simple_code_002c:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0032
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0032:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param r
-	push rax
-	mov rax, PARAM(1)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_002c:	; new closure is in rax
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_74]	; free var fold-left
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_002b:	; new closure is in rax
-	mov qword [free_var_92], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rax, L_constants + 1993
-	push rax
-	mov rax, L_constants + 1993
-	push rax
-	push 2	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
 	mov rdi, 8 * 0	; new rib
 	call malloc
 	push rax
@@ -6002,6909 +4539,49 @@ main:
 	mov rdi, ENV
 	mov rsi, 0
 	mov rdx, 1
-.L_lambda_simple_env_loop_002d:	; ext_env[i + 1] <-- env[i]
+.L_lambda_simple_env_loop_07ad:	; ext_env[i + 1] <-- env[i]
 	cmp rsi, 0
-	je .L_lambda_simple_env_end_002d
+	je .L_lambda_simple_env_end_07ad
 	mov rcx, qword [rdi + 8 * rsi]
 	mov qword [rax + 8 * rdx], rcx
 	inc rsi
 	inc rdx
-	jmp .L_lambda_simple_env_loop_002d
-.L_lambda_simple_env_end_002d:
+	jmp .L_lambda_simple_env_loop_07ad
+.L_lambda_simple_env_end_07ad:
 	pop rbx
 	mov rsi, 0
-.L_lambda_simple_params_loop_002d:	; copy params
+.L_lambda_simple_params_loop_07ad:	; copy params
 	cmp rsi, 0
-	je .L_lambda_simple_params_end_002d
+	je .L_lambda_simple_params_end_07ad
 	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
 	mov qword [rbx + 8 * rsi], rdx
 	inc rsi
-	jmp .L_lambda_simple_params_loop_002d
-.L_lambda_simple_params_end_002d:
+	jmp .L_lambda_simple_params_loop_07ad
+.L_lambda_simple_params_end_07ad:
 	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
 	mov rbx, rax
 	pop rax
 	mov byte [rax], T_closure
 	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_002d
-	jmp .L_lambda_simple_end_002d
-.L_lambda_simple_code_002d:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0033
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0033:
-	enter 0, 0
-	 mov rbx, qword [rbp + 8 * (4 +0)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	 mov rbx, qword [rbp + 8 * (4 +1)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_002e:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_002e
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_002e
-.L_lambda_simple_env_end_002e:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_002e:	; copy params
-	cmp rsi, 2
-	je .L_lambda_simple_params_end_002e
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_002e
-.L_lambda_simple_params_end_002e:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_002e
-	jmp .L_lambda_simple_end_002e
-.L_lambda_simple_code_002e:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0034
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0034:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param sr
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_000c
-	mov rax, PARAM(0)	; param s1
-	jmp .L_if_end_0011
-.L_if_else_000c:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param sr
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param sr
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run-1
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param s1
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var run-2
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0011:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_002e:	; new closure is in rax
-	push rax
-	mov rax, PARAM(0)	; param run-1
-	pop qword [rax]
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_002f:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_002f
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_002f
-.L_lambda_simple_env_end_002f:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_002f:	; copy params
-	cmp rsi, 2
-	je .L_lambda_simple_params_end_002f
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_002f
-.L_lambda_simple_params_end_002f:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_002f
-	jmp .L_lambda_simple_end_002f
-.L_lambda_simple_code_002f:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0035
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0035:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s1
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_000d
-	mov rax, PARAM(1)	; param s2
-	jmp .L_if_end_0012
-.L_if_else_000d:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s2
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s1
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var run-2
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s1
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0012:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_002f:	; new closure is in rax
-	push rax
-	mov rax, PARAM(1)	; param run-2
-	pop qword [rax]
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 2	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_0013:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 1
-	je .L_lambda_opt_end_0019
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_0013
-.L_lambda_opt_end_0019:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_0014:	; copy params
-	cmp rsi, 2
-	je .L_lambda_opt_end_001a
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_0014
-.L_lambda_opt_end_001a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0015
-	jmp .L_lambda_opt_end_001b
-.L_lambda_opt_code_0015:	; lambda-opt body
+	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_07ad
+	jmp .L_lambda_simple_end_07ad
+.L_lambda_simple_code_07ad:	; lambda-simple body
 	cmp qword [rsp + 8 * 2], 0
-	jge .L_lambda_simple_arity_check_ok_0036
+	je .L_lambda_simple_arity_check_ok_0861
 	push qword [rsp + 8 * 2]
 	push 0
 	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0036:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 0
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0015
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_000d: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_000d
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_001c
-	.L_lambda_opt_params_loop_0015:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0013: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0013
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_000e:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_001a
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_000e
-	.L_lambda_opt_params_end_001a:
-	add rsp,rcx
-	mov rbx, 0
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_001c:
+.L_lambda_simple_arity_check_ok_0861:
 	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_000e
-	mov rax, L_constants + 1
-	jmp .L_if_end_0013
-.L_if_else_000e:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run-1
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0013:
-	LEAVE
-	ret AND_KILL_FRAME(1)
-.L_lambda_opt_end_001b:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_002d:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_31], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rax, L_constants + 1993
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0030:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0030
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0030
-.L_lambda_simple_env_end_0030:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0030:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0030
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0030
-.L_lambda_simple_params_end_0030:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0030
-	jmp .L_lambda_simple_end_0030
-.L_lambda_simple_code_0030:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0037
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0037:
-	enter 0, 0
-	 mov rbx, qword [rbp + 8 * (4 +0)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0031:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0031
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0031
-.L_lambda_simple_env_end_0031:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0031:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0031
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0031
-.L_lambda_simple_params_end_0031:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0031
-	jmp .L_lambda_simple_end_0031
-.L_lambda_simple_code_0031:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 3
-	je .L_lambda_simple_arity_check_ok_0038
-	push qword [rsp + 8 * 2]
-	push 3
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0038:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_87]	; free var ormap
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_000f
-	mov rax, PARAM(1)	; param unit
-	jmp .L_if_end_0014
-.L_if_else_000f:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(1)	; param unit
-	push rax
-	mov rax, PARAM(0)	; param f
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_32]	; free var apply
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param f
-	push rax
-	push 3	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0014:
-	leave
-	ret AND_KILL_FRAME(3)
-.L_lambda_simple_end_0031:	; new closure is in rax
-	push rax
-	mov rax, PARAM(0)	; param run
-	pop qword [rax]
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_0016:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 1
-	je .L_lambda_opt_end_001d
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_0016
-.L_lambda_opt_end_001d:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_0017:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_001e
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_0017
-.L_lambda_opt_end_001e:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0018
-	jmp .L_lambda_opt_end_001f
-.L_lambda_opt_code_0018:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 2
-	jge .L_lambda_simple_arity_check_ok_0039
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0039:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 2
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0018
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_000f: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_000f
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0020
-	.L_lambda_opt_params_loop_0018:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0016: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0016
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0010:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_001e
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0010
-	.L_lambda_opt_params_end_001e:
-	add rsp,rcx
-	mov rbx, 2
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0020:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, PARAM(1)	; param unit
-	push rax
-	mov rax, PARAM(0)	; param f
-	push rax
-	push 3	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(3)
-.L_lambda_opt_end_001f:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0030:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_74], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rax, L_constants + 1993
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0032:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0032
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0032
-.L_lambda_simple_env_end_0032:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0032:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0032
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0032
-.L_lambda_simple_params_end_0032:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0032
-	jmp .L_lambda_simple_end_0032
-.L_lambda_simple_code_0032:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_003a
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_003a:
-	enter 0, 0
-	 mov rbx, qword [rbp + 8 * (4 +0)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0033:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0033
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0033
-.L_lambda_simple_env_end_0033:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0033:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0033
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0033
-.L_lambda_simple_params_end_0033:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0033
-	jmp .L_lambda_simple_end_0033
-.L_lambda_simple_code_0033:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 3
-	je .L_lambda_simple_arity_check_ok_003b
-	push qword [rsp + 8 * 2]
-	push 3
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_003b:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_87]	; free var ormap
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0010
-	mov rax, PARAM(1)	; param unit
-	jmp .L_if_end_0015
-.L_if_else_0010:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, L_constants + 1
-	push rax
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(1)	; param unit
-	push rax
-	mov rax, PARAM(0)	; param f
-	push rax
-	push 3	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_71]	; free var cons
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_31]	; free var append
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param f
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_32]	; free var apply
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0015:
-	leave
-	ret AND_KILL_FRAME(3)
-.L_lambda_simple_end_0033:	; new closure is in rax
-	push rax
-	mov rax, PARAM(0)	; param run
-	pop qword [rax]
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_0019:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 1
-	je .L_lambda_opt_end_0021
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_0019
-.L_lambda_opt_end_0021:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_001a:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_0022
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_001a
-.L_lambda_opt_end_0022:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_001b
-	jmp .L_lambda_opt_end_0023
-.L_lambda_opt_code_001b:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 2
-	jge .L_lambda_simple_arity_check_ok_003c
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_003c:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 2
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_001b
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0011: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0011
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0024
-	.L_lambda_opt_params_loop_001b:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0019: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0019
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0012:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_0022
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0012
-	.L_lambda_opt_params_end_0022:
-	add rsp,rcx
-	mov rbx, 2
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0024:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(2)	; param ss
-	push rax
-	mov rax, PARAM(1)	; param unit
-	push rax
-	mov rax, PARAM(0)	; param f
-	push rax
-	push 3	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(3)
-.L_lambda_opt_end_0023:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0032:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_75], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0034:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0034
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0034
-.L_lambda_simple_env_end_0034:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0034:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0034
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0034
-.L_lambda_simple_params_end_0034:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0034
-	jmp .L_lambda_simple_end_0034
-.L_lambda_simple_code_0034:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 0
-	je .L_lambda_simple_arity_check_ok_003d
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_003d:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2187
-	push rax
-	mov rax, L_constants + 2178
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_72]	; free var error
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
+	mov rax, L_constants + 2028
 	leave
 	ret AND_KILL_FRAME(0)
-.L_lambda_simple_end_0034:	; new closure is in rax
+.L_lambda_simple_end_07ad:	; new closure is in rax
 	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0035:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0035
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0035
-.L_lambda_simple_env_end_0035:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0035:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0035
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0035
-.L_lambda_simple_params_end_0035:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0035
-	jmp .L_lambda_simple_end_0035
-.L_lambda_simple_code_0035:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_003e
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_003e:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0036:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0036
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0036
-.L_lambda_simple_env_end_0036:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0036:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0036
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0036
-.L_lambda_simple_params_end_0036:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0036
-	jmp .L_lambda_simple_end_0036
-.L_lambda_simple_code_0036:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_003f
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_003f:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_001c
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0013
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_11]	; free var __bin-add-zz
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0018
-.L_if_else_0013:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0012
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_9]	; free var __bin-add-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0017
-.L_if_else_0012:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0011
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_10]	; free var __bin-add-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0016
-.L_if_else_0011:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0016:
-.L_if_end_0017:
-.L_if_end_0018:
-	jmp .L_if_end_0021
-.L_if_else_001c:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_001b
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0016
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_28]	; free var __bin_integer_to_fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_9]	; free var __bin-add-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_001b
-.L_if_else_0016:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0015
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_9]	; free var __bin-add-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_001a
-.L_if_else_0015:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0014
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_10]	; free var __bin-add-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0019
-.L_if_else_0014:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0019:
-.L_if_end_001a:
-.L_if_end_001b:
-	jmp .L_if_end_0020
-.L_if_else_001b:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_001a
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0019
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_10]	; free var __bin-add-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_001e
-.L_if_else_0019:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0018
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_10]	; free var __bin-add-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_001d
-.L_if_else_0018:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0017
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_10]	; free var __bin-add-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_001c
-.L_if_else_0017:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_001c:
-.L_if_end_001d:
-.L_if_end_001e:
-	jmp .L_if_end_001f
-.L_if_else_001a:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_001f:
-.L_if_end_0020:
-.L_if_end_0021:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0036:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0037:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0037
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0037
-.L_lambda_simple_env_end_0037:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0037:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0037
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0037
-.L_lambda_simple_params_end_0037:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0037
-	jmp .L_lambda_simple_end_0037
-.L_lambda_simple_code_0037:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0040
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0040:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_001c:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 2
-	je .L_lambda_opt_end_0025
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_001c
-.L_lambda_opt_end_0025:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_001d:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_0026
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_001d
-.L_lambda_opt_end_0026:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_001e
-	jmp .L_lambda_opt_end_0027
-.L_lambda_opt_code_001e:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 0
-	jge .L_lambda_simple_arity_check_ok_0041
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0041:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 0
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_001e
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0013: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0013
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0028
-	.L_lambda_opt_params_loop_001e:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_001c: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_001c
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0014:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_0026
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0014
-	.L_lambda_opt_params_end_0026:
-	add rsp,rcx
-	mov rbx, 0
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0028:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, L_constants + 2135
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var bin+
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_74]	; free var fold-left
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(1)
-.L_lambda_opt_end_0027:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0037:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0035:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_1], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0038:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0038
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0038
-.L_lambda_simple_env_end_0038:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0038:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0038
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0038
-.L_lambda_simple_params_end_0038:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0038
-	jmp .L_lambda_simple_end_0038
-.L_lambda_simple_code_0038:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 0
-	je .L_lambda_simple_arity_check_ok_0042
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0042:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2187
-	push rax
-	mov rax, L_constants + 2251
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_72]	; free var error
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(0)
-.L_lambda_simple_end_0038:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0039:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0039
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0039
-.L_lambda_simple_env_end_0039:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0039:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0039
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0039
-.L_lambda_simple_params_end_0039:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0039
-	jmp .L_lambda_simple_end_0039
-.L_lambda_simple_code_0039:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0043
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0043:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_003a:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_003a
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_003a
-.L_lambda_simple_env_end_003a:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_003a:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_003a
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_003a
-.L_lambda_simple_params_end_003a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_003a
-	jmp .L_lambda_simple_end_003a
-.L_lambda_simple_code_003a:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0044
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0044:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0028
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_001f
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_27]	; free var __bin-sub-zz
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0024
-.L_if_else_001f:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_001e
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_25]	; free var __bin-sub-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0023
-.L_if_else_001e:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_90]	; free var real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_001d
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_26]	; free var __bin-sub-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0022
-.L_if_else_001d:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0022:
-.L_if_end_0023:
-.L_if_end_0024:
-	jmp .L_if_end_002d
-.L_if_else_0028:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0027
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0022
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_25]	; free var __bin-sub-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0027
-.L_if_else_0022:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0021
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_25]	; free var __bin-sub-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0026
-.L_if_else_0021:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0020
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_26]	; free var __bin-sub-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0025
-.L_if_else_0020:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0025:
-.L_if_end_0026:
-.L_if_end_0027:
-	jmp .L_if_end_002c
-.L_if_else_0027:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0026
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0025
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_26]	; free var __bin-sub-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_002a
-.L_if_else_0025:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0024
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_26]	; free var __bin-sub-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0029
-.L_if_else_0024:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0023
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_26]	; free var __bin-sub-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0028
-.L_if_else_0023:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0028:
-.L_if_end_0029:
-.L_if_end_002a:
-	jmp .L_if_end_002b
-.L_if_else_0026:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_002b:
-.L_if_end_002c:
-.L_if_end_002d:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_003a:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_003b:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_003b
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_003b
-.L_lambda_simple_env_end_003b:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_003b:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_003b
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_003b
-.L_lambda_simple_params_end_003b:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_003b
-	jmp .L_lambda_simple_end_003b
-.L_lambda_simple_code_003b:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0045
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0045:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_001f:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 2
-	je .L_lambda_opt_end_0029
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_001f
-.L_lambda_opt_end_0029:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_0020:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_002a
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_0020
-.L_lambda_opt_end_002a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0021
-	jmp .L_lambda_opt_end_002b
-.L_lambda_opt_code_0021:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0046
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0046:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 1
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0021
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0015: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0015
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_002c
-	.L_lambda_opt_params_loop_0021:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_001f: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_001f
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0016:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_002a
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0016
-	.L_lambda_opt_params_end_002a:
-	add rsp,rcx
-	mov rbx, 1
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_002c:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0029
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	mov rax, L_constants + 2135
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var bin-
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_002e
-.L_if_else_0029:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	mov rax, L_constants + 2135
-	push rax
-	mov rax, qword [free_var_1]	; free var +
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_74]	; free var fold-left
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 4	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_003c:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 3
-	je .L_lambda_simple_env_end_003c
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_003c
-.L_lambda_simple_env_end_003c:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_003c:	; copy params
-	cmp rsi, 2
-	je .L_lambda_simple_params_end_003c
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_003c
-.L_lambda_simple_params_end_003c:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_003c
-	jmp .L_lambda_simple_end_003c
-.L_lambda_simple_code_003c:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0047
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0047:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param b
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var bin-
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_003c:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_002e:
-	LEAVE
-	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_002b:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_003b:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0039:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_2], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_003d:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_003d
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_003d
-.L_lambda_simple_env_end_003d:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_003d:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_003d
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_003d
-.L_lambda_simple_params_end_003d:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_003d
-	jmp .L_lambda_simple_end_003d
-.L_lambda_simple_code_003d:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 0
-	je .L_lambda_simple_arity_check_ok_0048
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0048:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2187
-	push rax
-	mov rax, L_constants + 2279
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_72]	; free var error
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(0)
-.L_lambda_simple_end_003d:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_003e:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_003e
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_003e
-.L_lambda_simple_env_end_003e:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_003e:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_003e
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_003e
-.L_lambda_simple_params_end_003e:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_003e
-	jmp .L_lambda_simple_end_003e
-.L_lambda_simple_code_003e:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0049
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0049:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_003f:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_003f
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_003f
-.L_lambda_simple_env_end_003f:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_003f:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_003f
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_003f
-.L_lambda_simple_params_end_003f:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_003f
-	jmp .L_lambda_simple_end_003f
-.L_lambda_simple_code_003f:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_004a
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_004a:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0035
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_002c
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_24]	; free var __bin-mul-zz
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0031
-.L_if_else_002c:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_002b
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_22]	; free var __bin-mul-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0030
-.L_if_else_002b:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_002a
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_23]	; free var __bin-mul-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_002f
-.L_if_else_002a:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_002f:
-.L_if_end_0030:
-.L_if_end_0031:
-	jmp .L_if_end_003a
-.L_if_else_0035:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0034
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_002f
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_22]	; free var __bin-mul-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0034
-.L_if_else_002f:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_002e
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_22]	; free var __bin-mul-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0033
-.L_if_else_002e:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_002d
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_23]	; free var __bin-mul-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0032
-.L_if_else_002d:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0032:
-.L_if_end_0033:
-.L_if_end_0034:
-	jmp .L_if_end_0039
-.L_if_else_0034:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0033
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0032
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_23]	; free var __bin-mul-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0037
-.L_if_else_0032:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0031
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_23]	; free var __bin-mul-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0036
-.L_if_else_0031:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0030
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_23]	; free var __bin-mul-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0035
-.L_if_else_0030:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0035:
-.L_if_end_0036:
-.L_if_end_0037:
-	jmp .L_if_end_0038
-.L_if_else_0033:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0038:
-.L_if_end_0039:
-.L_if_end_003a:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_003f:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0040:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0040
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0040
-.L_lambda_simple_env_end_0040:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0040:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0040
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0040
-.L_lambda_simple_params_end_0040:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0040
-	jmp .L_lambda_simple_end_0040
-.L_lambda_simple_code_0040:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_004b
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_004b:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_0022:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 2
-	je .L_lambda_opt_end_002d
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_0022
-.L_lambda_opt_end_002d:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_0023:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_002e
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_0023
-.L_lambda_opt_end_002e:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0024
-	jmp .L_lambda_opt_end_002f
-.L_lambda_opt_code_0024:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 0
-	jge .L_lambda_simple_arity_check_ok_004c
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_004c:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 0
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0024
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0017: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0017
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0030
-	.L_lambda_opt_params_loop_0024:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0022: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0022
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_0018:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_002e
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0018
-	.L_lambda_opt_params_end_002e:
-	add rsp,rcx
-	mov rbx, 0
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0030:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, L_constants + 2270
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var bin*
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_74]	; free var fold-left
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(1)
-.L_lambda_opt_end_002f:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0040:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_003e:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_0], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0041:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0041
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0041
-.L_lambda_simple_env_end_0041:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0041:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0041
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0041
-.L_lambda_simple_params_end_0041:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0041
-	jmp .L_lambda_simple_end_0041
-.L_lambda_simple_code_0041:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 0
-	je .L_lambda_simple_arity_check_ok_004d
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_004d:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2187
-	push rax
-	mov rax, L_constants + 2298
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_72]	; free var error
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(0)
-.L_lambda_simple_end_0041:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0042:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0042
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0042
-.L_lambda_simple_env_end_0042:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0042:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0042
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0042
-.L_lambda_simple_params_end_0042:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0042
-	jmp .L_lambda_simple_end_0042
-.L_lambda_simple_code_0042:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_004e
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_004e:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0043:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0043
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0043
-.L_lambda_simple_env_end_0043:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0043:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0043
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0043
-.L_lambda_simple_params_end_0043:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0043
-	jmp .L_lambda_simple_end_0043
-.L_lambda_simple_code_0043:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_004f
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_004f:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0041
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0038
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_15]	; free var __bin-div-zz
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_003d
-.L_if_else_0038:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0037
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_13]	; free var __bin-div-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_003c
-.L_if_else_0037:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0036
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_14]	; free var __bin-div-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_003b
-.L_if_else_0036:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_003b:
-.L_if_end_003c:
-.L_if_end_003d:
-	jmp .L_if_end_0046
-.L_if_else_0041:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0040
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_003b
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_13]	; free var __bin-div-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0040
-.L_if_else_003b:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_003a
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_13]	; free var __bin-div-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_003f
-.L_if_else_003a:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0039
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_14]	; free var __bin-div-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_003e
-.L_if_else_0039:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_003e:
-.L_if_end_003f:
-.L_if_end_0040:
-	jmp .L_if_end_0045
-.L_if_else_0040:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_003f
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_003e
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_14]	; free var __bin-div-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0043
-.L_if_else_003e:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_003d
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_14]	; free var __bin-div-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0042
-.L_if_else_003d:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_003c
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_14]	; free var __bin-div-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0041
-.L_if_else_003c:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0041:
-.L_if_end_0042:
-.L_if_end_0043:
-	jmp .L_if_end_0044
-.L_if_else_003f:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var error
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0044:
-.L_if_end_0045:
-.L_if_end_0046:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0043:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0044:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0044
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0044
-.L_lambda_simple_env_end_0044:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0044:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0044
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0044
-.L_lambda_simple_params_end_0044:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0044
-	jmp .L_lambda_simple_end_0044
-.L_lambda_simple_code_0044:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0050
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0050:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_0025:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 2
-	je .L_lambda_opt_end_0031
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_0025
-.L_lambda_opt_end_0031:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_0026:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_0032
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_0026
-.L_lambda_opt_end_0032:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_0027
-	jmp .L_lambda_opt_end_0033
-.L_lambda_opt_code_0027:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0051
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0051:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 1
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_0027
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_0019: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_0019
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0034
-	.L_lambda_opt_params_loop_0027:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0025: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0025
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_001a:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_0032
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_001a
-	.L_lambda_opt_params_end_0032:
-	add rsp,rcx
-	mov rbx, 1
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0034:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0042
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	mov rax, L_constants + 2270
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var bin/
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0047
-.L_if_else_0042:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	mov rax, L_constants + 2270
-	push rax
-	mov rax, qword [free_var_0]	; free var *
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_74]	; free var fold-left
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 4	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0045:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 3
-	je .L_lambda_simple_env_end_0045
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0045
-.L_lambda_simple_env_end_0045:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0045:	; copy params
-	cmp rsi, 2
-	je .L_lambda_simple_params_end_0045
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0045
-.L_lambda_simple_params_end_0045:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0045
-	jmp .L_lambda_simple_end_0045
-.L_lambda_simple_code_0045:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0052
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0052:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param b
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var bin/
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0045:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0047:
-	LEAVE
-	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_0033:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0044:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0042:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_3], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0046:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0046
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0046
-.L_lambda_simple_env_end_0046:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0046:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0046
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0046
-.L_lambda_simple_params_end_0046:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0046
-	jmp .L_lambda_simple_end_0046
-.L_lambda_simple_code_0046:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0053
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0053:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param n
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_93]	; free var zero?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0043
-	mov rax, L_constants + 2270
-	jmp .L_if_end_0048
-.L_if_else_0043:
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, L_constants + 2270
-	push rax
-	mov rax, PARAM(0)	; param n
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_2]	; free var -
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_73]	; free var fact
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param n
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_0]	; free var *
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0048:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0046:	; new closure is in rax
-	mov qword [free_var_73], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_4], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_5], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_7], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_8], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_6], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0047:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0047
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0047
-.L_lambda_simple_env_end_0047:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0047:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0047
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0047
-.L_lambda_simple_params_end_0047:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0047
-	jmp .L_lambda_simple_end_0047
-.L_lambda_simple_code_0047:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 0
-	je .L_lambda_simple_arity_check_ok_0054
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0054:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2408
-	push rax
-	mov rax, L_constants + 2399
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_72]	; free var error
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(0)
-.L_lambda_simple_end_0047:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0048:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0048
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0048
-.L_lambda_simple_env_end_0048:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0048:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0048
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0048
-.L_lambda_simple_params_end_0048:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0048
-	jmp .L_lambda_simple_end_0048
-.L_lambda_simple_code_0048:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0055
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0055:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0049:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_0049
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0049
-.L_lambda_simple_env_end_0049:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0049:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0049
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0049
-.L_lambda_simple_params_end_0049:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0049
-	jmp .L_lambda_simple_end_0049
-.L_lambda_simple_code_0049:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 3
-	je .L_lambda_simple_arity_check_ok_0056
-	push qword [rsp + 8 * 2]
-	push 3
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0056:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_004a:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 2
-	je .L_lambda_simple_env_end_004a
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_004a
-.L_lambda_simple_env_end_004a:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_004a:	; copy params
-	cmp rsi, 3
-	je .L_lambda_simple_params_end_004a
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_004a
-.L_lambda_simple_params_end_004a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_004a
-	jmp .L_lambda_simple_end_004a
-.L_lambda_simple_code_004a:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0057
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0057:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_004f
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0046
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var comparator-zz
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_004b
-.L_if_else_0046:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0045
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var comparator-qq
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_004a
-.L_if_else_0045:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0044
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 2]	; bound var comparator-rr
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0049
-.L_if_else_0044:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var exit
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0049:
-.L_if_end_004a:
-.L_if_end_004b:
-	jmp .L_if_end_0054
-.L_if_else_004f:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_004e
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0049
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_29]	; free var __integer-to-fraction
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var comparator-qq
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_004e
-.L_if_else_0049:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0048
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 1]	; bound var comparator-qq
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_004d
-.L_if_else_0048:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0047
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 2]	; bound var comparator-rr
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_004c
-.L_if_else_0047:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var exit
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_004c:
-.L_if_end_004d:
-.L_if_end_004e:
-	jmp .L_if_end_0053
-.L_if_else_004e:
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_004d
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_80]	; free var integer?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_004c
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_79]	; free var integer->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 2]	; bound var comparator-rr
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0051
-.L_if_else_004c:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_77]	; free var fraction?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_004b
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_76]	; free var fraction->real
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 2]	; bound var comparator-rr
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0050
-.L_if_else_004b:
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_91]	; free var real?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_004a
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 2]	; bound var comparator-rr
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_004f
-.L_if_else_004a:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var exit
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_004f:
-.L_if_end_0050:
-.L_if_end_0051:
-	jmp .L_if_end_0052
-.L_if_else_004d:
-	; preparing a non-tail-call
-	push 0	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var exit
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-.L_if_end_0052:
-.L_if_end_0053:
-.L_if_end_0054:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_004a:	; new closure is in rax
-	leave
-	ret AND_KILL_FRAME(3)
-.L_lambda_simple_end_0049:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_004b:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_004b
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_004b
-.L_lambda_simple_env_end_004b:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_004b:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_004b
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_004b
-.L_lambda_simple_params_end_004b:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_004b
-	jmp .L_lambda_simple_end_004b
-.L_lambda_simple_code_004b:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0058
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0058:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, qword [free_var_20]	; free var __bin-less-than-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	mov rax, qword [free_var_19]	; free var __bin-less-than-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	mov rax, qword [free_var_21]	; free var __bin-less-than-zz
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 3	; arg count
-	mov rax, PARAM(0)	; param make-bin-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 3	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_004c:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 2
-	je .L_lambda_simple_env_end_004c
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_004c
-.L_lambda_simple_env_end_004c:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_004c:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_004c
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_004c
-.L_lambda_simple_params_end_004c:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_004c
-	jmp .L_lambda_simple_end_004c
-.L_lambda_simple_code_004c:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0059
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0059:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, qword [free_var_17]	; free var __bin-equal-rr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	mov rax, qword [free_var_16]	; free var __bin-equal-qq
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	mov rax, qword [free_var_18]	; free var __bin-equal-zz
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 3	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var make-bin-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 4	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_004d:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 3
-	je .L_lambda_simple_env_end_004d
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_004d
-.L_lambda_simple_env_end_004d:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_004d:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_004d
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_004d
-.L_lambda_simple_params_end_004d:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_004d
-	jmp .L_lambda_simple_end_004d
-.L_lambda_simple_code_004d:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_005a
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_005a:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 5	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_004e:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 4
-	je .L_lambda_simple_env_end_004e
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_004e
-.L_lambda_simple_env_end_004e:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_004e:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_004e
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_004e
-.L_lambda_simple_params_end_004e:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_004e
-	jmp .L_lambda_simple_end_004e
-.L_lambda_simple_code_004e:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_005b
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_005b:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var bin<?
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_85]	; free var not
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_004e:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 5	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_004f:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 4
-	je .L_lambda_simple_env_end_004f
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_004f
-.L_lambda_simple_env_end_004f:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_004f:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_004f
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_004f
-.L_lambda_simple_params_end_004f:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_004f
-	jmp .L_lambda_simple_end_004f
-.L_lambda_simple_code_004f:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_005c
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_005c:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 6	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0050:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 5
-	je .L_lambda_simple_env_end_0050
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0050
-.L_lambda_simple_env_end_0050:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0050:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0050
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0050
-.L_lambda_simple_params_end_0050:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0050
-	jmp .L_lambda_simple_end_0050
-.L_lambda_simple_code_0050:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_005d
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_005d:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param a
-	push rax
-	mov rax, PARAM(1)	; param b
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 2]
-	mov rax, qword [rax + 8 * 0]	; bound var bin<?
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0050:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 6	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0051:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 5
-	je .L_lambda_simple_env_end_0051
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0051
-.L_lambda_simple_env_end_0051:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0051:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0051
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0051
-.L_lambda_simple_params_end_0051:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0051
-	jmp .L_lambda_simple_end_0051
-.L_lambda_simple_code_0051:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_005e
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_005e:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 7	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0052:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 6
-	je .L_lambda_simple_env_end_0052
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0052
-.L_lambda_simple_env_end_0052:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0052:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0052
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0052
-.L_lambda_simple_params_end_0052:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0052
-	jmp .L_lambda_simple_end_0052
-.L_lambda_simple_code_0052:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_005f
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_005f:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param b
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var bin>?
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_85]	; free var not
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0052:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 7	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0053:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 6
-	je .L_lambda_simple_env_end_0053
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0053
-.L_lambda_simple_env_end_0053:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0053:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0053
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0053
-.L_lambda_simple_params_end_0053:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0053
-	jmp .L_lambda_simple_end_0053
-.L_lambda_simple_code_0053:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0060
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0060:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 8	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0054:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 7
-	je .L_lambda_simple_env_end_0054
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0054
-.L_lambda_simple_env_end_0054:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0054:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0054
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0054
-.L_lambda_simple_params_end_0054:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0054
-	jmp .L_lambda_simple_end_0054
-.L_lambda_simple_code_0054:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0061
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0061:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 1993
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 9	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0055:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 8
-	je .L_lambda_simple_env_end_0055
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0055
-.L_lambda_simple_env_end_0055:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0055:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0055
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0055
-.L_lambda_simple_params_end_0055:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0055
-	jmp .L_lambda_simple_end_0055
-.L_lambda_simple_code_0055:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0062
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0062:
-	enter 0, 0
-	 mov rbx, qword [rbp + 8 * (4 +0)]
-	mov rdi, 8
-	call malloc
-	mov qword [rax], rbx
-	mov qword [rbx], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 10	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0056:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 9
-	je .L_lambda_simple_env_end_0056
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0056
-.L_lambda_simple_env_end_0056:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0056:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0056
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0056
-.L_lambda_simple_params_end_0056:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0056
-	jmp .L_lambda_simple_end_0056
-.L_lambda_simple_code_0056:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 2
-	je .L_lambda_simple_arity_check_ok_0063
-	push qword [rsp + 8 * 2]
-	push 2
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0063:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_86]	; free var null?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	jne .L_if_end_0055
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var bin-ordering
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0050
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_62]	; free var cdr
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_47]	; free var car
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0056
-.L_if_else_0050:
-	mov rax, L_constants + 2
-.L_if_end_0056:
-	cmp rax, sob_boolean_false
-	jne .L_if_end_0055
-.L_if_end_0055:
-	leave
-	ret AND_KILL_FRAME(2)
-.L_lambda_simple_end_0056:	; new closure is in rax
-	push rax
-	mov rax, PARAM(0)	; param run
-	pop qword [rax]
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 10	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_0028:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 9
-	je .L_lambda_opt_end_0035
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_0028
-.L_lambda_opt_end_0035:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_0029:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_0036
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_0029
-.L_lambda_opt_end_0036:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_002a
-	jmp .L_lambda_opt_end_0037
-.L_lambda_opt_code_002a:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 1
-	jge .L_lambda_simple_arity_check_ok_0064
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0064:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 1
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_002a
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_001b: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_001b
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_0038
-	.L_lambda_opt_params_loop_002a:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_0028: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_0028
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_001c:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_0036
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_001c
-	.L_lambda_opt_params_end_0036:
-	add rsp,rcx
-	mov rbx, 1
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_0038:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, PARAM(1)	; param s
-	push rax
-	mov rax, PARAM(0)	; param a
-	push rax
-	push 2	; arg count
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var run
-	mov rax, qword [rax]
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(2)
-.L_lambda_opt_end_0037:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0055:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0054:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 8	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0057:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 7
-	je .L_lambda_simple_env_end_0057
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0057
-.L_lambda_simple_env_end_0057:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0057:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_0057
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0057
-.L_lambda_simple_params_end_0057:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0057
-	jmp .L_lambda_simple_end_0057
-.L_lambda_simple_code_0057:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0065
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0065:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 4]
-	mov rax, qword [rax + 8 * 0]	; bound var bin<?
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-run
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_4], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var bin<=?
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-run
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_5], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 1]
-	mov rax, qword [rax + 8 * 0]	; bound var bin>?
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-run
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_7], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 2]
-	mov rax, qword [rax + 8 * 0]	; bound var bin>=?
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-run
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_8], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 3]
-	mov rax, qword [rax + 8 * 0]	; bound var bin=?
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-run
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_6], rax
-	mov rax, sob_void
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0057:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0053:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0051:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_004f:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_004d:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_004c:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_004b:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0048:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_67], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_66], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_68], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_70], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_69], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0058:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0058
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0058
-.L_lambda_simple_env_end_0058:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0058:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0058
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0058
-.L_lambda_simple_params_end_0058:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0058
-	jmp .L_lambda_simple_end_0058
-.L_lambda_simple_code_0058:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0066
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0066:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov r9, qword [rbp + 8 * 2]
-	mov r9, qword [rbp + 8 * 3]
-	mov rdi, 8 * 1	; new rib for optional parameters
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_opt_code_002b:	; ext_env[i + 1] <-- env[i] copy all the array
-	cmp rsi, 1
-	je .L_lambda_opt_end_0039
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_opt_code_002b
-.L_lambda_opt_end_0039:
-	pop rbx
-	mov rsi, 0
-.L_lambda_opt_code_002c:	; copy params
-	cmp rsi, 1
-	je .L_lambda_opt_end_003a
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_opt_code_002c
-.L_lambda_opt_end_003a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_opt_code_002d
-	jmp .L_lambda_opt_end_003b
-.L_lambda_opt_code_002d:	; lambda-opt body
-	cmp qword [rsp + 8 * 2], 0
-	jge .L_lambda_simple_arity_check_ok_0067
-	push qword [rsp + 8 * 2]
-	push 0
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0067:
-	mov r8, qword [rsp + 8 * 2]
-	sub r8, 0
-	mov rbx,r8
-	cmp r8, 0
-	jne .L_lambda_opt_params_loop_002d
-	mov rdx, qword [rsp + 8 * 2]
-	add rdx , 3
-	sub rsp , 8
-	mov rcx, rsp
-.L_lambda_opt_stack_adjusted_001d: ;pushing down the stack of the current function
-	mov rbx, qword [rcx + 8 * 1]
-	mov qword[rcx] , rbx
-	add rcx , 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_001d
-	inc qword [rsp + 8 * 2]
-	mov qword [rcx], sob_nil 
-	jmp .L_lambda_opt_end_003c
-	.L_lambda_opt_params_loop_002d:
-	mov rdx, qword [rsp + 8*2]
-	lea rcx, [rsp + 8*2 + 8*rdx]
-	mov rdx, r8
-	mov r9, sob_nil
-	mov r9, rcx
-	.L_lambda_opt_params_loop_002b: ;loop for copying the opt into list
-	mov rdi, (1 + 8 + 8)
-	call malloc
-	mov byte[rax], T_pair
-	mov rbx, qword [rcx]
-	mov SOB_PAIR_CAR(rax), rbx
-	mov SOB_PAIR_CDR(rax), r9
-	mov r9, rax
-	dec rdx
-	sub rcx, 8
-	cmp rdx, 0
-	jne .L_lambda_opt_params_loop_002b
-	mov rdx, qword [rsp + 8 * 2]
-	mov rax, rsp
-	lea rbx, [rsp + 8*(rdx + 2)]
-	mov r12 , rbx
-	mov rcx, r8
-	dec rcx
-	add rdx, 3
-	sub rdx,rcx
-	shl rcx, 3
-	.L_lambda_opt_stack_adjusted_001e:
-	cmp rdx, 0
-	je .L_lambda_opt_params_end_003a
-	mov rax, rbx
-	sub rax, rcx
-	mov rsi, qword [rax]
-	mov [rbx], rsi
-	sub rbx, 8
-	dec rdx
-	cmp rdx, 0
-	jne .L_lambda_opt_stack_adjusted_001e
-	.L_lambda_opt_params_end_003a:
-	add rsp,rcx
-	mov rbx, 0
-	mov rbx, qword [rsp + 8 * 2]
-	add rbx,3
-	sub rbx,r8
-	shl rbx, 3
-	add rbx, rsp
-	mov qword[rbx] , r9
-	dec r8
-	sub qword [rsp + 8 * 2], r8
-	.L_lambda_opt_end_003c:
-	enter 0, 0
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param s
-	push rax
-	mov rax, qword [free_var_63]	; free var char->integer
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_84]	; free var map
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var comparator
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_32]	; free var apply
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	LEAVE
-	ret AND_KILL_FRAME(1)
-.L_lambda_opt_end_003b:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0058:	; new closure is in rax
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_0059:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_0059
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_0059
-.L_lambda_simple_env_end_0059:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_0059:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_0059
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_0059
-.L_lambda_simple_params_end_0059:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_0059
-	jmp .L_lambda_simple_end_0059
-.L_lambda_simple_code_0059:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0068
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0068:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, qword [free_var_4]	; free var <
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-char-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_67], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, qword [free_var_5]	; free var <=
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-char-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_66], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, qword [free_var_6]	; free var =
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-char-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_68], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, qword [free_var_7]	; free var >
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-char-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_70], rax
-	mov rax, sob_void
-
-	; preparing a non-tail-call
-	mov rax, qword [free_var_8]	; free var >=
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	push rax
-	push 1	; arg count
-	mov rax, PARAM(0)	; param make-char-comparator
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	mov qword [free_var_69], rax
-	mov rax, sob_void
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_0059:	; new closure is in rax
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_64], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	mov rax, L_constants + 0
-	mov qword [free_var_65], rax
-	mov rax, sob_void
-
-	mov rdi, rax
-	call print_sexpr_if_not_void
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, L_constants + 2569
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_63]	; free var char->integer
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	; preparing a non-tail-call
-	mov rax, L_constants + 2573
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_63]	; free var char->integer
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_2]	; free var -
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 0	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_005a:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 0
-	je .L_lambda_simple_env_end_005a
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_005a
-.L_lambda_simple_env_end_005a:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_005a:	; copy params
-	cmp rsi, 0
-	je .L_lambda_simple_params_end_005a
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_005a
-.L_lambda_simple_params_end_005a:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_005a
-	jmp .L_lambda_simple_end_005a
-.L_lambda_simple_code_005a:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_0069
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_0069:
-	enter 0, 0
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_005b:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_005b
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_005b
-.L_lambda_simple_env_end_005b:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_005b:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_005b
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_005b
-.L_lambda_simple_params_end_005b:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_005b
-	jmp .L_lambda_simple_end_005b
-.L_lambda_simple_code_005b:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_006a
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_006a:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2571
-	push rax
-	mov rax, PARAM(0)	; param ch
-	push rax
-	mov rax, L_constants + 2569
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_66]	; free var char<=?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0051
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var delta
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param ch
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_63]	; free var char->integer
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 2	; arg count
-	mov rax, qword [free_var_1]	; free var +
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_78]	; free var integer->char
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0057
-.L_if_else_0051:
-	mov rax, PARAM(0)	; param ch
-.L_if_end_0057:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_005b:	; new closure is in rax
-	mov qword [free_var_64], rax
-	mov rax, sob_void
-
-	mov rdi, (1 + 8 + 8)	; sob closure
-	call malloc
-	push rax
-	mov rdi, 8 * 1	; new rib
-	call malloc
-	push rax
-	mov rdi, 8 * 2	; extended env
-	call malloc
-	mov rdi, ENV
-	mov rsi, 0
-	mov rdx, 1
-.L_lambda_simple_env_loop_005c:	; ext_env[i + 1] <-- env[i]
-	cmp rsi, 1
-	je .L_lambda_simple_env_end_005c
-	mov rcx, qword [rdi + 8 * rsi]
-	mov qword [rax + 8 * rdx], rcx
-	inc rsi
-	inc rdx
-	jmp .L_lambda_simple_env_loop_005c
-.L_lambda_simple_env_end_005c:
-	pop rbx
-	mov rsi, 0
-.L_lambda_simple_params_loop_005c:	; copy params
-	cmp rsi, 1
-	je .L_lambda_simple_params_end_005c
-	mov rdx, qword [rbp + 8 * rsi + 8 * 4]
-	mov qword [rbx + 8 * rsi], rdx
-	inc rsi
-	jmp .L_lambda_simple_params_loop_005c
-.L_lambda_simple_params_end_005c:
-	mov qword [rax], rbx	; ext_env[0] <-- new_rib 
-	mov rbx, rax
-	pop rax
-	mov byte [rax], T_closure
-	mov SOB_CLOSURE_ENV(rax), rbx
-	mov SOB_CLOSURE_CODE(rax), .L_lambda_simple_code_005c
-	jmp .L_lambda_simple_end_005c
-.L_lambda_simple_code_005c:	; lambda-simple body
-	cmp qword [rsp + 8 * 2], 1
-	je .L_lambda_simple_arity_check_ok_006b
-	push qword [rsp + 8 * 2]
-	push 1
-	jmp L_error_incorrect_arity_simple
-.L_lambda_simple_arity_check_ok_006b:
-	enter 0, 0
-	; preparing a non-tail-call
-	mov rax, L_constants + 2575
-	push rax
-	mov rax, PARAM(0)	; param ch
-	push rax
-	mov rax, L_constants + 2573
-	push rax
-	push 3	; arg count
-	mov rax, qword [free_var_66]	; free var char<=?
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	cmp rax, sob_boolean_false
-	je .L_if_else_0052
-	; preparing a non-tail-call
-	; preparing a non-tail-call
-	mov rax, ENV
-	mov rax, qword [rax + 8 * 0]
-	mov rax, qword [rax + 8 * 0]	; bound var delta
-	push rax
-	; preparing a non-tail-call
-	mov rax, PARAM(0)	; param ch
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_63]	; free var char->integer
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
 	push 2	; arg count
-	mov rax, qword [free_var_2]	; free var -
-	cmp byte [rax], T_undefined
-	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	push rax
-	push 1	; arg count
-	mov rax, qword [free_var_78]	; free var integer->char
+	mov rax, qword [free_var_1]	; free var apply
 	cmp byte [rax], T_undefined
 	je L_error_fvar_undefined
-	cmp byte [rax], T_closure
-	jne L_error_non_closure
-	push SOB_CLOSURE_ENV(rax)
-	call SOB_CLOSURE_CODE(rax)
-	jmp .L_if_end_0058
-.L_if_else_0052:
-	mov rax, PARAM(0)	; param ch
-.L_if_end_0058:
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_005c:	; new closure is in rax
-	mov qword [free_var_65], rax
-	mov rax, sob_void
-	leave
-	ret AND_KILL_FRAME(1)
-.L_lambda_simple_end_005a:	; new closure is in rax
 	cmp byte [rax], T_closure
 	jne L_error_non_closure
 	push SOB_CLOSURE_ENV(rax)
