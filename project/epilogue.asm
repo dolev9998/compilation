@@ -884,53 +884,51 @@ L_code_ptr_lognot:
 
 
 L_code_ptr_bin_apply:
-        enter 0, 0
-        cmp COUNT, 2
+        cmp qword [rsp + 16], 2
         jne L_error_arg_count_2
-        mov rax, PARAM(1) ; list
-        mov rbx,0 ;list length count
-.L_length_loop: ;this loop is to iterate through the list and count it's  (stop when encountering nil)
-        cmp byte [rax], T_nil ;TODO: check if correct
-        je .L_length_loop_exit
-        assert_pair(rax)
-        mov rax, SOB_PAIR_CDR(rax)
-        add rbx,1
-        jmp .L_length_loop
-.L_length_loop_exit: ;1381
-        mov rax, PARAM(1) ; list
-        ;rbx contains list's length
-        mov rcx, PARAM(0) ; PROC
-        assert_closure(rcx)
-        mov rdx, 0 ;i in (int i =0;i<list.length;i++)
-        mov r8, RET_ADDR
-        mov rbp, OLD_RBP
-        mov rsp, rbp
-.L_loop: ;loop to push list's to stack. not done with push because we need to invert it's order on stack.
-        cmp rdx, rbx ; rdx=index, rbx=count
-        je .L_loop_exit
-        mov r9, rbx
-        sub r9, rdx
-        add r9, 1
-        imul r9, -8
-        add r9, rbp
-        ;mov [rbp-8*(rbx - rdx + 1)], SOB_PAIR_CAR(rax)
-        mov rdi, SOB_PAIR_CAR(rax)
-        mov [r9], rdi
-        ;;above line should push parameters in backward order (for list (1 2 3) should push 1 2 3 to stack)
-        mov rax, SOB_PAIR_CDR(rax)
-        add rdx, 1
-        jmp .L_loop
-.L_loop_exit:
-        mov r9, rbx
-        add r9,1
-        imul r9, -8
-        add r9,rbp
-       ; mov rsp, rbp- 8 * (rbx + 1) ;fix stack pointer to include added parameters in loop.
-        mov rsp, r9
-        push rbx
-        push SOB_CLOSURE_ENV(rcx)
-        push r8
-        jmp SOB_CLOSURE_CODE(rcx)
+        mov r12, qword [rsp + 24]
+        assert_closure(r12)
+        lea r10, [rsp + 32]
+        mov r11, qword [r10]
+        mov r9, qword [rsp]
+        xor rcx, rcx
+        mov rsi, r11
+.L0_loop:
+        cmp rsi, sob_nil
+        je .L0_done
+        assert_pair(rsi)
+        inc rcx
+        mov rsi, SOB_PAIR_CDR(rsi)
+        jmp .L0_loop
+.L0_done:
+        lea rbx, [8 * rcx - 16]
+        sub rsp, rbx
+        mov rdi, rsp
+        cld
+        mov rax, r9
+        stosq
+        mov rax, SOB_CLOSURE_ENV(r12)
+        stosq
+        mov rax, rcx
+        stosq
+.L1_loop:
+        test rcx, rcx
+        je .L1_done
+        mov rax, SOB_PAIR_CAR(r11)
+        stosq
+        mov r11, SOB_PAIR_CDR(r11)
+        dec rcx
+        jmp .L1_loop
+.L1_done:
+        sub rdi, 8
+        cmp r10, rdi
+        jne .L_error_stack
+        jmp SOB_CLOSURE_CODE(r12)
+.L_error_stack:
+        int3
+
+
+
 
 
 L_code_ptr_is_null:
