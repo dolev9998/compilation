@@ -2086,7 +2086,7 @@ let sprint_exprs' chan exprs =
               (* Copy parameters into a newer rib*)
               ^ "\tpop rbx\n"
               ^ "\tmov rsi, 0\n"
-              ^ (Printf.sprintf "%s:\t; copy params\n" label_loop_params)
+              ^ (Printf.sprintf "%s: \t; copy params\n" label_loop_params)
               ^ (Printf.sprintf "\tcmp rsi, %d\n" params)
               ^ (Printf.sprintf "\tje %s\n" label_loop_params_end)
               ^ "\tmov rdx, qword [rbp + 8 * rsi + 8 * 4]\n"
@@ -2110,18 +2110,18 @@ let sprint_exprs' chan exprs =
 
 
               (*Check if the number of arguments is correct*)
-              ^ (Printf.sprintf "\tcmp qword [rsp + 8 * 2], %d\n"
-                   (param_num))      
+              ^ (Printf.sprintf "\tcmp qword [rsp + 16], %d\n"
+                   (List.length params'))      
               ^ (Printf.sprintf "\tjge %s\n" label_arity_ok)
-              ^ "\tpush qword [rsp + 8 * 2]\n"
-              ^ (Printf.sprintf "\tpush %d\n" (param_num))
+              ^ "\tpush qword [rsp + 16]\n"
+              ^ (Printf.sprintf "\tpush %d\n" (List.length params'))
               ^ "\tjmp L_error_incorrect_arity_simple\n"
               ^ (Printf.sprintf "%s:\n" label_arity_ok)
   
 
               (*compute number of optional parameters*)
-              ^ "\tmov r8, qword [rsp + 8 * 2]\n"
-              ^ (Printf.sprintf "\tsub r8, %d\n" (param_num)) 
+              ^ "\tmov r8, qword [rsp + 16]\n"
+              ^ (Printf.sprintf "\tsub r8, %d\n" (List.length params')) 
 
               (*Handling Optional parametes*)
               ^ "\tmov rbx,r8\n"
@@ -2137,7 +2137,7 @@ let sprint_exprs' chan exprs =
 
               (* pushing dowm the stac*)
               ^ (Printf.sprintf "%s: ;pushing down the stack of the current function\n" label_stack_down)
-              ^ "\tmov rbx, qword [rcx + 8 * 1]\n" 
+              ^ "\tmov rbx, qword [rcx + 8]\n" 
               ^ "\tmov qword[rcx] , rbx\n" 
               ^ "\tadd rcx , 8\n"
               ^ "\tdec rdx\n"
@@ -2149,15 +2149,14 @@ let sprint_exprs' chan exprs =
 
               (*Loop for the optional arguments*)
 
-              ^ (Printf.sprintf "\t%s:\n" label_loop_arguments)
+              ^ (Printf.sprintf "%s:\n" label_loop_arguments)
               ^ "\tmov rdx, qword [rsp + 8*2]\n"      
               ^ "\tlea rcx, [rsp + 16 + 8*rdx]\n" 
               ^ "\tmov rdx, r8\n" 
-
               ^ "\tmov r9, sob_nil\n"
-              (*^ "\tmov r10, rcx\n" *)
+              ^ "\tmov r10, rcx\n" 
 
-              ^ (Printf.sprintf "\t%s: ;loop for copying the opt into list\n" label_opt_loop)
+              ^ (Printf.sprintf "%s: ;loop for copying the opt into list\n" label_opt_loop)
               ^ "\tmov rdi, (1 + 8 + 8)\n"
               ^ "\tcall malloc\n"
               ^ "\tmov byte[rax], T_pair\n" 
@@ -2172,10 +2171,10 @@ let sprint_exprs' chan exprs =
 
 
               (*Shrink stack by the size by opt -1 *)
-              ^ "\tmov rdx, qword [rsp + 8 * 2]\n" 
+              ^ "\tmov rdx, qword [rsp + 16]\n" 
               ^ "\tmov rax, rsp\n"
               ^ "\tlea rbx, [rsp + 8*(rdx + 2)]\n"  
-              (*^ "\tmov r12 , rbx\n" *)
+              ^ "\tmov r12 , rbx\n" 
               ^ "\tmov rcx, r8\n"  
               ^ "\tdec rcx\n"   
               ^ "\tadd rdx, 3\n"
@@ -2183,7 +2182,7 @@ let sprint_exprs' chan exprs =
               ^ "\tshl rcx, 3\n" 
 
 
-              ^ (Printf.sprintf "\t%s:\n" label_stack_shrink)
+              ^ (Printf.sprintf "%s:\n" label_stack_shrink)
               ^ "\tcmp rdx, 0\n"
               ^ (Printf.sprintf "\tje %s\n" label_end_opt_loop)
               ^ "\tmov rax, rbx\n"    
@@ -2194,11 +2193,11 @@ let sprint_exprs' chan exprs =
               ^ "\tdec rdx\n"
               ^ "\tcmp rdx, 0\n"
               ^ (Printf.sprintf "\tjne %s\n" label_stack_shrink)
-              ^ (Printf.sprintf "\t%s:\n" label_end_opt_loop)
+              ^ (Printf.sprintf "%s:\n" label_end_opt_loop)
 
               ^ "\tadd rsp,rcx\n"
-              ^ (Printf.sprintf "\tmov rbx, %d\n" (param_num))
-              ^ "\tmov rbx, qword [rsp + 8 * 2]\n"
+              ^ (Printf.sprintf "\tmov rbx, %d\n" (List.length params'))
+              ^ "\tmov rbx, qword [rsp + 16]\n"
               ^ "\tadd rbx,3\n"
               ^ "\tsub rbx,r8\n"
               ^ "\tshl rbx, 3\n"
@@ -2208,14 +2207,14 @@ let sprint_exprs' chan exprs =
 
               ^ "\tsub qword [rsp + 8 * 2], r8\n" 
 
-              ^  (Printf.sprintf "\t%s:\n" label_done_opt)
+              ^  (Printf.sprintf "%s:\n" label_done_opt)
 
               ^ "\tenter 0, 0\n"
-              ^ (run (new_param_num ) (env + 1) body)  
+              ^ (run (List.length params' + 1 ) (env + 1) body)  
 
               ^ "\tLEAVE\n"
 
-              ^ (Printf.sprintf "\tret AND_KILL_FRAME(%d)\n" (new_param_num))
+              ^ (Printf.sprintf "\tret AND_KILL_FRAME(%d)\n" (List.length params' + 1))
 
               ^ (Printf.sprintf "%s:\n" label_end)
 
