@@ -1,6 +1,8 @@
 # Scheme Compiler in OCaml
 
-**Authors:** Ori Adika & Dolev David
+**Authors:**
+Ori Adika
+Dolev David
 
 ## 🔧 Description
 
