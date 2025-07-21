@@ -71,7 +71,7 @@ Once loaded, you can use the following functions interactively:
         Tail_Call)))
 
 # test "(define (fact n) (if (= n 0) 1 (* n (fact (- n 1))))) (fact 5)";;
-# => generates compiled assembly in goo.asm
+# => generates compiled assembly in goo.asm and return the output in the CLI.
 ```
 
 ## 🎓 Educational Value
